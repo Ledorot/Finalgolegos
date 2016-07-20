@@ -15,6 +15,8 @@ public class DieReader : MonoBehaviour {
 
 		// If we saw a die face
 		if (Physics.Raycast (cast, out hit, Mathf.Infinity, DieLayer)) {
+			// Visualize the raycast
+			Debug.DrawLine (cast.origin, hit.point, Color.red);
 			int face;
 			// If the face's name makes sense, parse it, otherwise, read 0
 			if (int.TryParse (hit.collider.gameObject.name, out face)) {
