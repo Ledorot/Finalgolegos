@@ -32,6 +32,8 @@ public class DiceManager : MonoBehaviour {
 	}
 		
 	public void Roll () {
+		Debug.ClearDeveloperConsole ();
+
 		// Clean things up before we roll the dice
 		foreach (Transform child in transform) {
 			Destroy (child.gameObject);
@@ -52,7 +54,7 @@ public class DiceManager : MonoBehaviour {
 		for (int i = 0; i < OffensiveDiceCount; i++) {
 			// These positionings are for testing purposes and will need to be modified.
 			// NOTE: DICE **CAN** SPAWN INSIDE EACH OTHER WITH THIS CODE.
-			GameObject newDie = Instantiate (DiePrefab, Random.insideUnitSphere * 3 + Vector3.up * 5, Random.rotation) as GameObject;
+			GameObject newDie = Instantiate (DiePrefab, Random.insideUnitSphere * 5 + Vector3.up * 5, Random.rotation) as GameObject;
 			// Rename the die
 			newDie.name = "Offensive Die " + i;
 			// Change its material
@@ -83,30 +85,70 @@ public class DiceManager : MonoBehaviour {
 
 	// Still working on this bit, documentation to come later
 	IEnumerator CheckForSettledDice () {
+		// Here we go
 		Debug.Log ("Starting dice read...");
-		while (offensiveDice.Count > 0 && defensiveDice.Count > 0) {
 
-			foreach (GameObject go in (new List<GameObject> (offensiveDice))) {
-				if (go.GetComponent<Rigidbody> ().IsSleeping ()) {
+		// Wait for each of the dice to start moving.
+		// Bandaid over dice being read as theyre spawned because they have no momentum yet.
+		yield return new WaitForSeconds (0.1f);
+
+		// Are all the dice done moving? No.
+		bool allSettled = false;
+
+		// Just to show the player that calculations are underway
+		OffensiveTotalText.color = Color.yellow;
+		DefensiveTotalText.color = Color.yellow;
+
+		// so long as not all the dice are settled...
+		while (!allSettled) {
+			// Say that they are
+			allSettled = true;
+
+			// Set totals to 0
+			OffensiveTotal = 0;
+			DefensiveTotal = 0;
+
+			// Optomization cache of dice rigidbodies. Avoids numerous GetComponenet calls
+			Rigidbody rb;
+
+			// For each of hte offensive dice...
+			foreach (GameObject go in offensiveDice) {
+				// Assign cached rigidbody
+				rb = go.GetComponent<Rigidbody> ();
+				// Check if they SHOULD be asleep
+				if (rb.velocity.sqrMagnitude <= rb.sleepThreshold) {
+					// Add their value to the total
 					OffensiveTotal += go.GetComponent<DieReader> ().Read ();
-					OffensiveTotalText.text = OffensiveTotal.ToString ();
-					offensiveDice.Remove (go);
-					// TESTING - This will cause dice to disappear once being read
-					// Destroy (go);
+				} else {
+					// Assert that at least one die is not settled
+					allSettled = false;
 				}
 			}
 
-			foreach (GameObject go in (new List<GameObject> (defensiveDice))) {
-				if (go.GetComponent<Rigidbody> ().IsSleeping ()) {
+			// Do the same for the defense
+			foreach (GameObject go in defensiveDice) {
+				rb = go.GetComponent<Rigidbody> ();
+				if (rb.velocity.sqrMagnitude <= rb.sleepThreshold) {
 					DefensiveTotal += go.GetComponent<DieReader> ().Read ();
-					DefensiveTotalText.text = DefensiveTotal.ToString ();
-					defensiveDice.Remove (go);
-					// TESTING - This will cause dice to disappear once being read
-					// Destroy (go);
+				} else {
+					allSettled = false;
 				}
 			}
-			yield return new WaitForEndOfFrame ();
+
+			// Set totals to animate while calculating. These aren't necessary
+			OffensiveTotalText.text = OffensiveTotal.ToString ();
+			DefensiveTotalText.text = DefensiveTotal.ToString ();
+
+			// Do this 10 times a second. Could be tweaked.
+			// TODO: Remove magic number
+			yield return new WaitForSeconds (0.1f);
 		}
+
+		// Display proper text colors to indicate final calculations are done
+		OffensiveTotalText.color = Color.red;
+		DefensiveTotalText.color = Color.blue;
+
+		// Finish up
 		Debug.Log ("All dice read!");
 	}
 }

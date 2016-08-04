@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent (typeof (Rigidbody))]
 public class DieReader : MonoBehaviour {
 	// This is a little bit (0.01f) bigger than than half the distance between alternate corners of a cube of length 1.2 (Accounting for extended faces)
 	static readonly float RaycastOriginOffset = ((1.2f * Mathf.Sqrt(3)) / 2f) + 0.01f;
