@@ -6,14 +6,6 @@ public class DieReader : MonoBehaviour {
 	static readonly float RaycastOriginOffset = ((1.2f * Mathf.Sqrt(3)) / 2f) + 0.01f;
 	// The layer the die faces are on
 	public LayerMask DieLayer;
-	// The currently read value of the die
-	public int Value;
-
-	void Update () {
-		// Do a read every frame.
-		// This is PURELY for visualization purposes. There will be no need for a Value variable later.
-		Value = Read ();
-	}
 
 	// Return the value of the rolled die
 	public int Read () {

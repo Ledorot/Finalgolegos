@@ -26,13 +26,9 @@ public class DiceManager : MonoBehaviour {
 	public Text OffensiveTotalText;
 	public Text DefensiveTotalText;
 
-	// Perform a roll as soon as the game starts (for testing purposes).
-	void Awake () {
-		Roll ();
-	}
+    public BattleManager BattleManager;
 		
 	public void Roll () {
-		Debug.ClearDeveloperConsole ();
 
 		// Clean things up before we roll the dice
 		foreach (Transform child in transform) {
@@ -86,7 +82,7 @@ public class DiceManager : MonoBehaviour {
 	// Still working on this bit, documentation to come later
 	IEnumerator CheckForSettledDice () {
 		// Here we go
-		Debug.Log ("Starting dice read...");
+		// Debug.Log ("Starting dice read...");
 
 		// Wait for each of the dice to start moving.
 		// Bandaid over dice being read as theyre spawned because they have no momentum yet.
@@ -149,6 +145,8 @@ public class DiceManager : MonoBehaviour {
 		DefensiveTotalText.color = Color.blue;
 
 		// Finish up
-		Debug.Log ("All dice read!");
+		// Debug.Log ("All dice read!");
+
+        this.BattleManager.EvaluateBattle (OffensiveTotal, DefensiveTotal);
 	}
 }
