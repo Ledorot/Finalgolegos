@@ -1,0 +1,6 @@
+﻿  Main.cpp
+Main.cpp(37): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating code
+  All 12 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Balance Test Tool.vcxproj -> X:\Finalgolegos\Finalgolegos\Balance Test Tool\Balance Test Tool\Release\Balance Test Tool.exe
