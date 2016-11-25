@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4feaba44a7853548a0428ab6bbee414, type: 3}
+  m_Name: Knight Pawn 2
+  m_EditorClassIdentifier: 
+  characterName: Knight Pawn 2
+  RollsPerTurn: 1
+  AttackDice: 2
+  DefenseDice: 0
+  HealthBars: 3c000000
+  Attacks: []
+  Equipment:
+  - {fileID: 11400000, guid: 84ba9f38cd10d9b46b938177500f5603, type: 2}

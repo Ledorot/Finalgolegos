@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4feaba44a7853548a0428ab6bbee414, type: 3}
+  m_Name: Emilio
+  m_EditorClassIdentifier: 
+  characterName: Emilio
+  RollsPerTurn: 2
+  AttackDice: 2
+  DefenseDice: 1
+  HealthBars: 6e000000
+  Attacks:
+  - {fileID: 11400000, guid: dc83390d8376c7148af81edb42237397, type: 2}
+  - {fileID: 11400000, guid: e2b828f8189dd134c89311d9f241bdbd, type: 2}
+  Equipment:
+  - {fileID: 11400000, guid: 299452b35ad8e134b8df1320b0da17c7, type: 2}

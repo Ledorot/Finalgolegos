@@ -1,16 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+using System.Collections.Generic;
+using Golegos;
 
+[Serializable]
 public class Equipment : ScriptableObject {
-    public EquipmentType EquipmentType;
-}
-
-public enum EquipmentType {
-    Head,
-    Neck,
-    Chest,
-    Back,
-    Hand,
-    OffHand,
-    Legs
+	public List<Boolean> typeFlags;
+	public List<EquipmentItem> items;
 }

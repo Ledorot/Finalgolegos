@@ -11,8 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4feaba44a7853548a0428ab6bbee414, type: 3}
   m_Name: Rodrick
   m_EditorClassIdentifier: 
-  Weapon: These don't work yet
-  HealthBars: 0f0000001e000000
+  characterName: Rodrick
   RollsPerTurn: 1
-  Dice: 1
-  SpecialAttack: These don't work yet
+  AttackDice: 0
+  DefenseDice: 2
+  HealthBars: 0f0000001e000000
+  Attacks: []
+  Equipment: []

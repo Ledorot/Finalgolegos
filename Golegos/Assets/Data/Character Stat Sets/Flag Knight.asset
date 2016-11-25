@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4feaba44a7853548a0428ab6bbee414, type: 3}
+  m_Name: Flag Knight
+  m_EditorClassIdentifier: 
+  characterName: Flag Knight
+  RollsPerTurn: 1
+  AttackDice: 3
+  DefenseDice: 2
+  HealthBars: 78000000
+  Attacks:
+  - {fileID: 11400000, guid: 406d24bb6ad45cc4bb2ca0c14b4a70cb, type: 2}
+  Equipment:
+  - {fileID: 11400000, guid: 4b7f83fb95603514abf929936ad896fb, type: 2}
+  - {fileID: 11400000, guid: 28ef283616f101f4bb1b62833a8945d9, type: 2}

@@ -11,8 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4feaba44a7853548a0428ab6bbee414, type: 3}
   m_Name: Davey
   m_EditorClassIdentifier: 
-  Weapon: These don't work yet
-  HealthBars: 19000000
+  characterName: Davey
   RollsPerTurn: 1
-  Dice: 1
-  SpecialAttack: These don't work yet
+  AttackDice: 2
+  DefenseDice: 0
+  HealthBars: 19000000
+  Attacks:
+  - {fileID: 11400000, guid: 4ff6a2b0999f2a0428398a5bb2167033, type: 2}
+  - {fileID: 11400000, guid: 4a1799fb7d40b684787b9926a00dd171, type: 2}
+  Equipment:
+  - {fileID: 11400000, guid: 1e745179157aec0449dc8a17abb83d9c, type: 2}

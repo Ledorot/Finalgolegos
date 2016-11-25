@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Golegos;
 
 public class BattleManager : MonoBehaviour {
 
@@ -18,8 +19,8 @@ public class BattleManager : MonoBehaviour {
     public void Battle () {
         BattleOutcomeText.text = "";
 
-        DiceManager.OffensiveDiceCount = Attacker.Dice;
-        DiceManager.DefensiveDiceCount = Defender.Dice;
+        DiceManager.OffensiveDiceCount = Attacker.AttackDice;
+        DiceManager.DefensiveDiceCount = Defender.DefenseDice;
         DiceManager.Roll ();
     }
 

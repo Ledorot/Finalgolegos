@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb451e2653159df499a9aa4e47812571, type: 3}
+  m_Name: Shield
+  m_EditorClassIdentifier: 
+  equipmentName: Shield
+  description: Pretty much the same description as the armor, only you have to carry
+    this one by hand.
+  attack: {fileID: 0}
+  type: 0
+  effects:
+  - type: 1
+    magnitude: 1

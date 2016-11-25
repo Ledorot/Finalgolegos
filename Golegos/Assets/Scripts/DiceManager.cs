@@ -3,7 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class DiceManager : MonoBehaviour {
+public class DiceManager : MonoBehaviour
+{
 
 	// The materials we want applied to the different types of dice
 	public Material OffensiveMaterial;
@@ -26,10 +27,14 @@ public class DiceManager : MonoBehaviour {
 	public Text OffensiveTotalText;
 	public Text DefensiveTotalText;
 
-    public BattleManager BattleManager;
-		
-	public void Roll () {
+	public BattleManager BattleManager;
 
+	void Start()
+	{
+	}
+
+	public void Roll ()
+	{
 		// Clean things up before we roll the dice
 		foreach (Transform child in transform) {
 			Destroy (child.gameObject);
@@ -43,8 +48,15 @@ public class DiceManager : MonoBehaviour {
 
 		// Create new arrays to hold each of the types of dice.
 		// This accounts for varying number of dice on subsequent rolls
-		offensiveDice = new List<GameObject> ();
-		defensiveDice = new List<GameObject> ();
+		if (offensiveDice == null)
+			offensiveDice = new List<GameObject> ();
+		else
+			offensiveDice.Clear ();
+
+		if (defensiveDice == null)
+			defensiveDice = new List<GameObject> ();
+		else
+			defensiveDice.Clear ();
 
 		// Go through each of the offensive dice to apply materials and cache references.
 		for (int i = 0; i < OffensiveDiceCount; i++) {
@@ -54,7 +66,7 @@ public class DiceManager : MonoBehaviour {
 			// Rename the die
 			newDie.name = "Offensive Die " + i;
 			// Change its material
-			newDie.GetComponentInChildren<Renderer> ().material = OffensiveMaterial;
+			newDie.GetComponent<Die>().SetMaterial(OffensiveMaterial);
 			// Fold it nicely under the dice manager in the scene hierarchy
 			newDie.transform.parent = transform;
 			offensiveDice.Add (newDie);
@@ -68,7 +80,7 @@ public class DiceManager : MonoBehaviour {
 			// Rename the die
 			newDie.name = "Defensive Die " + i;
 			// Change its material
-			newDie.GetComponentInChildren<Renderer> ().material = DefensiveMaterial;
+			newDie.GetComponent<Die>().SetMaterial(DefensiveMaterial);
 			// Fold it nicely under the dice manager in the scene hierarchy
 			newDie.transform.parent = transform;
 			defensiveDice.Add (newDie);
@@ -80,9 +92,8 @@ public class DiceManager : MonoBehaviour {
 
 
 	// Still working on this bit, documentation to come later
-	IEnumerator CheckForSettledDice () {
-		// Here we go
-		// Debug.Log ("Starting dice read...");
+	IEnumerator CheckForSettledDice ()
+	{
 
 		// Wait for each of the dice to start moving.
 		// Bandaid over dice being read as theyre spawned because they have no momentum yet.
@@ -104,30 +115,23 @@ public class DiceManager : MonoBehaviour {
 			OffensiveTotal = 0;
 			DefensiveTotal = 0;
 
-			// Optomization cache of dice rigidbodies. Avoids numerous GetComponenet calls
-			Rigidbody rb;
-
 			// For each of hte offensive dice...
 			foreach (GameObject go in offensiveDice) {
-				// Assign cached rigidbody
-				rb = go.GetComponent<Rigidbody> ();
-				// Check if they SHOULD be asleep
-				if (rb.velocity.sqrMagnitude <= rb.sleepThreshold) {
-					// Add their value to the total
-					OffensiveTotal += go.GetComponent<DieReader> ().Read ();
-				} else {
-					// Assert that at least one die is not settled
+				int dieValue = go.GetComponent<Die> ().value;
+				if (dieValue == 0) {
 					allSettled = false;
+				} else {
+					OffensiveTotal += dieValue;
 				}
 			}
 
 			// Do the same for the defense
 			foreach (GameObject go in defensiveDice) {
-				rb = go.GetComponent<Rigidbody> ();
-				if (rb.velocity.sqrMagnitude <= rb.sleepThreshold) {
-					DefensiveTotal += go.GetComponent<DieReader> ().Read ();
-				} else {
+				int dieValue = go.GetComponent<Die> ().value;
+				if (dieValue == 0) {
 					allSettled = false;
+				} else {
+					DefensiveTotal += dieValue;
 				}
 			}
 
@@ -147,6 +151,6 @@ public class DiceManager : MonoBehaviour {
 		// Finish up
 		// Debug.Log ("All dice read!");
 
-        this.BattleManager.EvaluateBattle (OffensiveTotal, DefensiveTotal);
+		this.BattleManager.EvaluateBattle (OffensiveTotal, DefensiveTotal);
 	}
 }

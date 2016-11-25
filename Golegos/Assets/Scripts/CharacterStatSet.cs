@@ -1,12 +1,17 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
-[CreateAssetMenu (fileName = "New Stat Set", menuName = "Golegos/CharacterStatSet", order = 1)]
-public class CharacterStatSet : ScriptableObject {
-	public string Weapon;
-	public List<int> HealthBars;
-	public int RollsPerTurn;
-	public int Dice;
-	public string SpecialAttack;
+namespace Golegos
+{
+	[CreateAssetMenu (fileName = "New Stat Set", menuName = "Golegos/CharacterStatSet", order = 1)]
+	public class CharacterStatSet : ScriptableObject
+	{
+		public string characterName;
+		public int RollsPerTurn;
+		public int AttackDice;
+		public int DefenseDice;
+		public List<int> HealthBars;
+		public List<SpecialAttack> Attacks;
+		public List<EquipmentItem> Equipment;
+	}
 }
