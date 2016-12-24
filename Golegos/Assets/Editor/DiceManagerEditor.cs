@@ -11,7 +11,11 @@ public class DiceManagerEditor : Editor {
 		DrawDefaultInspector ();
 
 		if (GUILayout.Button ("Roll Dice")) {
-			manager.Roll ();
+			if (!Application.isPlaying) {
+				Debug.Log ("Roll dice does not work in Editor mode.");
+			} else {
+				manager.Roll ();
+			}
 		}
 	}
 }

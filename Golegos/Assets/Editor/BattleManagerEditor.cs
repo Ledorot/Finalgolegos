@@ -11,7 +11,11 @@ public class BattleManagerEditor : Editor {
         DrawDefaultInspector ();
 
         if (GUILayout.Button ("Battle")) {
-            manager.Battle ();
+			if (!Application.isPlaying) {
+				Debug.Log ("Battle does not work in Editor mode.");
+			} else {
+				manager.Battle ();
+			}
         }
     }
 

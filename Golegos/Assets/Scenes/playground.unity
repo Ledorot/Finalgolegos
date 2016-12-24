@@ -1,15 +1,15 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!29 &1
-SceneSettings:
+OcclusionCullingSettings:
   m_ObjectHideFlags: 0
-  m_PVSData: 
-  m_PVSObjectsArray: []
-  m_PVSPortalsArray: []
+  serializedVersion: 2
   m_OcclusionBakeSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -79,30 +79,31 @@ NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
     serializedVersion: 2
+    agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
-    accuratePlacement: 0
     minRegionArea: 2
-    cellSize: 0.16666667
     manualCellSize: 0
+    cellSize: 0.16666667
+    accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1 &325080
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 325081}
-  - 33: {fileID: 325086}
-  - 23: {fileID: 325085}
-  - 65: {fileID: 325084}
-  - 54: {fileID: 325083}
-  - 114: {fileID: 325082}
+  - component: {fileID: 325081}
+  - component: {fileID: 325086}
+  - component: {fileID: 325085}
+  - component: {fileID: 325084}
+  - component: {fileID: 325083}
+  - component: {fileID: 325082}
   m_Layer: 0
   m_Name: Defensive Die 5
   m_TagString: Untagged
@@ -119,10 +120,10 @@ Transform:
   m_LocalRotation: {x: -0.3507266, y: 0.65821177, z: -0.5230242, w: 0.41254556}
   m_LocalPosition: {x: -1.8385084, y: 0.9312668, z: -0.3939913}
   m_LocalScale: {x: 50.000008, y: 50, z: 50.000015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 49
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &325082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,14 +170,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 325080}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -184,7 +187,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -203,14 +206,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 11116257}
-  - 33: {fileID: 11116262}
-  - 23: {fileID: 11116261}
-  - 65: {fileID: 11116260}
-  - 54: {fileID: 11116259}
-  - 114: {fileID: 11116258}
+  - component: {fileID: 11116257}
+  - component: {fileID: 11116262}
+  - component: {fileID: 11116261}
+  - component: {fileID: 11116260}
+  - component: {fileID: 11116259}
+  - component: {fileID: 11116258}
   m_Layer: 0
   m_Name: Defensive Die 39
   m_TagString: Untagged
@@ -227,10 +230,10 @@ Transform:
   m_LocalRotation: {x: 0.320525, y: -0.06586738, z: -0.6495299, w: 0.6863208}
   m_LocalPosition: {x: -3.2315302, y: 6.1121507, z: 2.416312}
   m_LocalScale: {x: 50.000008, y: 50.000008, z: 50.000004}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 83
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11116258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,14 +280,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 11116256}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -292,7 +297,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -311,14 +316,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 88287710}
-  - 33: {fileID: 88287715}
-  - 23: {fileID: 88287714}
-  - 65: {fileID: 88287713}
-  - 54: {fileID: 88287712}
-  - 114: {fileID: 88287711}
+  - component: {fileID: 88287710}
+  - component: {fileID: 88287715}
+  - component: {fileID: 88287714}
+  - component: {fileID: 88287713}
+  - component: {fileID: 88287712}
+  - component: {fileID: 88287711}
   m_Layer: 0
   m_Name: Offensive Die 26
   m_TagString: Untagged
@@ -335,10 +340,10 @@ Transform:
   m_LocalRotation: {x: 0.14952634, y: -0.77504486, z: 0.4123709, w: 0.45486006}
   m_LocalPosition: {x: -0.26101053, y: 2.4513993, z: 0.13749132}
   m_LocalScale: {x: 50.000034, y: 50.000004, z: 50.000015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &88287711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,14 +390,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 88287709}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -400,7 +407,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -419,14 +426,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 89549060}
-  - 33: {fileID: 89549065}
-  - 23: {fileID: 89549064}
-  - 65: {fileID: 89549063}
-  - 54: {fileID: 89549062}
-  - 114: {fileID: 89549061}
+  - component: {fileID: 89549060}
+  - component: {fileID: 89549065}
+  - component: {fileID: 89549064}
+  - component: {fileID: 89549063}
+  - component: {fileID: 89549062}
+  - component: {fileID: 89549061}
   m_Layer: 0
   m_Name: Defensive Die 17
   m_TagString: Untagged
@@ -443,10 +450,10 @@ Transform:
   m_LocalRotation: {x: -0.5809456, y: 0.7085984, z: -0.042341243, w: 0.3982435}
   m_LocalPosition: {x: -2.6746058, y: 3.5825362, z: 0.36739075}
   m_LocalScale: {x: 50.000023, y: 50.00002, z: 50.000046}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 61
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &89549061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,14 +500,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 89549059}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -508,7 +517,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -527,14 +536,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 121228232}
-  - 33: {fileID: 121228237}
-  - 23: {fileID: 121228236}
-  - 65: {fileID: 121228235}
-  - 54: {fileID: 121228234}
-  - 114: {fileID: 121228233}
+  - component: {fileID: 121228232}
+  - component: {fileID: 121228237}
+  - component: {fileID: 121228236}
+  - component: {fileID: 121228235}
+  - component: {fileID: 121228234}
+  - component: {fileID: 121228233}
   m_Layer: 0
   m_Name: Offensive Die 30
   m_TagString: Untagged
@@ -551,10 +560,10 @@ Transform:
   m_LocalRotation: {x: 0.58069956, y: 0.66079646, z: -0.4709874, w: 0.06562736}
   m_LocalPosition: {x: -1.602204, y: 7.070371, z: -0.34638232}
   m_LocalScale: {x: 49.99999, y: 49.999992, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &121228233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,14 +610,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 121228231}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -616,7 +627,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -635,14 +646,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 163149861}
-  - 33: {fileID: 163149866}
-  - 23: {fileID: 163149865}
-  - 65: {fileID: 163149864}
-  - 54: {fileID: 163149863}
-  - 114: {fileID: 163149862}
+  - component: {fileID: 163149861}
+  - component: {fileID: 163149866}
+  - component: {fileID: 163149865}
+  - component: {fileID: 163149864}
+  - component: {fileID: 163149863}
+  - component: {fileID: 163149862}
   m_Layer: 0
   m_Name: Defensive Die 36
   m_TagString: Untagged
@@ -659,10 +670,10 @@ Transform:
   m_LocalRotation: {x: -0.54607946, y: 0.5054514, z: 0.17549533, w: 0.6446066}
   m_LocalPosition: {x: -1.8992558, y: 4.804702, z: 4.172547}
   m_LocalScale: {x: 50.000008, y: 50.000015, z: 50.000027}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 80
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &163149862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,14 +720,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 163149860}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -724,7 +737,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -743,14 +756,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 171017702}
-  - 33: {fileID: 171017707}
-  - 23: {fileID: 171017706}
-  - 65: {fileID: 171017705}
-  - 54: {fileID: 171017704}
-  - 114: {fileID: 171017703}
+  - component: {fileID: 171017702}
+  - component: {fileID: 171017707}
+  - component: {fileID: 171017706}
+  - component: {fileID: 171017705}
+  - component: {fileID: 171017704}
+  - component: {fileID: 171017703}
   m_Layer: 0
   m_Name: Offensive Die 28
   m_TagString: Untagged
@@ -767,10 +780,10 @@ Transform:
   m_LocalRotation: {x: -0.2896089, y: -0.4381682, z: 0.8500676, w: 0.038992673}
   m_LocalPosition: {x: -0.30678153, y: 4.199536, z: -1.7082334}
   m_LocalScale: {x: 49.999973, y: 49.999985, z: 49.999992}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &171017703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,14 +830,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 171017701}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -832,7 +847,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -851,14 +866,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 175947071}
-  - 33: {fileID: 175947076}
-  - 23: {fileID: 175947075}
-  - 65: {fileID: 175947074}
-  - 54: {fileID: 175947073}
-  - 114: {fileID: 175947072}
+  - component: {fileID: 175947071}
+  - component: {fileID: 175947076}
+  - component: {fileID: 175947075}
+  - component: {fileID: 175947074}
+  - component: {fileID: 175947073}
+  - component: {fileID: 175947072}
   m_Layer: 0
   m_Name: Defensive Die 22
   m_TagString: Untagged
@@ -875,10 +890,10 @@ Transform:
   m_LocalRotation: {x: 0.7093055, y: -0.46925107, z: 0.42226276, w: 0.31366125}
   m_LocalPosition: {x: -2.482685, y: 8.136751, z: -1.2034367}
   m_LocalScale: {x: 50.000023, y: 50.00003, z: 50.000027}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 66
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &175947072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,14 +940,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 175947070}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -940,7 +957,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -959,14 +976,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 185232580}
-  - 33: {fileID: 185232585}
-  - 23: {fileID: 185232584}
-  - 65: {fileID: 185232583}
-  - 54: {fileID: 185232582}
-  - 114: {fileID: 185232581}
+  - component: {fileID: 185232580}
+  - component: {fileID: 185232585}
+  - component: {fileID: 185232584}
+  - component: {fileID: 185232583}
+  - component: {fileID: 185232582}
+  - component: {fileID: 185232581}
   m_Layer: 0
   m_Name: Defensive Die 11
   m_TagString: Untagged
@@ -983,10 +1000,10 @@ Transform:
   m_LocalRotation: {x: -0.6109039, y: -0.45957416, z: -0.500616, w: 0.40616703}
   m_LocalPosition: {x: -3.1479492, y: 3.5936623, z: 1.7587631}
   m_LocalScale: {x: 50.000004, y: 50.000015, z: 50.00001}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 55
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &185232581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1033,14 +1050,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 185232579}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -1048,7 +1067,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1067,14 +1086,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 201937534}
-  - 33: {fileID: 201937539}
-  - 23: {fileID: 201937538}
-  - 65: {fileID: 201937537}
-  - 54: {fileID: 201937536}
-  - 114: {fileID: 201937535}
+  - component: {fileID: 201937534}
+  - component: {fileID: 201937539}
+  - component: {fileID: 201937538}
+  - component: {fileID: 201937537}
+  - component: {fileID: 201937536}
+  - component: {fileID: 201937535}
   m_Layer: 0
   m_Name: Offensive Die 31
   m_TagString: Untagged
@@ -1091,10 +1110,10 @@ Transform:
   m_LocalRotation: {x: 0.48130167, y: -0.49921775, z: -0.5418936, w: 0.47484908}
   m_LocalPosition: {x: -2.7995062, y: 4.108495, z: 0.047625292}
   m_LocalScale: {x: 49.999992, y: 49.999992, z: 49.999985}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &201937535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1141,14 +1160,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 201937533}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -1156,7 +1177,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1175,14 +1196,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 216958345}
-  - 33: {fileID: 216958350}
-  - 23: {fileID: 216958349}
-  - 65: {fileID: 216958348}
-  - 54: {fileID: 216958347}
-  - 114: {fileID: 216958346}
+  - component: {fileID: 216958345}
+  - component: {fileID: 216958350}
+  - component: {fileID: 216958349}
+  - component: {fileID: 216958348}
+  - component: {fileID: 216958347}
+  - component: {fileID: 216958346}
   m_Layer: 0
   m_Name: Defensive Die 37
   m_TagString: Untagged
@@ -1199,10 +1220,10 @@ Transform:
   m_LocalRotation: {x: -0.6603594, y: 0.40302405, z: -0.11004494, w: 0.6240091}
   m_LocalPosition: {x: 1.0046222, y: 9.5978985, z: 0.7364118}
   m_LocalScale: {x: 50.000008, y: 50.000023, z: 50.00002}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 81
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &216958346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1249,14 +1270,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 216958344}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -1264,7 +1287,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1283,14 +1306,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 250742338}
-  - 33: {fileID: 250742343}
-  - 23: {fileID: 250742342}
-  - 65: {fileID: 250742341}
-  - 54: {fileID: 250742340}
-  - 114: {fileID: 250742339}
+  - component: {fileID: 250742338}
+  - component: {fileID: 250742343}
+  - component: {fileID: 250742342}
+  - component: {fileID: 250742341}
+  - component: {fileID: 250742340}
+  - component: {fileID: 250742339}
   m_Layer: 0
   m_Name: Offensive Die 22
   m_TagString: Untagged
@@ -1307,10 +1330,10 @@ Transform:
   m_LocalRotation: {x: 0.6332992, y: 0.34043378, z: 0.5186132, w: 0.46268502}
   m_LocalPosition: {x: -2.4434125, y: 4.979876, z: 1.052912}
   m_LocalScale: {x: 50.000004, y: 50.000023, z: 50.000027}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &250742339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1357,14 +1380,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 250742337}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -1372,7 +1397,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1391,14 +1416,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 257816786}
-  - 33: {fileID: 257816791}
-  - 23: {fileID: 257816790}
-  - 65: {fileID: 257816789}
-  - 54: {fileID: 257816788}
-  - 114: {fileID: 257816787}
+  - component: {fileID: 257816786}
+  - component: {fileID: 257816791}
+  - component: {fileID: 257816790}
+  - component: {fileID: 257816789}
+  - component: {fileID: 257816788}
+  - component: {fileID: 257816787}
   m_Layer: 0
   m_Name: Offensive Die 35
   m_TagString: Untagged
@@ -1415,10 +1440,10 @@ Transform:
   m_LocalRotation: {x: 0.24931705, y: -0.5845672, z: 0.5208764, w: 0.569921}
   m_LocalPosition: {x: -2.6813586, y: 4.5662317, z: 0.5838036}
   m_LocalScale: {x: 50, y: 49.999992, z: 49.999992}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &257816787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1465,14 +1490,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 257816785}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -1480,7 +1507,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1499,14 +1526,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 268591108}
-  - 33: {fileID: 268591113}
-  - 23: {fileID: 268591112}
-  - 65: {fileID: 268591111}
-  - 54: {fileID: 268591110}
-  - 114: {fileID: 268591109}
+  - component: {fileID: 268591108}
+  - component: {fileID: 268591113}
+  - component: {fileID: 268591112}
+  - component: {fileID: 268591111}
+  - component: {fileID: 268591110}
+  - component: {fileID: 268591109}
   m_Layer: 0
   m_Name: Defensive Die 34
   m_TagString: Untagged
@@ -1523,10 +1550,10 @@ Transform:
   m_LocalRotation: {x: -0.021707572, y: 0.540189, z: -0.43759325, w: 0.71849614}
   m_LocalPosition: {x: 4.208356, y: 5.068839, z: 0.5990457}
   m_LocalScale: {x: 50, y: 50, z: 49.99999}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 78
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &268591109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,14 +1600,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 268591107}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -1588,7 +1617,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1607,11 +1636,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 273246549}
-  - 222: {fileID: 273246551}
-  - 114: {fileID: 273246550}
+  - component: {fileID: 273246549}
+  - component: {fileID: 273246551}
+  - component: {fileID: 273246550}
   m_Layer: 5
   m_Name: Offense Text
   m_TagString: Untagged
@@ -1628,10 +1657,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1737147111}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 50, y: 150}
@@ -1681,14 +1710,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 278420002}
-  - 33: {fileID: 278420007}
-  - 23: {fileID: 278420006}
-  - 65: {fileID: 278420005}
-  - 54: {fileID: 278420004}
-  - 114: {fileID: 278420003}
+  - component: {fileID: 278420002}
+  - component: {fileID: 278420007}
+  - component: {fileID: 278420006}
+  - component: {fileID: 278420005}
+  - component: {fileID: 278420004}
+  - component: {fileID: 278420003}
   m_Layer: 0
   m_Name: Defensive Die 20
   m_TagString: Untagged
@@ -1705,10 +1734,10 @@ Transform:
   m_LocalRotation: {x: -0.34201688, y: 0.53381455, z: -0.77201486, w: 0.04538352}
   m_LocalPosition: {x: 1.2583754, y: 1.5753033, z: 1.9498262}
   m_LocalScale: {x: 50.00003, y: 50.000046, z: 50.000023}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 64
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &278420003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1755,14 +1784,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 278420001}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -1770,7 +1801,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1789,14 +1820,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 308533266}
-  - 33: {fileID: 308533271}
-  - 23: {fileID: 308533270}
-  - 65: {fileID: 308533269}
-  - 54: {fileID: 308533268}
-  - 114: {fileID: 308533267}
+  - component: {fileID: 308533266}
+  - component: {fileID: 308533271}
+  - component: {fileID: 308533270}
+  - component: {fileID: 308533269}
+  - component: {fileID: 308533268}
+  - component: {fileID: 308533267}
   m_Layer: 0
   m_Name: Offensive Die 23
   m_TagString: Untagged
@@ -1813,10 +1844,10 @@ Transform:
   m_LocalRotation: {x: -0.81940186, y: -0.4222738, z: -0.003924478, w: 0.38762113}
   m_LocalPosition: {x: 2.4614446, y: 5.9558816, z: -0.5852448}
   m_LocalScale: {x: 50, y: 50.000015, z: 50.00004}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &308533267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1863,14 +1894,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 308533265}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -1878,7 +1911,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1897,14 +1930,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 387737906}
-  - 33: {fileID: 387737911}
-  - 23: {fileID: 387737910}
-  - 65: {fileID: 387737909}
-  - 54: {fileID: 387737908}
-  - 114: {fileID: 387737907}
+  - component: {fileID: 387737906}
+  - component: {fileID: 387737911}
+  - component: {fileID: 387737910}
+  - component: {fileID: 387737909}
+  - component: {fileID: 387737908}
+  - component: {fileID: 387737907}
   m_Layer: 0
   m_Name: Offensive Die 33
   m_TagString: Untagged
@@ -1921,10 +1954,10 @@ Transform:
   m_LocalRotation: {x: 0.36942694, y: -0.6506621, z: 0.43964335, w: 0.49686646}
   m_LocalPosition: {x: 2.113376, y: 5.897862, z: -1.8686711}
   m_LocalScale: {x: 50.000015, y: 50.000008, z: 50.000015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &387737907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1971,14 +2004,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 387737905}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -1986,7 +2021,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2005,12 +2040,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 394139613}
-  - 33: {fileID: 394139616}
-  - 65: {fileID: 394139615}
-  - 23: {fileID: 394139614}
+  - component: {fileID: 394139613}
+  - component: {fileID: 394139616}
+  - component: {fileID: 394139615}
+  - component: {fileID: 394139614}
   m_Layer: 0
   m_Name: Table Edge
   m_TagString: Untagged
@@ -2027,10 +2062,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.75, z: 0.17}
   m_LocalScale: {x: 0.56, y: 0.5, z: 0.02}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 551706905}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &394139614
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2045,7 +2080,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: f81acce8074af2540846d0a25d02e503, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -2053,7 +2090,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2084,14 +2121,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 401470489}
-  - 33: {fileID: 401470494}
-  - 23: {fileID: 401470493}
-  - 65: {fileID: 401470492}
-  - 54: {fileID: 401470491}
-  - 114: {fileID: 401470490}
+  - component: {fileID: 401470489}
+  - component: {fileID: 401470494}
+  - component: {fileID: 401470493}
+  - component: {fileID: 401470492}
+  - component: {fileID: 401470491}
+  - component: {fileID: 401470490}
   m_Layer: 0
   m_Name: Defensive Die 19
   m_TagString: Untagged
@@ -2108,10 +2145,10 @@ Transform:
   m_LocalRotation: {x: -0.629131, y: 0.5712082, z: -0.11039849, w: 0.51548773}
   m_LocalPosition: {x: 2.1351502, y: 1.251807, z: 0.68581766}
   m_LocalScale: {x: 50.000004, y: 50.000015, z: 50.000015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 63
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &401470490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2158,14 +2195,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 401470488}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -2173,7 +2212,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2192,14 +2231,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 405663041}
-  - 33: {fileID: 405663046}
-  - 23: {fileID: 405663045}
-  - 65: {fileID: 405663044}
-  - 54: {fileID: 405663043}
-  - 114: {fileID: 405663042}
+  - component: {fileID: 405663041}
+  - component: {fileID: 405663046}
+  - component: {fileID: 405663045}
+  - component: {fileID: 405663044}
+  - component: {fileID: 405663043}
+  - component: {fileID: 405663042}
   m_Layer: 0
   m_Name: Offensive Die 2
   m_TagString: Untagged
@@ -2216,10 +2255,10 @@ Transform:
   m_LocalRotation: {x: 0.026517201, y: 0.81047887, z: -0.3208099, w: 0.48938936}
   m_LocalPosition: {x: 1.4929085, y: 3.4178548, z: -0.06352882}
   m_LocalScale: {x: 50.000027, y: 50.000008, z: 50.000023}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &405663042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2266,14 +2305,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 405663040}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -2281,7 +2322,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2300,11 +2341,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 409807314}
-  - 222: {fileID: 409807316}
-  - 114: {fileID: 409807315}
+  - component: {fileID: 409807314}
+  - component: {fileID: 409807316}
+  - component: {fileID: 409807315}
   m_Layer: 5
   m_Name: Battle Outcome Text
   m_TagString: Untagged
@@ -2321,10 +2362,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1737147111}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -2374,14 +2415,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 443318126}
-  - 33: {fileID: 443318131}
-  - 23: {fileID: 443318130}
-  - 65: {fileID: 443318129}
-  - 54: {fileID: 443318128}
-  - 114: {fileID: 443318127}
+  - component: {fileID: 443318126}
+  - component: {fileID: 443318131}
+  - component: {fileID: 443318130}
+  - component: {fileID: 443318129}
+  - component: {fileID: 443318128}
+  - component: {fileID: 443318127}
   m_Layer: 0
   m_Name: Offensive Die 12
   m_TagString: Untagged
@@ -2398,10 +2439,10 @@ Transform:
   m_LocalRotation: {x: 0.60955566, y: -0.76375794, z: -0.14707856, w: 0.15324377}
   m_LocalPosition: {x: 1.3916508, y: 7.395989, z: 0.030566225}
   m_LocalScale: {x: 50.00002, y: 50.000008, z: 50.00002}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &443318127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2448,14 +2489,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 443318125}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -2463,7 +2506,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2482,14 +2525,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 448954778}
-  - 33: {fileID: 448954783}
-  - 23: {fileID: 448954782}
-  - 65: {fileID: 448954781}
-  - 54: {fileID: 448954780}
-  - 114: {fileID: 448954779}
+  - component: {fileID: 448954778}
+  - component: {fileID: 448954783}
+  - component: {fileID: 448954782}
+  - component: {fileID: 448954781}
+  - component: {fileID: 448954780}
+  - component: {fileID: 448954779}
   m_Layer: 0
   m_Name: Defensive Die 29
   m_TagString: Untagged
@@ -2506,10 +2549,10 @@ Transform:
   m_LocalRotation: {x: -0.80672103, y: -0.43462312, z: -0.39632654, w: 0.05682632}
   m_LocalPosition: {x: -0.7336914, y: 8.407841, z: 0.41349024}
   m_LocalScale: {x: 49.999996, y: 50.000015, z: 50.00001}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 73
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &448954779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2556,14 +2599,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 448954777}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -2571,7 +2616,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2590,14 +2635,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 455080272}
-  - 33: {fileID: 455080277}
-  - 23: {fileID: 455080276}
-  - 65: {fileID: 455080275}
-  - 54: {fileID: 455080274}
-  - 114: {fileID: 455080273}
+  - component: {fileID: 455080272}
+  - component: {fileID: 455080277}
+  - component: {fileID: 455080276}
+  - component: {fileID: 455080275}
+  - component: {fileID: 455080274}
+  - component: {fileID: 455080273}
   m_Layer: 0
   m_Name: Offensive Die 8
   m_TagString: Untagged
@@ -2614,10 +2659,10 @@ Transform:
   m_LocalRotation: {x: -0.442909, y: 0.5839208, z: -0.21774606, w: 0.64455783}
   m_LocalPosition: {x: 2.388391, y: 3.9472768, z: 0.2617441}
   m_LocalScale: {x: 50, y: 50.000008, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &455080273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2664,14 +2709,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 455080271}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -2679,7 +2726,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2698,14 +2745,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 511539477}
-  - 33: {fileID: 511539482}
-  - 23: {fileID: 511539481}
-  - 65: {fileID: 511539480}
-  - 54: {fileID: 511539479}
-  - 114: {fileID: 511539478}
+  - component: {fileID: 511539477}
+  - component: {fileID: 511539482}
+  - component: {fileID: 511539481}
+  - component: {fileID: 511539480}
+  - component: {fileID: 511539479}
+  - component: {fileID: 511539478}
   m_Layer: 0
   m_Name: Offensive Die 21
   m_TagString: Untagged
@@ -2722,10 +2769,10 @@ Transform:
   m_LocalRotation: {x: -0.07686065, y: -0.6193939, z: -0.50995654, w: 0.5919358}
   m_LocalPosition: {x: 1.3261003, y: 4.2616315, z: -2.5723317}
   m_LocalScale: {x: 50.000008, y: 50, z: 50.00001}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &511539478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2772,14 +2819,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 511539476}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -2787,7 +2836,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2806,13 +2855,13 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 551706905}
-  - 33: {fileID: 551706904}
-  - 65: {fileID: 551706903}
-  - 23: {fileID: 551706902}
-  - 54: {fileID: 551706906}
+  - component: {fileID: 551706905}
+  - component: {fileID: 551706904}
+  - component: {fileID: 551706903}
+  - component: {fileID: 551706902}
+  - component: {fileID: 551706906}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -2834,7 +2883,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: f81acce8074af2540846d0a25d02e503, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -2842,7 +2893,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -2877,7 +2928,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -25, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2051069687}
   - {fileID: 1501840347}
@@ -2885,6 +2935,7 @@ Transform:
   - {fileID: 394139613}
   m_Father: {fileID: 1242823768}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &551706906
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2905,14 +2956,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 574202117}
-  - 33: {fileID: 574202122}
-  - 23: {fileID: 574202121}
-  - 65: {fileID: 574202120}
-  - 54: {fileID: 574202119}
-  - 114: {fileID: 574202118}
+  - component: {fileID: 574202117}
+  - component: {fileID: 574202122}
+  - component: {fileID: 574202121}
+  - component: {fileID: 574202120}
+  - component: {fileID: 574202119}
+  - component: {fileID: 574202118}
   m_Layer: 0
   m_Name: Defensive Die 28
   m_TagString: Untagged
@@ -2929,10 +2980,10 @@ Transform:
   m_LocalRotation: {x: -0.0026582216, y: -0.5461468, z: 0.43403742, w: 0.7164692}
   m_LocalPosition: {x: -2.0388577, y: 9.284837, z: 0.6096829}
   m_LocalScale: {x: 50.000004, y: 50, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 72
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &574202118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2979,14 +3030,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 574202116}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -2994,7 +3047,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3013,14 +3066,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 575707339}
-  - 33: {fileID: 575707344}
-  - 23: {fileID: 575707343}
-  - 65: {fileID: 575707342}
-  - 54: {fileID: 575707341}
-  - 114: {fileID: 575707340}
+  - component: {fileID: 575707339}
+  - component: {fileID: 575707344}
+  - component: {fileID: 575707343}
+  - component: {fileID: 575707342}
+  - component: {fileID: 575707341}
+  - component: {fileID: 575707340}
   m_Layer: 0
   m_Name: Offensive Die 3
   m_TagString: Untagged
@@ -3037,10 +3090,10 @@ Transform:
   m_LocalRotation: {x: 0.93213636, y: -0.36097732, z: -0.009267136, w: 0.027043445}
   m_LocalPosition: {x: 0.34213048, y: 7.142223, z: -0.363268}
   m_LocalScale: {x: 50, y: 50.000015, z: 50.000015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &575707340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3087,14 +3140,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 575707338}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -3102,7 +3157,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3121,14 +3176,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 592939872}
-  - 33: {fileID: 592939877}
-  - 23: {fileID: 592939876}
-  - 65: {fileID: 592939875}
-  - 54: {fileID: 592939874}
-  - 114: {fileID: 592939873}
+  - component: {fileID: 592939872}
+  - component: {fileID: 592939877}
+  - component: {fileID: 592939876}
+  - component: {fileID: 592939875}
+  - component: {fileID: 592939874}
+  - component: {fileID: 592939873}
   m_Layer: 0
   m_Name: Defensive Die 0
   m_TagString: Untagged
@@ -3145,10 +3200,10 @@ Transform:
   m_LocalRotation: {x: 0.42028168, y: 0.12895179, z: 0.84448636, w: 0.30590466}
   m_LocalPosition: {x: -3.8123178, y: 6.0929184, z: -0.9780593}
   m_LocalScale: {x: 50.000034, y: 50.000034, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &592939873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3195,14 +3250,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 592939871}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -3210,7 +3267,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3229,14 +3286,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 598339806}
-  - 33: {fileID: 598339811}
-  - 23: {fileID: 598339810}
-  - 65: {fileID: 598339809}
-  - 54: {fileID: 598339808}
-  - 114: {fileID: 598339807}
+  - component: {fileID: 598339806}
+  - component: {fileID: 598339811}
+  - component: {fileID: 598339810}
+  - component: {fileID: 598339809}
+  - component: {fileID: 598339808}
+  - component: {fileID: 598339807}
   m_Layer: 0
   m_Name: Offensive Die 11
   m_TagString: Untagged
@@ -3253,10 +3310,10 @@ Transform:
   m_LocalRotation: {x: 0.22621262, y: 0.45353228, z: -0.609632, w: 0.6094958}
   m_LocalPosition: {x: 0.101822585, y: 4.586686, z: 2.7278962}
   m_LocalScale: {x: 50, y: 50.000008, z: 49.999996}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &598339807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3303,14 +3360,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 598339805}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -3318,7 +3377,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3337,14 +3396,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 605094746}
-  - 33: {fileID: 605094751}
-  - 23: {fileID: 605094750}
-  - 65: {fileID: 605094749}
-  - 54: {fileID: 605094748}
-  - 114: {fileID: 605094747}
+  - component: {fileID: 605094746}
+  - component: {fileID: 605094751}
+  - component: {fileID: 605094750}
+  - component: {fileID: 605094749}
+  - component: {fileID: 605094748}
+  - component: {fileID: 605094747}
   m_Layer: 0
   m_Name: Defensive Die 25
   m_TagString: Untagged
@@ -3361,10 +3420,10 @@ Transform:
   m_LocalRotation: {x: -0.63474745, y: -0.74939114, z: -0.07878195, w: 0.17117856}
   m_LocalPosition: {x: 2.7596407, y: 6.7564845, z: 1.4099338}
   m_LocalScale: {x: 50.000023, y: 50.000023, z: 50.000046}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 69
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &605094747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3411,14 +3470,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 605094745}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -3426,7 +3487,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3445,14 +3506,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 643525860}
-  - 33: {fileID: 643525865}
-  - 23: {fileID: 643525864}
-  - 65: {fileID: 643525863}
-  - 54: {fileID: 643525862}
-  - 114: {fileID: 643525861}
+  - component: {fileID: 643525860}
+  - component: {fileID: 643525865}
+  - component: {fileID: 643525864}
+  - component: {fileID: 643525863}
+  - component: {fileID: 643525862}
+  - component: {fileID: 643525861}
   m_Layer: 0
   m_Name: Defensive Die 21
   m_TagString: Untagged
@@ -3469,10 +3530,10 @@ Transform:
   m_LocalRotation: {x: 0.5589842, y: -0.59167284, z: -0.37494588, w: 0.4437066}
   m_LocalPosition: {x: -1.4143991, y: 3.9718513, z: 2.4671092}
   m_LocalScale: {x: 50.000008, y: 50.000008, z: 50.000015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 65
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &643525861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3519,14 +3580,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 643525859}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -3534,7 +3597,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3553,14 +3616,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 704796726}
-  - 33: {fileID: 704796731}
-  - 23: {fileID: 704796730}
-  - 65: {fileID: 704796729}
-  - 54: {fileID: 704796728}
-  - 114: {fileID: 704796727}
+  - component: {fileID: 704796726}
+  - component: {fileID: 704796731}
+  - component: {fileID: 704796730}
+  - component: {fileID: 704796729}
+  - component: {fileID: 704796728}
+  - component: {fileID: 704796727}
   m_Layer: 0
   m_Name: Defensive Die 32
   m_TagString: Untagged
@@ -3577,10 +3640,10 @@ Transform:
   m_LocalRotation: {x: -0.551742, y: -0.19018078, z: -0.5715071, w: 0.57688105}
   m_LocalPosition: {x: 1.9598771, y: 5.1884656, z: -2.4300363}
   m_LocalScale: {x: 50.000015, y: 50.000027, z: 50.000023}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 76
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &704796727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3627,14 +3690,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 704796725}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -3642,7 +3707,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3661,14 +3726,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 708251112}
-  - 33: {fileID: 708251117}
-  - 23: {fileID: 708251116}
-  - 65: {fileID: 708251115}
-  - 54: {fileID: 708251114}
-  - 114: {fileID: 708251113}
+  - component: {fileID: 708251112}
+  - component: {fileID: 708251117}
+  - component: {fileID: 708251116}
+  - component: {fileID: 708251115}
+  - component: {fileID: 708251114}
+  - component: {fileID: 708251113}
   m_Layer: 0
   m_Name: Offensive Die 17
   m_TagString: Untagged
@@ -3685,10 +3750,10 @@ Transform:
   m_LocalRotation: {x: -0.6871204, y: -0.4694253, z: 0.4386713, w: 0.33922413}
   m_LocalPosition: {x: 0.6565267, y: 4.500286, z: 1.0081755}
   m_LocalScale: {x: 50.000008, y: 50.000015, z: 49.999992}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &708251113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3735,14 +3800,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 708251111}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -3750,7 +3817,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3769,14 +3836,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 709984708}
-  - 33: {fileID: 709984713}
-  - 23: {fileID: 709984712}
-  - 65: {fileID: 709984711}
-  - 54: {fileID: 709984710}
-  - 114: {fileID: 709984709}
+  - component: {fileID: 709984708}
+  - component: {fileID: 709984713}
+  - component: {fileID: 709984712}
+  - component: {fileID: 709984711}
+  - component: {fileID: 709984710}
+  - component: {fileID: 709984709}
   m_Layer: 0
   m_Name: Defensive Die 26
   m_TagString: Untagged
@@ -3793,10 +3860,10 @@ Transform:
   m_LocalRotation: {x: 0.47435525, y: -0.6880153, z: 0.4445201, w: 0.32252738}
   m_LocalPosition: {x: -2.0041425, y: 3.5393407, z: 1.6507722}
   m_LocalScale: {x: 49.99999, y: 49.999985, z: 49.999985}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 70
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &709984709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3843,14 +3910,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 709984707}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -3858,7 +3927,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3877,14 +3946,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 746946293}
-  - 33: {fileID: 746946298}
-  - 23: {fileID: 746946297}
-  - 65: {fileID: 746946296}
-  - 54: {fileID: 746946295}
-  - 114: {fileID: 746946294}
+  - component: {fileID: 746946293}
+  - component: {fileID: 746946298}
+  - component: {fileID: 746946297}
+  - component: {fileID: 746946296}
+  - component: {fileID: 746946295}
+  - component: {fileID: 746946294}
   m_Layer: 0
   m_Name: Defensive Die 23
   m_TagString: Untagged
@@ -3901,10 +3970,10 @@ Transform:
   m_LocalRotation: {x: 0.629277, y: 0.28309944, z: -0.45395455, w: 0.56372917}
   m_LocalPosition: {x: -0.4671685, y: 8.828468, z: -0.30199137}
   m_LocalScale: {x: 50.000015, y: 50.00003, z: 50.000015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 67
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &746946294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3951,14 +4020,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 746946292}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -3966,7 +4037,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -3985,14 +4056,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 800264922}
-  - 33: {fileID: 800264927}
-  - 23: {fileID: 800264926}
-  - 65: {fileID: 800264925}
-  - 54: {fileID: 800264924}
-  - 114: {fileID: 800264923}
+  - component: {fileID: 800264922}
+  - component: {fileID: 800264927}
+  - component: {fileID: 800264926}
+  - component: {fileID: 800264925}
+  - component: {fileID: 800264924}
+  - component: {fileID: 800264923}
   m_Layer: 0
   m_Name: Offensive Die 13
   m_TagString: Untagged
@@ -4009,10 +4080,10 @@ Transform:
   m_LocalRotation: {x: -0.014223783, y: -0.24619083, z: 0.9273262, w: 0.28152072}
   m_LocalPosition: {x: 1.6423647, y: 6.0627766, z: -1.739516}
   m_LocalScale: {x: 50.00003, y: 50.000015, z: 50.000008}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &800264923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4059,14 +4130,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 800264921}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -4074,7 +4147,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4093,14 +4166,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 804786448}
-  - 33: {fileID: 804786453}
-  - 23: {fileID: 804786452}
-  - 65: {fileID: 804786451}
-  - 54: {fileID: 804786450}
-  - 114: {fileID: 804786449}
+  - component: {fileID: 804786448}
+  - component: {fileID: 804786453}
+  - component: {fileID: 804786452}
+  - component: {fileID: 804786451}
+  - component: {fileID: 804786450}
+  - component: {fileID: 804786449}
   m_Layer: 0
   m_Name: Defensive Die 15
   m_TagString: Untagged
@@ -4117,10 +4190,10 @@ Transform:
   m_LocalRotation: {x: -0.43086737, y: -0.59031826, z: 0.028217705, w: 0.68196887}
   m_LocalPosition: {x: 0.3920859, y: 3.314733, z: -2.5840056}
   m_LocalScale: {x: 50.000015, y: 50, z: 50.00004}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 59
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &804786449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4167,14 +4240,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 804786447}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -4182,7 +4257,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4201,14 +4276,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 827453020}
-  - 33: {fileID: 827453025}
-  - 23: {fileID: 827453024}
-  - 65: {fileID: 827453023}
-  - 54: {fileID: 827453022}
-  - 114: {fileID: 827453021}
+  - component: {fileID: 827453020}
+  - component: {fileID: 827453025}
+  - component: {fileID: 827453024}
+  - component: {fileID: 827453023}
+  - component: {fileID: 827453022}
+  - component: {fileID: 827453021}
   m_Layer: 0
   m_Name: Defensive Die 8
   m_TagString: Untagged
@@ -4225,10 +4300,10 @@ Transform:
   m_LocalRotation: {x: -0.25246173, y: 0.83267283, z: -0.1562637, w: 0.46744063}
   m_LocalPosition: {x: -4.4267516, y: 4.1946516, z: 1.6094999}
   m_LocalScale: {x: 50.00002, y: 49.999996, z: 50.000027}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 52
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &827453021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4275,14 +4350,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 827453019}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -4290,7 +4367,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4309,14 +4386,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 838537454}
-  - 33: {fileID: 838537459}
-  - 23: {fileID: 838537458}
-  - 65: {fileID: 838537457}
-  - 54: {fileID: 838537456}
-  - 114: {fileID: 838537455}
+  - component: {fileID: 838537454}
+  - component: {fileID: 838537459}
+  - component: {fileID: 838537458}
+  - component: {fileID: 838537457}
+  - component: {fileID: 838537456}
+  - component: {fileID: 838537455}
   m_Layer: 0
   m_Name: Defensive Die 30
   m_TagString: Untagged
@@ -4333,10 +4410,10 @@ Transform:
   m_LocalRotation: {x: 0.8179546, y: 0.09011155, z: -0.25629172, w: 0.5070945}
   m_LocalPosition: {x: -4.300546, y: 5.715577, z: 0.22731142}
   m_LocalScale: {x: 50, y: 50.00004, z: 50.000034}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 74
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &838537455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4383,14 +4460,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 838537453}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -4398,7 +4477,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4417,14 +4496,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 841400676}
-  - 33: {fileID: 841400681}
-  - 23: {fileID: 841400680}
-  - 65: {fileID: 841400679}
-  - 54: {fileID: 841400678}
-  - 114: {fileID: 841400677}
+  - component: {fileID: 841400676}
+  - component: {fileID: 841400681}
+  - component: {fileID: 841400680}
+  - component: {fileID: 841400679}
+  - component: {fileID: 841400678}
+  - component: {fileID: 841400677}
   m_Layer: 0
   m_Name: Defensive Die 10
   m_TagString: Untagged
@@ -4441,10 +4520,10 @@ Transform:
   m_LocalRotation: {x: -0.24582781, y: -0.61001456, z: 0.48885188, w: 0.5731272}
   m_LocalPosition: {x: 1.9354184, y: 2.2198606, z: -1.1882693}
   m_LocalScale: {x: 49.99999, y: 50, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 54
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &841400677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4491,14 +4570,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 841400675}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -4506,7 +4587,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4525,14 +4606,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 846888154}
-  - 33: {fileID: 846888159}
-  - 23: {fileID: 846888158}
-  - 65: {fileID: 846888157}
-  - 54: {fileID: 846888156}
-  - 114: {fileID: 846888155}
+  - component: {fileID: 846888154}
+  - component: {fileID: 846888159}
+  - component: {fileID: 846888158}
+  - component: {fileID: 846888157}
+  - component: {fileID: 846888156}
+  - component: {fileID: 846888155}
   m_Layer: 0
   m_Name: Defensive Die 31
   m_TagString: Untagged
@@ -4549,10 +4630,10 @@ Transform:
   m_LocalRotation: {x: -0.76959467, y: -0.47131395, z: -0.25009972, w: 0.35076687}
   m_LocalPosition: {x: -0.5562966, y: 7.033456, z: 0.046810515}
   m_LocalScale: {x: 50.000008, y: 50.000015, z: 50.00003}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 75
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &846888155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4599,14 +4680,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 846888153}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -4614,7 +4697,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4633,14 +4716,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 862373520}
-  - 33: {fileID: 862373525}
-  - 23: {fileID: 862373524}
-  - 65: {fileID: 862373523}
-  - 54: {fileID: 862373522}
-  - 114: {fileID: 862373521}
+  - component: {fileID: 862373520}
+  - component: {fileID: 862373525}
+  - component: {fileID: 862373524}
+  - component: {fileID: 862373523}
+  - component: {fileID: 862373522}
+  - component: {fileID: 862373521}
   m_Layer: 0
   m_Name: Defensive Die 40
   m_TagString: Untagged
@@ -4657,10 +4740,10 @@ Transform:
   m_LocalRotation: {x: -0.17603724, y: -0.779973, z: 0.41877952, w: 0.43043792}
   m_LocalPosition: {x: -1.2638807, y: 6.427362, z: -4.120624}
   m_LocalScale: {x: 50.000023, y: 49.99999, z: 50.000015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 84
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &862373521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4707,14 +4790,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 862373519}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -4722,7 +4807,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4741,14 +4826,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 864818305}
-  - 33: {fileID: 864818310}
-  - 23: {fileID: 864818309}
-  - 65: {fileID: 864818308}
-  - 54: {fileID: 864818307}
-  - 114: {fileID: 864818306}
+  - component: {fileID: 864818305}
+  - component: {fileID: 864818310}
+  - component: {fileID: 864818309}
+  - component: {fileID: 864818308}
+  - component: {fileID: 864818307}
+  - component: {fileID: 864818306}
   m_Layer: 0
   m_Name: Offensive Die 24
   m_TagString: Untagged
@@ -4765,10 +4850,10 @@ Transform:
   m_LocalRotation: {x: -0.40551487, y: -0.5893296, z: 0.24217172, w: 0.65543973}
   m_LocalPosition: {x: 1.2470626, y: 3.451848, z: 0.24593478}
   m_LocalScale: {x: 50.000023, y: 49.999992, z: 50.000015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &864818306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4815,14 +4900,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 864818304}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -4830,7 +4917,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4849,14 +4936,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 871545033}
-  - 33: {fileID: 871545038}
-  - 23: {fileID: 871545037}
-  - 65: {fileID: 871545036}
-  - 54: {fileID: 871545035}
-  - 114: {fileID: 871545034}
+  - component: {fileID: 871545033}
+  - component: {fileID: 871545038}
+  - component: {fileID: 871545037}
+  - component: {fileID: 871545036}
+  - component: {fileID: 871545035}
+  - component: {fileID: 871545034}
   m_Layer: 0
   m_Name: Offensive Die 4
   m_TagString: Untagged
@@ -4873,10 +4960,10 @@ Transform:
   m_LocalRotation: {x: -0.84685856, y: 0.23580307, z: 0.24610326, w: 0.40824094}
   m_LocalPosition: {x: 1.2407329, y: 5.2782, z: 2.593602}
   m_LocalScale: {x: 49.999992, y: 49.99999, z: 49.999992}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &871545034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4923,14 +5010,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 871545032}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -4938,7 +5027,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -4957,14 +5046,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 883422089}
-  - 33: {fileID: 883422094}
-  - 23: {fileID: 883422093}
-  - 65: {fileID: 883422092}
-  - 54: {fileID: 883422091}
-  - 114: {fileID: 883422090}
+  - component: {fileID: 883422089}
+  - component: {fileID: 883422094}
+  - component: {fileID: 883422093}
+  - component: {fileID: 883422092}
+  - component: {fileID: 883422091}
+  - component: {fileID: 883422090}
   m_Layer: 0
   m_Name: Offensive Die 34
   m_TagString: Untagged
@@ -4981,10 +5070,10 @@ Transform:
   m_LocalRotation: {x: 0.46744198, y: -0.029132532, z: -0.73186797, w: 0.4949935}
   m_LocalPosition: {x: -0.3003792, y: 5.3415227, z: -2.8763306}
   m_LocalScale: {x: 49.99998, y: 49.999996, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &883422090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5031,14 +5120,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 883422088}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -5046,7 +5137,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -5065,14 +5156,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 890548587}
-  - 33: {fileID: 890548592}
-  - 23: {fileID: 890548591}
-  - 65: {fileID: 890548590}
-  - 54: {fileID: 890548589}
-  - 114: {fileID: 890548588}
+  - component: {fileID: 890548587}
+  - component: {fileID: 890548592}
+  - component: {fileID: 890548591}
+  - component: {fileID: 890548590}
+  - component: {fileID: 890548589}
+  - component: {fileID: 890548588}
   m_Layer: 0
   m_Name: Offensive Die 25
   m_TagString: Untagged
@@ -5089,10 +5180,10 @@ Transform:
   m_LocalRotation: {x: 0.37259543, y: 0.32223973, z: 0.84587777, w: 0.20451176}
   m_LocalPosition: {x: -0.5992285, y: 5.879523, z: -1.7020769}
   m_LocalScale: {x: 50.000015, y: 50.000004, z: 50.000004}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &890548588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5139,14 +5230,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 890548586}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -5154,7 +5247,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -5173,14 +5266,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1037485186}
-  - 33: {fileID: 1037485191}
-  - 23: {fileID: 1037485190}
-  - 65: {fileID: 1037485189}
-  - 54: {fileID: 1037485188}
-  - 114: {fileID: 1037485187}
+  - component: {fileID: 1037485186}
+  - component: {fileID: 1037485191}
+  - component: {fileID: 1037485190}
+  - component: {fileID: 1037485189}
+  - component: {fileID: 1037485188}
+  - component: {fileID: 1037485187}
   m_Layer: 0
   m_Name: Offensive Die 43
   m_TagString: Untagged
@@ -5197,10 +5290,10 @@ Transform:
   m_LocalRotation: {x: -0.79307324, y: -0.13754776, z: -0.5802657, w: 0.124125816}
   m_LocalPosition: {x: 2.76468, y: 4.4964585, z: -0.3358924}
   m_LocalScale: {x: 50.000008, y: 50.000015, z: 50.000008}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 43
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1037485187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5247,14 +5340,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1037485185}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -5262,7 +5357,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -5281,14 +5376,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1039755445}
-  - 33: {fileID: 1039755450}
-  - 23: {fileID: 1039755449}
-  - 65: {fileID: 1039755448}
-  - 54: {fileID: 1039755447}
-  - 114: {fileID: 1039755446}
+  - component: {fileID: 1039755445}
+  - component: {fileID: 1039755450}
+  - component: {fileID: 1039755449}
+  - component: {fileID: 1039755448}
+  - component: {fileID: 1039755447}
+  - component: {fileID: 1039755446}
   m_Layer: 0
   m_Name: Offensive Die 14
   m_TagString: Untagged
@@ -5305,10 +5400,10 @@ Transform:
   m_LocalRotation: {x: 0.94939, y: -0.2955713, z: 0.06865593, w: 0.08113387}
   m_LocalPosition: {x: 0.47285673, y: 7.273329, z: 0.44902226}
   m_LocalScale: {x: 50, y: 50.000053, z: 50.000057}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1039755446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5355,14 +5450,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1039755444}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -5370,7 +5467,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -5389,14 +5486,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1047561975}
-  - 33: {fileID: 1047561980}
-  - 23: {fileID: 1047561979}
-  - 65: {fileID: 1047561978}
-  - 54: {fileID: 1047561977}
-  - 114: {fileID: 1047561976}
+  - component: {fileID: 1047561975}
+  - component: {fileID: 1047561980}
+  - component: {fileID: 1047561979}
+  - component: {fileID: 1047561978}
+  - component: {fileID: 1047561977}
+  - component: {fileID: 1047561976}
   m_Layer: 0
   m_Name: Offensive Die 6
   m_TagString: Untagged
@@ -5413,10 +5510,10 @@ Transform:
   m_LocalRotation: {x: -0.37116972, y: 0.44397542, z: -0.75916463, w: 0.29797307}
   m_LocalPosition: {x: 1.8144774, y: 4.4289837, z: 0.60749304}
   m_LocalScale: {x: 50.000008, y: 50.000008, z: 50.000004}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1047561976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5463,14 +5560,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1047561974}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -5478,7 +5577,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -5497,14 +5596,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1050271926}
-  - 33: {fileID: 1050271931}
-  - 23: {fileID: 1050271930}
-  - 65: {fileID: 1050271929}
-  - 54: {fileID: 1050271928}
-  - 114: {fileID: 1050271927}
+  - component: {fileID: 1050271926}
+  - component: {fileID: 1050271931}
+  - component: {fileID: 1050271930}
+  - component: {fileID: 1050271929}
+  - component: {fileID: 1050271928}
+  - component: {fileID: 1050271927}
   m_Layer: 0
   m_Name: Defensive Die 4
   m_TagString: Untagged
@@ -5521,10 +5620,10 @@ Transform:
   m_LocalRotation: {x: -0.61387944, y: 0.5822765, z: 0.47111768, w: 0.24930747}
   m_LocalPosition: {x: 3.1946375, y: 4.717597, z: 1.0463421}
   m_LocalScale: {x: 49.999996, y: 50, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 48
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1050271927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5571,14 +5670,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1050271925}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -5586,7 +5687,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -5605,14 +5706,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1093254319}
-  - 33: {fileID: 1093254324}
-  - 23: {fileID: 1093254323}
-  - 65: {fileID: 1093254322}
-  - 54: {fileID: 1093254321}
-  - 114: {fileID: 1093254320}
+  - component: {fileID: 1093254319}
+  - component: {fileID: 1093254324}
+  - component: {fileID: 1093254323}
+  - component: {fileID: 1093254322}
+  - component: {fileID: 1093254321}
+  - component: {fileID: 1093254320}
   m_Layer: 0
   m_Name: Offensive Die 19
   m_TagString: Untagged
@@ -5629,10 +5730,10 @@ Transform:
   m_LocalRotation: {x: 0.12251851, y: -0.8045372, z: 0.06129635, w: 0.5778858}
   m_LocalPosition: {x: -0.97913253, y: 6.4668884, z: 0.7513978}
   m_LocalScale: {x: 50.00003, y: 50.000008, z: 50.00003}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1093254320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5679,14 +5780,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1093254318}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -5694,7 +5797,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -5713,11 +5816,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 1097884167}
-  - 222: {fileID: 1097884169}
-  - 114: {fileID: 1097884168}
+  - component: {fileID: 1097884167}
+  - component: {fileID: 1097884169}
+  - component: {fileID: 1097884168}
   m_Layer: 5
   m_Name: Defense Text
   m_TagString: Untagged
@@ -5734,10 +5837,10 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1737147111}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -50, y: 150}
@@ -5787,14 +5890,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1136958767}
-  - 33: {fileID: 1136958772}
-  - 23: {fileID: 1136958771}
-  - 65: {fileID: 1136958770}
-  - 54: {fileID: 1136958769}
-  - 114: {fileID: 1136958768}
+  - component: {fileID: 1136958767}
+  - component: {fileID: 1136958772}
+  - component: {fileID: 1136958771}
+  - component: {fileID: 1136958770}
+  - component: {fileID: 1136958769}
+  - component: {fileID: 1136958768}
   m_Layer: 0
   m_Name: Defensive Die 27
   m_TagString: Untagged
@@ -5811,10 +5914,10 @@ Transform:
   m_LocalRotation: {x: 0.6860027, y: -0.12917934, z: 0.49031177, w: 0.52183086}
   m_LocalPosition: {x: -3.91605, y: 3.7423778, z: 1.304497}
   m_LocalScale: {x: 50.00001, y: 50.000015, z: 50.000004}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 71
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1136958768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5861,14 +5964,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1136958766}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -5876,7 +5981,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -5895,14 +6000,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1168877934}
-  - 33: {fileID: 1168877939}
-  - 23: {fileID: 1168877938}
-  - 65: {fileID: 1168877937}
-  - 54: {fileID: 1168877936}
-  - 114: {fileID: 1168877935}
+  - component: {fileID: 1168877934}
+  - component: {fileID: 1168877939}
+  - component: {fileID: 1168877938}
+  - component: {fileID: 1168877937}
+  - component: {fileID: 1168877936}
+  - component: {fileID: 1168877935}
   m_Layer: 0
   m_Name: Defensive Die 35
   m_TagString: Untagged
@@ -5919,10 +6024,10 @@ Transform:
   m_LocalRotation: {x: -0.009622121, y: -0.28235763, z: -0.44562393, w: 0.849471}
   m_LocalPosition: {x: 0.77931637, y: 3.1266093, z: 2.434579}
   m_LocalScale: {x: 50, y: 50, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 79
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1168877935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5969,14 +6074,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1168877933}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -5984,7 +6091,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -6003,13 +6110,13 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1181464117}
-  - 20: {fileID: 1181464116}
-  - 92: {fileID: 1181464115}
-  - 124: {fileID: 1181464114}
-  - 81: {fileID: 1181464113}
+  - component: {fileID: 1181464117}
+  - component: {fileID: 1181464116}
+  - component: {fileID: 1181464115}
+  - component: {fileID: 1181464114}
+  - component: {fileID: 1181464113}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6054,7 +6161,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: -11.11
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -6081,19 +6188,19 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1242823768}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1187491098
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1187491100}
-  - 114: {fileID: 1187491099}
+  - component: {fileID: 1187491100}
+  - component: {fileID: 1187491099}
   m_Layer: 0
   m_Name: Battle Manager
   m_TagString: Untagged
@@ -6125,23 +6232,23 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1226022390
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1226022391}
-  - 33: {fileID: 1226022396}
-  - 23: {fileID: 1226022395}
-  - 65: {fileID: 1226022394}
-  - 54: {fileID: 1226022393}
-  - 114: {fileID: 1226022392}
+  - component: {fileID: 1226022391}
+  - component: {fileID: 1226022396}
+  - component: {fileID: 1226022395}
+  - component: {fileID: 1226022394}
+  - component: {fileID: 1226022393}
+  - component: {fileID: 1226022392}
   m_Layer: 0
   m_Name: Defensive Die 38
   m_TagString: Untagged
@@ -6158,10 +6265,10 @@ Transform:
   m_LocalRotation: {x: -0.34034765, y: 0.8557542, z: -0.0014413814, w: 0.38967457}
   m_LocalPosition: {x: 0.5234661, y: 5.9787683, z: 3.5236583}
   m_LocalScale: {x: 50.00004, y: 50, z: 50.000034}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 82
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1226022392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6208,14 +6315,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1226022390}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -6223,7 +6332,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -6242,9 +6351,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1242823768}
+  - component: {fileID: 1242823768}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -6261,26 +6370,26 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 551706905}
   - {fileID: 1181464117}
   - {fileID: 2102828649}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1263511390
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1263511391}
-  - 33: {fileID: 1263511396}
-  - 23: {fileID: 1263511395}
-  - 65: {fileID: 1263511394}
-  - 54: {fileID: 1263511393}
-  - 114: {fileID: 1263511392}
+  - component: {fileID: 1263511391}
+  - component: {fileID: 1263511396}
+  - component: {fileID: 1263511395}
+  - component: {fileID: 1263511394}
+  - component: {fileID: 1263511393}
+  - component: {fileID: 1263511392}
   m_Layer: 0
   m_Name: Defensive Die 24
   m_TagString: Untagged
@@ -6297,10 +6406,10 @@ Transform:
   m_LocalRotation: {x: 0.42478672, y: -0.8800654, z: -0.10696135, w: 0.18330419}
   m_LocalPosition: {x: -3.096239, y: 7.836237, z: 2.3802493}
   m_LocalScale: {x: 50.000015, y: 50.00001, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 68
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1263511392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6347,14 +6456,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1263511390}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -6362,7 +6473,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -6381,14 +6492,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1282253925}
-  - 33: {fileID: 1282253930}
-  - 23: {fileID: 1282253929}
-  - 65: {fileID: 1282253928}
-  - 54: {fileID: 1282253927}
-  - 114: {fileID: 1282253926}
+  - component: {fileID: 1282253925}
+  - component: {fileID: 1282253930}
+  - component: {fileID: 1282253929}
+  - component: {fileID: 1282253928}
+  - component: {fileID: 1282253927}
+  - component: {fileID: 1282253926}
   m_Layer: 0
   m_Name: Offensive Die 27
   m_TagString: Untagged
@@ -6405,10 +6516,10 @@ Transform:
   m_LocalRotation: {x: 0.8303678, y: 0.4647872, z: -0.26224566, w: 0.16027938}
   m_LocalPosition: {x: 0.37870258, y: 6.894483, z: -0.17284302}
   m_LocalScale: {x: 50.000008, y: 50.000027, z: 50.00004}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1282253926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6455,14 +6566,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1282253924}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -6470,7 +6583,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -6489,14 +6602,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1292256848}
-  - 33: {fileID: 1292256853}
-  - 23: {fileID: 1292256852}
-  - 65: {fileID: 1292256851}
-  - 54: {fileID: 1292256850}
-  - 114: {fileID: 1292256849}
+  - component: {fileID: 1292256848}
+  - component: {fileID: 1292256853}
+  - component: {fileID: 1292256852}
+  - component: {fileID: 1292256851}
+  - component: {fileID: 1292256850}
+  - component: {fileID: 1292256849}
   m_Layer: 0
   m_Name: Offensive Die 20
   m_TagString: Untagged
@@ -6513,10 +6626,10 @@ Transform:
   m_LocalRotation: {x: -0.61384094, y: 0.53517365, z: -0.13175611, w: 0.5651803}
   m_LocalPosition: {x: -1.4116807, y: 5.56626, z: -1.0041015}
   m_LocalScale: {x: 49.999996, y: 50, z: 49.999992}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1292256849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6563,14 +6676,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1292256847}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -6578,7 +6693,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -6597,14 +6712,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1300090026}
-  - 33: {fileID: 1300090031}
-  - 23: {fileID: 1300090030}
-  - 65: {fileID: 1300090029}
-  - 54: {fileID: 1300090028}
-  - 114: {fileID: 1300090027}
+  - component: {fileID: 1300090026}
+  - component: {fileID: 1300090031}
+  - component: {fileID: 1300090030}
+  - component: {fileID: 1300090029}
+  - component: {fileID: 1300090028}
+  - component: {fileID: 1300090027}
   m_Layer: 0
   m_Name: Offensive Die 37
   m_TagString: Untagged
@@ -6621,10 +6736,10 @@ Transform:
   m_LocalRotation: {x: -0.49349195, y: -0.22123365, z: -0.7681983, w: 0.34262636}
   m_LocalPosition: {x: -1.9236114, y: 5.3779387, z: 0.6230935}
   m_LocalScale: {x: 50.00002, y: 50.000046, z: 50.000015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1300090027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6671,14 +6786,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1300090025}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -6686,7 +6803,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -6705,14 +6822,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1311828084}
-  - 33: {fileID: 1311828089}
-  - 23: {fileID: 1311828088}
-  - 65: {fileID: 1311828087}
-  - 54: {fileID: 1311828086}
-  - 114: {fileID: 1311828085}
+  - component: {fileID: 1311828084}
+  - component: {fileID: 1311828089}
+  - component: {fileID: 1311828088}
+  - component: {fileID: 1311828087}
+  - component: {fileID: 1311828086}
+  - component: {fileID: 1311828085}
   m_Layer: 0
   m_Name: Defensive Die 42
   m_TagString: Untagged
@@ -6729,10 +6846,10 @@ Transform:
   m_LocalRotation: {x: 0.6832218, y: 0.557639, z: 0.33830482, w: 0.32832387}
   m_LocalPosition: {x: -1.4730583, y: 3.3963454, z: 1.9901683}
   m_LocalScale: {x: 50, y: 50.000015, z: 50.000008}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 86
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1311828085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6779,14 +6896,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1311828083}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -6794,7 +6913,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -6813,14 +6932,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1343294526}
-  - 33: {fileID: 1343294531}
-  - 23: {fileID: 1343294530}
-  - 65: {fileID: 1343294529}
-  - 54: {fileID: 1343294528}
-  - 114: {fileID: 1343294527}
+  - component: {fileID: 1343294526}
+  - component: {fileID: 1343294531}
+  - component: {fileID: 1343294530}
+  - component: {fileID: 1343294529}
+  - component: {fileID: 1343294528}
+  - component: {fileID: 1343294527}
   m_Layer: 0
   m_Name: Offensive Die 1
   m_TagString: Untagged
@@ -6837,10 +6956,10 @@ Transform:
   m_LocalRotation: {x: -0.401053, y: -0.7756331, z: -0.35492575, w: 0.33403218}
   m_LocalPosition: {x: 0.27943236, y: 4.7420554, z: 2.7087293}
   m_LocalScale: {x: 50, y: 50, z: 49.999992}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1343294527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6887,14 +7006,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1343294525}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -6902,7 +7023,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -6921,14 +7042,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1387943414}
-  - 33: {fileID: 1387943419}
-  - 23: {fileID: 1387943418}
-  - 65: {fileID: 1387943417}
-  - 54: {fileID: 1387943416}
-  - 114: {fileID: 1387943415}
+  - component: {fileID: 1387943414}
+  - component: {fileID: 1387943419}
+  - component: {fileID: 1387943418}
+  - component: {fileID: 1387943417}
+  - component: {fileID: 1387943416}
+  - component: {fileID: 1387943415}
   m_Layer: 0
   m_Name: Defensive Die 1
   m_TagString: Untagged
@@ -6945,10 +7066,10 @@ Transform:
   m_LocalRotation: {x: -0.86687773, y: 0.054302428, z: 0.28416824, w: 0.40598354}
   m_LocalPosition: {x: -3.4040895, y: 6.8354325, z: 0.4556137}
   m_LocalScale: {x: 49.999992, y: 49.999996, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1387943415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6995,14 +7116,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1387943413}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -7010,7 +7133,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -7029,14 +7152,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1432584405}
-  - 33: {fileID: 1432584410}
-  - 23: {fileID: 1432584409}
-  - 65: {fileID: 1432584408}
-  - 54: {fileID: 1432584407}
-  - 114: {fileID: 1432584406}
+  - component: {fileID: 1432584405}
+  - component: {fileID: 1432584410}
+  - component: {fileID: 1432584409}
+  - component: {fileID: 1432584408}
+  - component: {fileID: 1432584407}
+  - component: {fileID: 1432584406}
   m_Layer: 0
   m_Name: Offensive Die 10
   m_TagString: Untagged
@@ -7053,10 +7176,10 @@ Transform:
   m_LocalRotation: {x: 0.5379096, y: -0.5471774, z: -0.6146079, w: 0.18305011}
   m_LocalPosition: {x: 1.6153302, y: 7.1441317, z: -0.8483703}
   m_LocalScale: {x: 50, y: 49.999992, z: 50.000008}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1432584406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7103,14 +7226,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1432584404}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -7118,7 +7243,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -7137,14 +7262,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1434194641}
-  - 33: {fileID: 1434194646}
-  - 23: {fileID: 1434194645}
-  - 65: {fileID: 1434194644}
-  - 54: {fileID: 1434194643}
-  - 114: {fileID: 1434194642}
+  - component: {fileID: 1434194641}
+  - component: {fileID: 1434194646}
+  - component: {fileID: 1434194645}
+  - component: {fileID: 1434194644}
+  - component: {fileID: 1434194643}
+  - component: {fileID: 1434194642}
   m_Layer: 0
   m_Name: Offensive Die 16
   m_TagString: Untagged
@@ -7161,10 +7286,10 @@ Transform:
   m_LocalRotation: {x: 0.665664, y: -0.6792939, z: 0.13078128, w: 0.27990624}
   m_LocalPosition: {x: -0.15024541, y: 5.8225155, z: 0.5214779}
   m_LocalScale: {x: 50, y: 50, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1434194642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7211,14 +7336,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1434194640}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -7226,7 +7353,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -7245,12 +7372,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1444046025}
-  - 33: {fileID: 1444046028}
-  - 65: {fileID: 1444046027}
-  - 23: {fileID: 1444046026}
+  - component: {fileID: 1444046025}
+  - component: {fileID: 1444046028}
+  - component: {fileID: 1444046027}
+  - component: {fileID: 1444046026}
   m_Layer: 0
   m_Name: Table Edge
   m_TagString: Untagged
@@ -7267,10 +7394,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.75, z: -0.172}
   m_LocalScale: {x: 0.56, y: 0.5, z: 0.02}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 551706905}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1444046026
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7285,7 +7412,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: f81acce8074af2540846d0a25d02e503, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -7293,7 +7422,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -7324,14 +7453,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1464067823}
-  - 33: {fileID: 1464067828}
-  - 23: {fileID: 1464067827}
-  - 65: {fileID: 1464067826}
-  - 54: {fileID: 1464067825}
-  - 114: {fileID: 1464067824}
+  - component: {fileID: 1464067823}
+  - component: {fileID: 1464067828}
+  - component: {fileID: 1464067827}
+  - component: {fileID: 1464067826}
+  - component: {fileID: 1464067825}
+  - component: {fileID: 1464067824}
   m_Layer: 0
   m_Name: Offensive Die 5
   m_TagString: Untagged
@@ -7348,10 +7477,10 @@ Transform:
   m_LocalRotation: {x: -0.6018117, y: 0.22084692, z: 0.49587303, w: 0.58579797}
   m_LocalPosition: {x: 0.42770582, y: 3.4165564, z: -1.1026459}
   m_LocalScale: {x: 49.999996, y: 50, z: 49.999996}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1464067824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7398,14 +7527,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1464067822}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -7413,7 +7544,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -7432,14 +7563,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1473082075}
-  - 33: {fileID: 1473082080}
-  - 23: {fileID: 1473082079}
-  - 65: {fileID: 1473082078}
-  - 54: {fileID: 1473082077}
-  - 114: {fileID: 1473082076}
+  - component: {fileID: 1473082075}
+  - component: {fileID: 1473082080}
+  - component: {fileID: 1473082079}
+  - component: {fileID: 1473082078}
+  - component: {fileID: 1473082077}
+  - component: {fileID: 1473082076}
   m_Layer: 0
   m_Name: Defensive Die 16
   m_TagString: Untagged
@@ -7456,10 +7587,10 @@ Transform:
   m_LocalRotation: {x: -0.1020142, y: 0.89221025, z: -0.30595145, w: 0.31614512}
   m_LocalPosition: {x: -0.34555155, y: 7.366329, z: 2.5871859}
   m_LocalScale: {x: 50, y: 50.000008, z: 50.000015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 60
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1473082076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7506,14 +7637,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1473082074}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -7521,7 +7654,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -7540,14 +7673,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1492294466}
-  - 33: {fileID: 1492294471}
-  - 23: {fileID: 1492294470}
-  - 65: {fileID: 1492294469}
-  - 54: {fileID: 1492294468}
-  - 114: {fileID: 1492294467}
+  - component: {fileID: 1492294466}
+  - component: {fileID: 1492294471}
+  - component: {fileID: 1492294470}
+  - component: {fileID: 1492294469}
+  - component: {fileID: 1492294468}
+  - component: {fileID: 1492294467}
   m_Layer: 0
   m_Name: Defensive Die 13
   m_TagString: Untagged
@@ -7564,10 +7697,10 @@ Transform:
   m_LocalRotation: {x: 0.56030524, y: -0.71481466, z: 0.37067378, w: 0.19416264}
   m_LocalPosition: {x: -1.9922323, y: 4.1843257, z: 3.345842}
   m_LocalScale: {x: 50.000034, y: 50.00003, z: 50.000046}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 57
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1492294467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7614,14 +7747,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1492294465}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -7629,7 +7764,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -7648,14 +7783,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1497106462}
-  - 33: {fileID: 1497106467}
-  - 23: {fileID: 1497106466}
-  - 65: {fileID: 1497106465}
-  - 54: {fileID: 1497106464}
-  - 114: {fileID: 1497106463}
+  - component: {fileID: 1497106462}
+  - component: {fileID: 1497106467}
+  - component: {fileID: 1497106466}
+  - component: {fileID: 1497106465}
+  - component: {fileID: 1497106464}
+  - component: {fileID: 1497106463}
   m_Layer: 0
   m_Name: Offensive Die 15
   m_TagString: Untagged
@@ -7672,10 +7807,10 @@ Transform:
   m_LocalRotation: {x: 0.5592065, y: -0.8096709, z: 0.042999584, w: 0.17283563}
   m_LocalPosition: {x: 0.38517505, y: 4.478003, z: -1.917714}
   m_LocalScale: {x: 50, y: 50.000015, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1497106463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7722,14 +7857,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1497106461}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -7737,7 +7874,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -7756,12 +7893,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1501840347}
-  - 33: {fileID: 1501840350}
-  - 65: {fileID: 1501840349}
-  - 23: {fileID: 1501840348}
+  - component: {fileID: 1501840347}
+  - component: {fileID: 1501840350}
+  - component: {fileID: 1501840349}
+  - component: {fileID: 1501840348}
   m_Layer: 0
   m_Name: Table Edge
   m_TagString: Untagged
@@ -7776,12 +7913,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1501840346}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.27, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0.226, y: 0.75, z: 0}
   m_LocalScale: {x: 0.02, y: 0.5, z: 0.35}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 551706905}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1501840348
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7796,7 +7933,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: f81acce8074af2540846d0a25d02e503, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -7804,7 +7943,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -7835,14 +7974,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1601661637}
-  - 33: {fileID: 1601661642}
-  - 23: {fileID: 1601661641}
-  - 65: {fileID: 1601661640}
-  - 54: {fileID: 1601661639}
-  - 114: {fileID: 1601661638}
+  - component: {fileID: 1601661637}
+  - component: {fileID: 1601661642}
+  - component: {fileID: 1601661641}
+  - component: {fileID: 1601661640}
+  - component: {fileID: 1601661639}
+  - component: {fileID: 1601661638}
   m_Layer: 0
   m_Name: Offensive Die 18
   m_TagString: Untagged
@@ -7859,10 +7998,10 @@ Transform:
   m_LocalRotation: {x: -0.64247155, y: 0.46464282, z: 0.102582924, w: 0.60067815}
   m_LocalPosition: {x: 0.24063943, y: 4.872302, z: -1.5674169}
   m_LocalScale: {x: 50.000008, y: 50.000015, z: 50.00002}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1601661638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7909,14 +8048,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1601661636}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -7924,7 +8065,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -7943,14 +8084,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1651589356}
-  - 33: {fileID: 1651589361}
-  - 23: {fileID: 1651589360}
-  - 65: {fileID: 1651589359}
-  - 54: {fileID: 1651589358}
-  - 114: {fileID: 1651589357}
+  - component: {fileID: 1651589356}
+  - component: {fileID: 1651589361}
+  - component: {fileID: 1651589360}
+  - component: {fileID: 1651589359}
+  - component: {fileID: 1651589358}
+  - component: {fileID: 1651589357}
   m_Layer: 0
   m_Name: Offensive Die 39
   m_TagString: Untagged
@@ -7967,10 +8108,10 @@ Transform:
   m_LocalRotation: {x: -0.061680343, y: 0.5629816, z: -0.56208223, w: 0.6027527}
   m_LocalPosition: {x: -1.562118, y: 5.585208, z: -0.78679264}
   m_LocalScale: {x: 49.999992, y: 49.999996, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1651589357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8017,14 +8158,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1651589355}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -8032,7 +8175,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -8051,14 +8194,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1651602812}
-  - 33: {fileID: 1651602817}
-  - 23: {fileID: 1651602816}
-  - 65: {fileID: 1651602815}
-  - 54: {fileID: 1651602814}
-  - 114: {fileID: 1651602813}
+  - component: {fileID: 1651602812}
+  - component: {fileID: 1651602817}
+  - component: {fileID: 1651602816}
+  - component: {fileID: 1651602815}
+  - component: {fileID: 1651602814}
+  - component: {fileID: 1651602813}
   m_Layer: 0
   m_Name: Offensive Die 9
   m_TagString: Untagged
@@ -8075,10 +8218,10 @@ Transform:
   m_LocalRotation: {x: -0.44298637, y: 0.4823209, z: 0.74580044, w: 0.12211222}
   m_LocalPosition: {x: 1.655206, y: 4.7970834, z: -2.2067332}
   m_LocalScale: {x: 50.00002, y: 50.000004, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1651602813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8125,14 +8268,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1651602811}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -8140,7 +8285,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -8159,14 +8304,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1679128872}
-  - 33: {fileID: 1679128877}
-  - 23: {fileID: 1679128876}
-  - 65: {fileID: 1679128875}
-  - 54: {fileID: 1679128874}
-  - 114: {fileID: 1679128873}
+  - component: {fileID: 1679128872}
+  - component: {fileID: 1679128877}
+  - component: {fileID: 1679128876}
+  - component: {fileID: 1679128875}
+  - component: {fileID: 1679128874}
+  - component: {fileID: 1679128873}
   m_Layer: 0
   m_Name: Defensive Die 12
   m_TagString: Untagged
@@ -8183,10 +8328,10 @@ Transform:
   m_LocalRotation: {x: 0.83961886, y: -0.1561917, z: -0.5163725, w: 0.06327612}
   m_LocalPosition: {x: 0.64044845, y: 6.500486, z: -4.212118}
   m_LocalScale: {x: 50.000008, y: 50.000046, z: 50.00001}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 56
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1679128873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8233,14 +8378,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1679128871}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -8248,7 +8395,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -8267,12 +8414,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 224: {fileID: 1737147111}
-  - 223: {fileID: 1737147110}
-  - 114: {fileID: 1737147109}
-  - 114: {fileID: 1737147108}
+  - component: {fileID: 1737147111}
+  - component: {fileID: 1737147110}
+  - component: {fileID: 1737147109}
+  - component: {fileID: 1737147108}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -8345,13 +8492,13 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1097884167}
   - {fileID: 273246549}
   - {fileID: 409807314}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -8362,14 +8509,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1740868315}
-  - 33: {fileID: 1740868320}
-  - 23: {fileID: 1740868319}
-  - 65: {fileID: 1740868318}
-  - 54: {fileID: 1740868317}
-  - 114: {fileID: 1740868316}
+  - component: {fileID: 1740868315}
+  - component: {fileID: 1740868320}
+  - component: {fileID: 1740868319}
+  - component: {fileID: 1740868318}
+  - component: {fileID: 1740868317}
+  - component: {fileID: 1740868316}
   m_Layer: 0
   m_Name: Offensive Die 36
   m_TagString: Untagged
@@ -8386,10 +8533,10 @@ Transform:
   m_LocalRotation: {x: 0.93095696, y: -0.0667639, z: -0.3538203, w: 0.060605053}
   m_LocalPosition: {x: 0.47367477, y: 2.7154226, z: 1.047988}
   m_LocalScale: {x: 50, y: 50.00003, z: 50.000023}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1740868316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8436,14 +8583,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1740868314}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -8451,7 +8600,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -8470,14 +8619,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1748530511}
-  - 33: {fileID: 1748530516}
-  - 23: {fileID: 1748530515}
-  - 65: {fileID: 1748530514}
-  - 54: {fileID: 1748530513}
-  - 114: {fileID: 1748530512}
+  - component: {fileID: 1748530511}
+  - component: {fileID: 1748530516}
+  - component: {fileID: 1748530515}
+  - component: {fileID: 1748530514}
+  - component: {fileID: 1748530513}
+  - component: {fileID: 1748530512}
   m_Layer: 0
   m_Name: Defensive Die 33
   m_TagString: Untagged
@@ -8494,10 +8643,10 @@ Transform:
   m_LocalRotation: {x: -0.57836103, y: -0.76736516, z: 0.21773693, w: 0.1709966}
   m_LocalPosition: {x: 2.9973176, y: 7.935547, z: -2.1178632}
   m_LocalScale: {x: 49.999992, y: 49.999996, z: 50.00001}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 77
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1748530512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8544,14 +8693,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1748530510}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -8559,7 +8710,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -8578,14 +8729,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1762157448}
-  - 33: {fileID: 1762157453}
-  - 23: {fileID: 1762157452}
-  - 65: {fileID: 1762157451}
-  - 54: {fileID: 1762157450}
-  - 114: {fileID: 1762157449}
+  - component: {fileID: 1762157448}
+  - component: {fileID: 1762157453}
+  - component: {fileID: 1762157452}
+  - component: {fileID: 1762157451}
+  - component: {fileID: 1762157450}
+  - component: {fileID: 1762157449}
   m_Layer: 0
   m_Name: Offensive Die 40
   m_TagString: Untagged
@@ -8602,10 +8753,10 @@ Transform:
   m_LocalRotation: {x: 0.48220336, y: 0.19923957, z: -0.4945629, w: 0.6951195}
   m_LocalPosition: {x: 2.2383492, y: 4.968793, z: -1.884461}
   m_LocalScale: {x: 50.00001, y: 50.00001, z: 49.999992}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1762157449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8652,14 +8803,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1762157447}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -8667,7 +8820,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -8686,14 +8839,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1768288455}
-  - 33: {fileID: 1768288460}
-  - 23: {fileID: 1768288459}
-  - 65: {fileID: 1768288458}
-  - 54: {fileID: 1768288457}
-  - 114: {fileID: 1768288456}
+  - component: {fileID: 1768288455}
+  - component: {fileID: 1768288460}
+  - component: {fileID: 1768288459}
+  - component: {fileID: 1768288458}
+  - component: {fileID: 1768288457}
+  - component: {fileID: 1768288456}
   m_Layer: 0
   m_Name: Defensive Die 7
   m_TagString: Untagged
@@ -8710,10 +8863,10 @@ Transform:
   m_LocalRotation: {x: 0.5998808, y: -0.63665396, z: 0.36152238, w: 0.32267067}
   m_LocalPosition: {x: -0.8582691, y: 4.452429, z: -3.8133307}
   m_LocalScale: {x: 50.000008, y: 50.000008, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 51
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1768288456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8760,14 +8913,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1768288454}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -8775,7 +8930,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -8794,14 +8949,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1809449850}
-  - 33: {fileID: 1809449855}
-  - 23: {fileID: 1809449854}
-  - 65: {fileID: 1809449853}
-  - 54: {fileID: 1809449852}
-  - 114: {fileID: 1809449851}
+  - component: {fileID: 1809449850}
+  - component: {fileID: 1809449855}
+  - component: {fileID: 1809449854}
+  - component: {fileID: 1809449853}
+  - component: {fileID: 1809449852}
+  - component: {fileID: 1809449851}
   m_Layer: 0
   m_Name: Offensive Die 38
   m_TagString: Untagged
@@ -8818,10 +8973,10 @@ Transform:
   m_LocalRotation: {x: 0.4276953, y: 0.5453734, z: 0.36557066, w: 0.62129116}
   m_LocalPosition: {x: -0.38745594, y: 6.900086, z: -2.0020347}
   m_LocalScale: {x: 50, y: 50.000008, z: 50.000008}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1809449851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8868,14 +9023,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1809449849}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -8883,7 +9040,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -8902,14 +9059,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1819456595}
-  - 33: {fileID: 1819456600}
-  - 23: {fileID: 1819456599}
-  - 65: {fileID: 1819456598}
-  - 54: {fileID: 1819456597}
-  - 114: {fileID: 1819456596}
+  - component: {fileID: 1819456595}
+  - component: {fileID: 1819456600}
+  - component: {fileID: 1819456599}
+  - component: {fileID: 1819456598}
+  - component: {fileID: 1819456597}
+  - component: {fileID: 1819456596}
   m_Layer: 0
   m_Name: Offensive Die 32
   m_TagString: Untagged
@@ -8926,10 +9083,10 @@ Transform:
   m_LocalRotation: {x: 0.6849132, y: -0.49007758, z: -0.12885146, w: 0.52356017}
   m_LocalPosition: {x: -1.8170711, y: 5.855913, z: -1.186375}
   m_LocalScale: {x: 50, y: 50.000023, z: 50.000023}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1819456596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8976,14 +9133,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1819456594}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -8991,7 +9150,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -9010,14 +9169,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1842088273}
-  - 33: {fileID: 1842088278}
-  - 23: {fileID: 1842088277}
-  - 65: {fileID: 1842088276}
-  - 54: {fileID: 1842088275}
-  - 114: {fileID: 1842088274}
+  - component: {fileID: 1842088273}
+  - component: {fileID: 1842088278}
+  - component: {fileID: 1842088277}
+  - component: {fileID: 1842088276}
+  - component: {fileID: 1842088275}
+  - component: {fileID: 1842088274}
   m_Layer: 0
   m_Name: Defensive Die 6
   m_TagString: Untagged
@@ -9034,10 +9193,10 @@ Transform:
   m_LocalRotation: {x: -0.09275563, y: -0.6743004, z: 0.5294517, w: 0.506356}
   m_LocalPosition: {x: 1.9682927, y: 8.03349, z: -1.8082743}
   m_LocalScale: {x: 50.00004, y: 50.000015, z: 50.000027}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 50
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1842088274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9084,14 +9243,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1842088272}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -9099,7 +9260,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -9118,14 +9279,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1851455993}
-  - 33: {fileID: 1851455998}
-  - 23: {fileID: 1851455997}
-  - 65: {fileID: 1851455996}
-  - 54: {fileID: 1851455995}
-  - 114: {fileID: 1851455994}
+  - component: {fileID: 1851455993}
+  - component: {fileID: 1851455998}
+  - component: {fileID: 1851455997}
+  - component: {fileID: 1851455996}
+  - component: {fileID: 1851455995}
+  - component: {fileID: 1851455994}
   m_Layer: 0
   m_Name: Defensive Die 14
   m_TagString: Untagged
@@ -9142,10 +9303,10 @@ Transform:
   m_LocalRotation: {x: -0.7699901, y: 0.32214805, z: 0.46080917, w: 0.3016469}
   m_LocalPosition: {x: -1.1270266, y: 5.7088003, z: 3.1107183}
   m_LocalScale: {x: 50.000015, y: 50, z: 50.000004}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 58
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1851455994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9192,14 +9353,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1851455992}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -9207,7 +9370,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -9226,14 +9389,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1930981361}
-  - 33: {fileID: 1930981366}
-  - 23: {fileID: 1930981365}
-  - 65: {fileID: 1930981364}
-  - 54: {fileID: 1930981363}
-  - 114: {fileID: 1930981362}
+  - component: {fileID: 1930981361}
+  - component: {fileID: 1930981366}
+  - component: {fileID: 1930981365}
+  - component: {fileID: 1930981364}
+  - component: {fileID: 1930981363}
+  - component: {fileID: 1930981362}
   m_Layer: 0
   m_Name: Offensive Die 29
   m_TagString: Untagged
@@ -9250,10 +9413,10 @@ Transform:
   m_LocalRotation: {x: -0.8974988, y: 0.10559278, z: 0.009402913, w: 0.42808616}
   m_LocalPosition: {x: -1.21383, y: 4.207132, z: -1.6713741}
   m_LocalScale: {x: 50, y: 50.00002, z: 50.000027}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1930981362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9300,14 +9463,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1930981360}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -9315,7 +9480,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -9334,10 +9499,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1936162091}
-  - 114: {fileID: 1936162090}
+  - component: {fileID: 1936162091}
+  - component: {fileID: 1936162090}
   m_Layer: 0
   m_Name: Dice Manager
   m_TagString: Untagged
@@ -9357,15 +9522,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OffensiveMaterial: {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
+  OffensiveSpecialMaterial: {fileID: 2100000, guid: 4d9adac77a07196419b04e45cb94b007,
+    type: 2}
   DefensiveMaterial: {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  OffensiveMaterialOld: {fileID: 2100000, guid: 517b427ca9b6e0347ba81d676002dd1c,
+  DefensiveSpecialMaterial: {fileID: 2100000, guid: 0635835007f9a2e43b4bc1c93d93d560,
     type: 2}
-  DefensiveMaterialOld: {fileID: 2100000, guid: 00154c4fd87d7544e8f550382b8103e4,
-    type: 2}
+  SpecialMoveMaterial: {fileID: 2100000, guid: e322dc480c1b2a044bf04751fac68218, type: 2}
   OffensiveDiceCount: 3
+  OffensiveSpecialDiceCount: 2
   DefensiveDiceCount: 6
+  DefensiveSpecialDiceCount: 2
+  SpecialDiceCount: 6
   OffensiveTotal: 0
   DefensiveTotal: 0
+  SpecialTotal: 0
   DiePrefab: {fileID: 1000013565230380, guid: 091ebf30ea8329d4dbadb80d34b9ef25, type: 2}
   OffensiveTotalText: {fileID: 273246550}
   DefensiveTotalText: {fileID: 1097884168}
@@ -9379,7 +9549,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1988348432}
   - {fileID: 1343294526}
@@ -9472,19 +9641,20 @@ Transform:
   - {fileID: 1942432672}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1942432671
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1942432672}
-  - 33: {fileID: 1942432677}
-  - 23: {fileID: 1942432676}
-  - 65: {fileID: 1942432675}
-  - 54: {fileID: 1942432674}
-  - 114: {fileID: 1942432673}
+  - component: {fileID: 1942432672}
+  - component: {fileID: 1942432677}
+  - component: {fileID: 1942432676}
+  - component: {fileID: 1942432675}
+  - component: {fileID: 1942432674}
+  - component: {fileID: 1942432673}
   m_Layer: 0
   m_Name: Defensive Die 44
   m_TagString: Untagged
@@ -9501,10 +9671,10 @@ Transform:
   m_LocalRotation: {x: 0.61423784, y: 0.5486906, z: 0.5512037, w: 0.13351057}
   m_LocalPosition: {x: 1.8110471, y: 6.77063, z: -0.6145724}
   m_LocalScale: {x: 50.000027, y: 50.000046, z: 50.00004}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 88
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1942432673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9551,14 +9721,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1942432671}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -9566,7 +9738,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -9585,14 +9757,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1966589119}
-  - 33: {fileID: 1966589124}
-  - 23: {fileID: 1966589123}
-  - 65: {fileID: 1966589122}
-  - 54: {fileID: 1966589121}
-  - 114: {fileID: 1966589120}
+  - component: {fileID: 1966589119}
+  - component: {fileID: 1966589124}
+  - component: {fileID: 1966589123}
+  - component: {fileID: 1966589122}
+  - component: {fileID: 1966589121}
+  - component: {fileID: 1966589120}
   m_Layer: 0
   m_Name: Defensive Die 2
   m_TagString: Untagged
@@ -9609,10 +9781,10 @@ Transform:
   m_LocalRotation: {x: 0.13940708, y: 0.32801965, z: -0.0861033, w: 0.9303521}
   m_LocalPosition: {x: 0.76912993, y: 5.1785135, z: -3.9554186}
   m_LocalScale: {x: 50, y: 50, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 46
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1966589120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9659,14 +9831,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1966589118}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -9674,7 +9848,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -9693,14 +9867,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1980753330}
-  - 33: {fileID: 1980753335}
-  - 23: {fileID: 1980753334}
-  - 65: {fileID: 1980753333}
-  - 54: {fileID: 1980753332}
-  - 114: {fileID: 1980753331}
+  - component: {fileID: 1980753330}
+  - component: {fileID: 1980753335}
+  - component: {fileID: 1980753334}
+  - component: {fileID: 1980753333}
+  - component: {fileID: 1980753332}
+  - component: {fileID: 1980753331}
   m_Layer: 0
   m_Name: Offensive Die 42
   m_TagString: Untagged
@@ -9717,10 +9891,10 @@ Transform:
   m_LocalRotation: {x: -0.58798224, y: 0.13624337, z: -0.23438804, w: 0.76208717}
   m_LocalPosition: {x: 0.14599788, y: 7.6626534, z: 0.31644046}
   m_LocalScale: {x: 50, y: 49.999992, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1980753331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9767,14 +9941,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1980753329}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -9782,7 +9958,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -9801,14 +9977,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1988348432}
-  - 33: {fileID: 1988348437}
-  - 23: {fileID: 1988348436}
-  - 65: {fileID: 1988348435}
-  - 54: {fileID: 1988348434}
-  - 114: {fileID: 1988348433}
+  - component: {fileID: 1988348432}
+  - component: {fileID: 1988348437}
+  - component: {fileID: 1988348436}
+  - component: {fileID: 1988348435}
+  - component: {fileID: 1988348434}
+  - component: {fileID: 1988348433}
   m_Layer: 0
   m_Name: Offensive Die 0
   m_TagString: Untagged
@@ -9825,10 +10001,10 @@ Transform:
   m_LocalRotation: {x: 0.5266477, y: 0.4689965, z: 0.05717673, w: 0.70669323}
   m_LocalPosition: {x: 1.5596287, y: 6.2217035, z: 0.79731363}
   m_LocalScale: {x: 50, y: 49.999996, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1988348433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9875,14 +10051,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1988348431}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -9890,7 +10068,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -9909,14 +10087,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1989809017}
-  - 33: {fileID: 1989809022}
-  - 23: {fileID: 1989809021}
-  - 65: {fileID: 1989809020}
-  - 54: {fileID: 1989809019}
-  - 114: {fileID: 1989809018}
+  - component: {fileID: 1989809017}
+  - component: {fileID: 1989809022}
+  - component: {fileID: 1989809021}
+  - component: {fileID: 1989809020}
+  - component: {fileID: 1989809019}
+  - component: {fileID: 1989809018}
   m_Layer: 0
   m_Name: Offensive Die 41
   m_TagString: Untagged
@@ -9933,10 +10111,10 @@ Transform:
   m_LocalRotation: {x: 0.4742495, y: 0.390004, z: 0.57179034, w: 0.5440957}
   m_LocalPosition: {x: 2.1754694, y: 4.524585, z: 1.5627913}
   m_LocalScale: {x: 50.00001, y: 50.000008, z: 50.00002}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1989809018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9983,14 +10161,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1989809016}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -9998,7 +10178,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -10017,14 +10197,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 2002574826}
-  - 33: {fileID: 2002574831}
-  - 23: {fileID: 2002574830}
-  - 65: {fileID: 2002574829}
-  - 54: {fileID: 2002574828}
-  - 114: {fileID: 2002574827}
+  - component: {fileID: 2002574826}
+  - component: {fileID: 2002574831}
+  - component: {fileID: 2002574830}
+  - component: {fileID: 2002574829}
+  - component: {fileID: 2002574828}
+  - component: {fileID: 2002574827}
   m_Layer: 0
   m_Name: Offensive Die 7
   m_TagString: Untagged
@@ -10041,10 +10221,10 @@ Transform:
   m_LocalRotation: {x: 0.7211095, y: 0.5547765, z: -0.40137485, w: 0.10546286}
   m_LocalPosition: {x: 1.3432989, y: 5.108757, z: -0.004878724}
   m_LocalScale: {x: 50, y: 50.000015, z: 50.000004}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2002574827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10091,14 +10271,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2002574825}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4d0d484f71f8e484e8a15804b83a29e5, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -10106,7 +10288,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -10125,14 +10307,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 2014785175}
-  - 33: {fileID: 2014785180}
-  - 23: {fileID: 2014785179}
-  - 65: {fileID: 2014785178}
-  - 54: {fileID: 2014785177}
-  - 114: {fileID: 2014785176}
+  - component: {fileID: 2014785175}
+  - component: {fileID: 2014785180}
+  - component: {fileID: 2014785179}
+  - component: {fileID: 2014785178}
+  - component: {fileID: 2014785177}
+  - component: {fileID: 2014785176}
   m_Layer: 0
   m_Name: Defensive Die 18
   m_TagString: Untagged
@@ -10149,10 +10331,10 @@ Transform:
   m_LocalRotation: {x: 0.79927456, y: -0.5178144, z: 0.15429847, w: 0.2630978}
   m_LocalPosition: {x: -4.3655615, y: 5.5196366, z: 1.9138907}
   m_LocalScale: {x: 50, y: 50.000015, z: 50.000004}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 62
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2014785176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10199,14 +10381,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2014785174}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -10214,7 +10398,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -10233,14 +10417,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 2017252449}
-  - 33: {fileID: 2017252454}
-  - 23: {fileID: 2017252453}
-  - 65: {fileID: 2017252452}
-  - 54: {fileID: 2017252451}
-  - 114: {fileID: 2017252450}
+  - component: {fileID: 2017252449}
+  - component: {fileID: 2017252454}
+  - component: {fileID: 2017252453}
+  - component: {fileID: 2017252452}
+  - component: {fileID: 2017252451}
+  - component: {fileID: 2017252450}
   m_Layer: 0
   m_Name: Defensive Die 3
   m_TagString: Untagged
@@ -10257,10 +10441,10 @@ Transform:
   m_LocalRotation: {x: -0.05699788, y: 0.2235482, z: -0.62406623, w: 0.74653786}
   m_LocalPosition: {x: -0.47651297, y: 2.067778, z: -0.77497417}
   m_LocalScale: {x: 49.999996, y: 50, z: 50}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 47
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2017252450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10307,14 +10491,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2017252448}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -10322,7 +10508,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -10341,14 +10527,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 2033684966}
-  - 33: {fileID: 2033684971}
-  - 23: {fileID: 2033684970}
-  - 65: {fileID: 2033684969}
-  - 54: {fileID: 2033684968}
-  - 114: {fileID: 2033684967}
+  - component: {fileID: 2033684966}
+  - component: {fileID: 2033684971}
+  - component: {fileID: 2033684970}
+  - component: {fileID: 2033684969}
+  - component: {fileID: 2033684968}
+  - component: {fileID: 2033684967}
   m_Layer: 0
   m_Name: Defensive Die 41
   m_TagString: Untagged
@@ -10365,10 +10551,10 @@ Transform:
   m_LocalRotation: {x: 0.38737318, y: 0.5841431, z: 0.6218408, w: 0.3493322}
   m_LocalPosition: {x: -2.0579185, y: 5.004696, z: -2.899774}
   m_LocalScale: {x: 50.000027, y: 50.000008, z: 50.000015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 85
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2033684967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10415,14 +10601,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2033684965}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -10430,7 +10618,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -10449,12 +10637,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 2051069687}
-  - 33: {fileID: 2051069690}
-  - 65: {fileID: 2051069689}
-  - 23: {fileID: 2051069688}
+  - component: {fileID: 2051069687}
+  - component: {fileID: 2051069690}
+  - component: {fileID: 2051069689}
+  - component: {fileID: 2051069688}
   m_Layer: 0
   m_Name: Table Edge
   m_TagString: Untagged
@@ -10469,12 +10657,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2051069686}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.271, y: 0.75, z: 0}
+  m_LocalPosition: {x: -0.226, y: 0.75, z: 0}
   m_LocalScale: {x: 0.02, y: 0.5, z: 0.35}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 551706905}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2051069688
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10489,7 +10677,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: f81acce8074af2540846d0a25d02e503, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -10497,7 +10687,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -10528,10 +10718,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 2102828649}
-  - 108: {fileID: 2102828648}
+  - component: {fileID: 2102828649}
+  - component: {fileID: 2102828648}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -10582,23 +10772,23 @@ Transform:
   m_LocalRotation: {x: 0.40821794, y: -0.23456973, z: 0.109381676, w: 0.87542605}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1242823768}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2118282485
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 2118282486}
-  - 33: {fileID: 2118282491}
-  - 23: {fileID: 2118282490}
-  - 65: {fileID: 2118282489}
-  - 54: {fileID: 2118282488}
-  - 114: {fileID: 2118282487}
+  - component: {fileID: 2118282486}
+  - component: {fileID: 2118282491}
+  - component: {fileID: 2118282490}
+  - component: {fileID: 2118282489}
+  - component: {fileID: 2118282488}
+  - component: {fileID: 2118282487}
   m_Layer: 0
   m_Name: Defensive Die 9
   m_TagString: Untagged
@@ -10615,10 +10805,10 @@ Transform:
   m_LocalRotation: {x: -0.12106372, y: -0.6648803, z: -0.20350939, w: 0.70842206}
   m_LocalPosition: {x: -0.5270606, y: 2.6216352, z: 4.078383}
   m_LocalScale: {x: 50.00003, y: 50, z: 50.000015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 53
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2118282487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10665,14 +10855,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2118282485}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -10680,7 +10872,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -10699,14 +10891,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 2125048482}
-  - 33: {fileID: 2125048487}
-  - 23: {fileID: 2125048486}
-  - 65: {fileID: 2125048485}
-  - 54: {fileID: 2125048484}
-  - 114: {fileID: 2125048483}
+  - component: {fileID: 2125048482}
+  - component: {fileID: 2125048487}
+  - component: {fileID: 2125048486}
+  - component: {fileID: 2125048485}
+  - component: {fileID: 2125048484}
+  - component: {fileID: 2125048483}
   m_Layer: 0
   m_Name: Defensive Die 43
   m_TagString: Untagged
@@ -10723,10 +10915,10 @@ Transform:
   m_LocalRotation: {x: -0.68571645, y: -0.4641685, z: -0.40494284, w: 0.38776538}
   m_LocalPosition: {x: -0.51206386, y: 1.0414796, z: -0.94918424}
   m_LocalScale: {x: 50.000015, y: 50.000046, z: 50.000023}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1936162091}
   m_RootOrder: 87
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2125048483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10773,14 +10965,16 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2125048481}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 8d11644b3dd8c874b93cadc63a66d4fd, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -10788,7 +10982,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89

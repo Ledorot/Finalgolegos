@@ -20,7 +20,11 @@ public class BattleManager : MonoBehaviour {
         BattleOutcomeText.text = "";
 
         DiceManager.OffensiveDiceCount = Attacker.AttackDice;
+		DiceManager.OffensiveSpecialDiceCount = 0;
         DiceManager.DefensiveDiceCount = Defender.DefenseDice;
+		DiceManager.DefensiveSpecialDiceCount = 0;
+		DiceManager.SpecialDiceCount = 0;
+
         DiceManager.Roll ();
     }
 
@@ -34,5 +38,4 @@ public class BattleManager : MonoBehaviour {
             BattleOutcomeText.text = "Defender wins!";
         }
     }
-
 }
