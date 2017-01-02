@@ -5,6 +5,25 @@ using System.Collections.Generic;
 
 public class DiceManager : MonoBehaviour
 {
+	// This is meant to be private but for ease of testing via Inspector it is public.
+	// Same goes for the Serializable tag.
+	[System.Serializable]
+	public class RollInfo
+	{
+		public int regularDice;
+		public int specialDice;
+		public bool playerSide;
+		public float throwOffset;
+
+		public void Clear ()
+		{
+			regularDice = 0;
+			specialDice = 0;
+			playerSide = false;
+			throwOffset = 0;
+		}
+	}
+
 	public static float DieCheckUpdateDelay = 0.1f;
 
 	// The materials we want applied to the different types of dice
@@ -21,6 +40,11 @@ public class DiceManager : MonoBehaviour
 	public int DefensiveSpecialDiceCount;
 	public int SpecialDiceCount;
 
+	// The data used for the next roll.
+	private RollInfo attackerInfo;
+	private RollInfo defenderInfo;
+	private RollInfo specialInfo;
+
 	// The totals
 	public int OffensiveTotal;
 	public int DefensiveTotal;
@@ -34,17 +58,16 @@ public class DiceManager : MonoBehaviour
 	// Tell the script what it should spawn
 	public GameObject DiePrefab;
 
-	public Text OffensiveTotalText;
-	public Text DefensiveTotalText;
-
 	public BattleManager BattleManager;
 
-	void Awake()
+	void Awake ()
 	{
-		
+		attackerInfo = new RollInfo ();
+		defenderInfo = new RollInfo ();
+		specialInfo = new RollInfo ();
 	}
 
-	void Start()
+	void Start ()
 	{
 	}
 
@@ -57,13 +80,15 @@ public class DiceManager : MonoBehaviour
 	/// <param name="useMaterial">Material for the new dice.</param>
 	/// <param name="playerSide">If set to <c>true</c> dice spawn on the player side.</param>
 	/// <param name="throwOffset">Offset from -1 to 1 to determine the throw starting from the left, middle or right.</param>
-	private void SpawnDice(int diceCount, string dieName, List<GameObject> dieList, Material useMaterial, bool playerSide, float throwOffset)
+	private void SpawnDice (int diceCount, string dieName, List<GameObject> dieList, Material useMaterial, bool playerSide, float throwOffset)
 	{
 		// Clamp throwOffset to stay in range.
 		throwOffset	= Mathf.Min (Mathf.Max (throwOffset, -1), 1);
 
 		// Set the start position to be used for the rest of the loop.
-		Vector3 startPosition = new Vector3(9 * throwOffset, 5, playerSide ? 5 : -5);
+		Vector3 startPosition = new Vector3 (9 * throwOffset, 5, playerSide ? -5 : 5);
+
+		startPosition += transform.position;
 
 		for (int i = 0; i < diceCount; i++) {
 			// These positionings are for testing purposes and will need to be modified.
@@ -86,7 +111,7 @@ public class DiceManager : MonoBehaviour
 			rb.velocity = direction.normalized * 20;
 
 			// Add rotation to the die.
-			rb.AddTorque(reorganize.normalized * 250);
+			rb.AddTorque (reorganize.normalized * 250);
 
 			// Fold it nicely under the dice manager in the scene hierarchy
 			newDie.transform.parent = transform;
@@ -94,7 +119,7 @@ public class DiceManager : MonoBehaviour
 			// Rename the die
 			newDie.name = dieName + " " + i;
 			// Change its material
-			newDie.GetComponent<Die>().SetMaterial(useMaterial);
+			newDie.GetComponent<Die> ().SetMaterial (useMaterial);
 
 			// Add it to the correct list.
 			dieList.Add (newDie);
@@ -103,19 +128,28 @@ public class DiceManager : MonoBehaviour
 	}
 
 	// These functions are for setting up from the BattleManager code.
-	public void SetAttackerInfo(int diceCount, int specialDiceCount, bool playerSide, float throwOffset)
+	public void SetAttackerInfo (int diceCount, int specialDiceCount, bool playerSide, float throwOffset)
 	{
-
+		attackerInfo.regularDice = diceCount;
+		attackerInfo.specialDice = specialDiceCount;
+		attackerInfo.playerSide = playerSide;
+		attackerInfo.throwOffset = throwOffset;
 	}
 
-	public void SetDefenderInfo(int diceCount, int specialDiceCount, bool playerSide, float throwOffset)
+	public void SetDefenderInfo (int diceCount, int specialDiceCount, bool playerSide, float throwOffset)
 	{
-
+		defenderInfo.regularDice = diceCount;
+		defenderInfo.specialDice = specialDiceCount;
+		defenderInfo.playerSide = playerSide;
+		defenderInfo.throwOffset = throwOffset;
 	}
 
-	public void SetSpecialInfo(int diceCount, bool playerSide, float throwOffset)
+	public void SetSpecialInfo (int diceCount, bool playerSide, float throwOffset)
 	{
-
+		specialInfo.regularDice = diceCount;
+		specialInfo.specialDice = 0;
+		specialInfo.playerSide = playerSide;
+		specialInfo.throwOffset = throwOffset;
 	}
 
 	public void Roll ()
@@ -128,9 +162,6 @@ public class DiceManager : MonoBehaviour
 			child.position = noMansLand + Random.insideUnitSphere * 100;
 			Destroy (child.gameObject);
 		}
-
-		OffensiveTotalText.text = "";
-		DefensiveTotalText.text = "";
 
 		OffensiveTotal = 0;
 		DefensiveTotal = 0;
@@ -154,11 +185,16 @@ public class DiceManager : MonoBehaviour
 			specialDice.Clear ();
 
 		// Spawn dice for each variety.
-		SpawnDice (OffensiveDiceCount, "Offensive Die", offensiveDice, OffensiveMaterial, true, .0f);
-		SpawnDice (OffensiveSpecialDiceCount, "Offensive Special Die", offensiveDice, OffensiveSpecialMaterial, true, 0.0f);
-		SpawnDice (DefensiveDiceCount, "Defensive Die", defensiveDice, DefensiveMaterial, false, -.5f);
-		SpawnDice (DefensiveSpecialDiceCount, "Defensive Special Die", defensiveDice, DefensiveSpecialMaterial, false, -.5f);
-		SpawnDice (SpecialDiceCount, "Special Die", specialDice, SpecialMoveMaterial, false, 1f);
+		if (attackerInfo.regularDice > 0)
+			SpawnDice (attackerInfo.regularDice, "Offensive Die", offensiveDice, OffensiveMaterial, attackerInfo.playerSide, attackerInfo.throwOffset);
+		if (attackerInfo.specialDice > 0)
+			SpawnDice (attackerInfo.specialDice, "Offensive Special Die", offensiveDice, OffensiveSpecialMaterial, attackerInfo.playerSide, attackerInfo.throwOffset);
+		if (defenderInfo.regularDice > 0)
+			SpawnDice (defenderInfo.regularDice, "Defensive Die", defensiveDice, DefensiveMaterial, defenderInfo.playerSide, defenderInfo.throwOffset);
+		if (defenderInfo.specialDice > 0)
+			SpawnDice (defenderInfo.specialDice, "Defensive Special Die", defensiveDice, DefensiveSpecialMaterial, defenderInfo.playerSide, defenderInfo.throwOffset);
+		if (specialInfo.regularDice > 0)
+			SpawnDice (specialInfo.regularDice, "Special Die", specialDice, SpecialMoveMaterial, specialInfo.playerSide, specialInfo.throwOffset);
 
 		// Start trying to read the dice we've created.
 		StartCoroutine (CheckForSettledDice ());
@@ -167,7 +203,7 @@ public class DiceManager : MonoBehaviour
 	// Helper function to count the dice and avoid having three copies of this code in a row.
 	// AllSettled argument gets passed back out, possibly set to false.
 	// dieTotal is going to get boxed/unboxed but this won't matter much for how little it's called.
-	private bool CountDice(List<GameObject> dieList, bool allSettled, ref int dieTotal)
+	private bool CountDice (List<GameObject> dieList, bool allSettled, ref int dieTotal)
 	{
 		// Clear the total.
 		dieTotal = 0;
@@ -197,10 +233,6 @@ public class DiceManager : MonoBehaviour
 		// Are all the dice done moving? No.
 		bool allSettled = false;
 
-		// Just to show the player that calculations are underway
-		OffensiveTotalText.color = Color.yellow;
-		DefensiveTotalText.color = Color.yellow;
-
 		// so long as not all the dice are settled...
 		while (!allSettled) {
 			// Say that they are
@@ -212,16 +244,11 @@ public class DiceManager : MonoBehaviour
 			allSettled = CountDice (specialDice, allSettled, ref SpecialTotal);
 
 			// Set totals to animate while calculating. These aren't necessary
-			OffensiveTotalText.text = OffensiveTotal.ToString ();
-			DefensiveTotalText.text = DefensiveTotal.ToString ();
+			BattleManager.UpdateDiceTotals(OffensiveTotal, DefensiveTotal);
 
 			// Do this every so often.
 			yield return new WaitForSeconds (DieCheckUpdateDelay);
 		}
-
-		// Display proper text colors to indicate final calculations are done
-		OffensiveTotalText.color = Color.red;
-		DefensiveTotalText.color = Color.blue;
 
 		// Finish up
 		this.BattleManager.EvaluateBattle (OffensiveTotal, DefensiveTotal);
