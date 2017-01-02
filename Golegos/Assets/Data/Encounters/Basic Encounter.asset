@@ -8,13 +8,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4feaba44a7853548a0428ab6bbee414, type: 3}
-  m_Name: Rodrick
+  m_Script: {fileID: 11500000, guid: 9ae762653b49610408a95a1ccd44fbc5, type: 3}
+  m_Name: Basic Encounter
   m_EditorClassIdentifier: 
-  characterName: Rodrick
-  RollsPerTurn: 1
-  AttackDice: 1
-  DefenseDice: 0
-  HealthBars: 0f0000001e000000
-  Attacks: []
-  Equipment: []
+  enemies: []
+  coinReward: 0
+  itemReward: {fileID: 0}

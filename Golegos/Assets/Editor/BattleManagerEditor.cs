@@ -2,6 +2,7 @@
 using UnityEditor;
 using System.Collections;
 
+// Used to add a Battle button and block it from being used when not in Play mode.
 [CustomEditor (typeof (BattleManager))]
 public class BattleManagerEditor : Editor {
 

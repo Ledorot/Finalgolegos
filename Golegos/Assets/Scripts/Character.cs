@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Character : MonoBehaviour {
+namespace Golegos
+{
+	[System.Serializable]
+	public class Character {
+	
+		public CharacterStatSet stats;
+		public Equipment gear;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+}
 }
