@@ -12,6 +12,6 @@ namespace Golegos
 		public int DefenseDice;
 		public List<int> HealthBars;
 		public List<SpecialAttack> Attacks;
-		public List<EquipmentItem> Equipment;
+		public Equipment defaultEquipment;
 	}
 }

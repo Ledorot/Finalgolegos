@@ -13,11 +13,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Davey
   RollsPerTurn: 1
-  AttackDice: 2
+  AttackDice: 1
   DefenseDice: 0
   HealthBars: 19000000
   Attacks:
   - {fileID: 11400000, guid: 4ff6a2b0999f2a0428398a5bb2167033, type: 2}
   - {fileID: 11400000, guid: 4a1799fb7d40b684787b9926a00dd171, type: 2}
-  Equipment:
-  - {fileID: 11400000, guid: 1e745179157aec0449dc8a17abb83d9c, type: 2}
+  defaultEquipment:
+    hand:
+      enabled: 0
+      item: {fileID: 0}
+    torso:
+      enabled: 0
+      item: {fileID: 0}
+    neck:
+      enabled: 0
+      item: {fileID: 0}
+    head:
+      enabled: 0
+      item: {fileID: 0}
+    back:
+      enabled: 0
+      item: {fileID: 0}
+    legs:
+      enabled: 0
+      item: {fileID: 0}
+    offHand:
+      enabled: 0
+      item: {fileID: 0}

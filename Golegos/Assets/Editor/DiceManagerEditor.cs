@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
+using Golegos;
 
+// Used to add a roll button and to block it's usage outside of Play mode.
 [CustomEditor (typeof (DiceManager))]
 public class DiceManagerEditor : Editor {
 

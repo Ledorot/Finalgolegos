@@ -13,8 +13,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Tester
   RollsPerTurn: 1
-  AttackDice: 20
-  DefenseDice: 20
+  AttackDice: 4
+  DefenseDice: 4
   HealthBars: 19000000
   Attacks: []
-  Equipment: []
+  defaultEquipment:
+    hand:
+      enabled: 0
+      item: {fileID: 0}
+    torso:
+      enabled: 0
+      item: {fileID: 0}
+    neck:
+      enabled: 0
+      item: {fileID: 0}
+    head:
+      enabled: 0
+      item: {fileID: 0}
+    back:
+      enabled: 0
+      item: {fileID: 0}
+    legs:
+      enabled: 0
+      item: {fileID: 0}
+    offHand:
+      enabled: 0
+      item: {fileID: 0}

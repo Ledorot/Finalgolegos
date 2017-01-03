@@ -9,5 +9,6 @@
 		Back,
 		Legs,
 		OffHand,
+		Count
 	}
 }

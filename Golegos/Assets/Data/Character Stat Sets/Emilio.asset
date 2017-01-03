@@ -21,3 +21,32 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e2b828f8189dd134c89311d9f241bdbd, type: 2}
   Equipment:
   - {fileID: 11400000, guid: 299452b35ad8e134b8df1320b0da17c7, type: 2}
+  wftisthisthing:
+    hand:
+      enabled: 0
+      type: 0
+      item: {fileID: 0}
+    torso:
+      enabled: 0
+      type: 0
+      item: {fileID: 0}
+    neck:
+      enabled: 0
+      type: 0
+      item: {fileID: 0}
+    head:
+      enabled: 0
+      type: 0
+      item: {fileID: 0}
+    back:
+      enabled: 0
+      type: 0
+      item: {fileID: 0}
+    legs:
+      enabled: 0
+      type: 0
+      item: {fileID: 0}
+    offHand:
+      enabled: 0
+      type: 0
+      item: {fileID: 0}

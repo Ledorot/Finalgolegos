@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections;
+using Golegos;
 
+// Used to add a Battle button and block it from being used when not in Play mode.
 [CustomEditor (typeof (BattleManager))]
 public class BattleManagerEditor : Editor {
 

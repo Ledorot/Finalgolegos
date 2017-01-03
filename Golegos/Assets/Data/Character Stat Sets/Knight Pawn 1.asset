@@ -18,5 +18,25 @@ MonoBehaviour:
   HealthBars: 82000000
   Attacks:
   - {fileID: 0}
-  Equipment:
-  - {fileID: 11400000, guid: 316f674098661cd469be53fc5834fa49, type: 2}
+  defaultEquipment:
+    hand:
+      enabled: 1
+      item: {fileID: 11400000, guid: 316f674098661cd469be53fc5834fa49, type: 2}
+    torso:
+      enabled: 0
+      item: {fileID: 0}
+    neck:
+      enabled: 0
+      item: {fileID: 0}
+    head:
+      enabled: 0
+      item: {fileID: 0}
+    back:
+      enabled: 0
+      item: {fileID: 0}
+    legs:
+      enabled: 0
+      item: {fileID: 0}
+    offHand:
+      enabled: 0
+      item: {fileID: 0}

@@ -17,5 +17,25 @@ MonoBehaviour:
   DefenseDice: 0
   HealthBars: 46000000
   Attacks: []
-  Equipment:
-  - {fileID: 11400000, guid: 22007eb80c660b540a2e0bf606f35ece, type: 2}
+  defaultEquipment:
+    hand:
+      enabled: 0
+      item: {fileID: 0}
+    torso:
+      enabled: 0
+      item: {fileID: 0}
+    neck:
+      enabled: 0
+      item: {fileID: 0}
+    head:
+      enabled: 1
+      item: {fileID: 0}
+    back:
+      enabled: 0
+      item: {fileID: 0}
+    legs:
+      enabled: 0
+      item: {fileID: 0}
+    offHand:
+      enabled: 0
+      item: {fileID: 0}

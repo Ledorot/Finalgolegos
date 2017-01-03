@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae762653b49610408a95a1ccd44fbc5, type: 3}
+  m_Name: First Encounter
+  m_EditorClassIdentifier: 
+  enemies:
+  - stats: {fileID: 0}
+    gear:
+      hand:
+        enabled: 0
+        item: {fileID: 0}
+      torso:
+        enabled: 0
+        item: {fileID: 0}
+      neck:
+        enabled: 0
+        item: {fileID: 0}
+      head:
+        enabled: 0
+        item: {fileID: 0}
+      back:
+        enabled: 0
+        item: {fileID: 0}
+      legs:
+        enabled: 0
+        item: {fileID: 0}
+      offHand:
+        enabled: 0
+        item: {fileID: 0}
+  - stats: {fileID: 0}
+    gear:
+      hand:
+        enabled: 0
+        item: {fileID: 0}
+      torso:
+        enabled: 0
+        item: {fileID: 0}
+      neck:
+        enabled: 0
+        item: {fileID: 0}
+      head:
+        enabled: 0
+        item: {fileID: 0}
+      back:
+        enabled: 0
+        item: {fileID: 0}
+      legs:
+        enabled: 0
+        item: {fileID: 0}
+      offHand:
+        enabled: 0
+        item: {fileID: 0}
+  coinReward: 46
+  itemReward: {fileID: 11400000, guid: 10d77bd1fe774444c9cd1aac825db6b4, type: 2}
