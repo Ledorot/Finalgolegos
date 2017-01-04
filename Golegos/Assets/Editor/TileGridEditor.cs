@@ -48,40 +48,37 @@ public class TileGridEditor : Editor {
 
     private void UpdateGrid() {
 
-        //If the dimensions changed
-        if (editorGridSize.x != grid.gridSize.x || editorGridSize.y != grid.gridSize.y || editorTileSize != grid.tileSize) {
-            //Update the editor values
-            editorGridSize.x = grid.gridSize.x;
-            editorGridSize.y = grid.gridSize.y;
-            editorTileSize = grid.tileSize;
-            DeleteTiles();
+        //Update the editor values
+        editorGridSize.x = grid.gridSize.x;
+        editorGridSize.y = grid.gridSize.y;
+        editorTileSize = grid.tileSize;
+        DeleteTiles();
 
-            //Spawn all the tiles on the scene
-            if (grid.tile && grid.gridSize.x > 0 && grid.gridSize.y > 0) {
+        //Spawn all the tiles on the scene
+        if (grid.tile && grid.gridSize.x > 0 && grid.gridSize.y > 0) {
 
-                Vector3 newPos = grid.transform.position;
-                float xPos = newPos.x;
-                SpriteRenderer sprite = grid.tile.GetComponent<SpriteRenderer>();
-                if (!sprite) {
-                    Debug.LogError("Tile doesn't have SpriteRenderer component");
-                }
-                //If the sprite doesn't ocupy the desired space, scale it so that it does
-                if (sprite.bounds.size.x != grid.tileSize) {
-                    grid.tile.localScale *= (grid.tileSize / sprite.bounds.size.x);
-                }
-                for (int j = 0; j < grid.gridSize.y; j++) {
-                    for (int i = 0; i < grid.gridSize.x; i++) {
-                        Transform newTile = Instantiate(grid.tile, newPos, grid.transform.rotation, grid.transform);
-                        if (newTile == null) {
-                            Debug.LogError("Not instantiated");
-                        }
-                        newTile.name = "Tile_" + ((i + 1) + j * grid.gridSize.x);
-                        tiles.Add(newTile);
-                        newPos.x += grid.tileSize;
+            Vector3 newPos = grid.transform.position;
+            float xPos = newPos.x;
+            SpriteRenderer sprite = grid.tile.GetComponent<SpriteRenderer>();
+            if (!sprite) {
+                Debug.LogError("Tile doesn't have SpriteRenderer component");
+            }
+            //If the sprite doesn't ocupy the desired space, scale it so that it does
+            if (sprite.bounds.size.x != grid.tileSize) {
+                grid.tile.localScale *= (grid.tileSize / sprite.bounds.size.x);
+            }
+            for (int j = 0; j < grid.gridSize.y; j++) {
+                for (int i = 0; i < grid.gridSize.x; i++) {
+                    Transform newTile = Instantiate(grid.tile, newPos, grid.transform.rotation, grid.transform);
+                    if (newTile == null) {
+                        Debug.LogError("Not instantiated");
                     }
-                    newPos.x = xPos;
-                    newPos.y += grid.tileSize;
+                    newTile.name = "Tile_" + ((i + 1) + j * grid.gridSize.x);
+                    tiles.Add(newTile);
+                    newPos.x += grid.tileSize;
                 }
+                newPos.x = xPos;
+                newPos.y += grid.tileSize;
             }
         }
     }
