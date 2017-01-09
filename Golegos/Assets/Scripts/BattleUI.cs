@@ -10,15 +10,34 @@ namespace Golegos
         //private Transform optionBox;
         private GameObject optionBox;
         public Transform[] boxPositions;
+        public Transform optionsUI;
+        private Animator optionsAnimator;
 
-        [SerializeField]
-        private float optionWidth;
-        [SerializeField]
-        private float optionHeight;
+        //Static reference to this class, so that the options can manipulate the optionsox and depth of the menu
+        public static BattleUI BUI;
+
+        //Keeps track of the depth of the options navigating
+        private int depth = 0;
+        //Stores last indexes of selected options
+        private int lastCharacterIndex = 0;
+        
 
         void Awake() {
+
+            if (BUI == null) {
+                BUI = this;
+            }
             if (boxPositions.Length < 4) {
                 Debug.LogError("Not enough boxPositions in the BattleUI component!");
+            }
+            if (optionsUI == null) {
+                Debug.LogError("No optionsUI selected");
+            }
+            else {
+                optionsAnimator = optionsUI.GetComponent<Animator>();
+                if (optionsAnimator == null) {
+                    Debug.LogError("optionsUI has no Animator component");
+                }
             }
         }
 
@@ -27,40 +46,26 @@ namespace Golegos
             if (optionBox == null) {
                 Debug.Log("Couldn't find OptionBox");
             }
-            /*
-            Image image = optionBox.GetComponent<Image>();
-            if (image == null) {
-                Debug.LogError("The optionBox transform has no Image component!");
+            else {
+                optionBox.transform.position = boxPositions[0].position;
+            }
+        }
+        
+        public void UpdateOptionBox(int index) {
+            if (optionBox != null && boxPositions[index] != null) {
+                optionBox.transform.position = boxPositions[index].position;
             }
             else {
-                float width = image.sprite.bounds.size.x;
-                float height = image.sprite.bounds.size.y;
-
-                //Scale the option box according to the specified width and height
-                if (width != optionWidth) {
-                    Vector3 theScale = optionBox.localScale;
-                    theScale.x *= (optionWidth / width);
-                    Debug.Log("" + optionWidth / width);
-                    //optionBox.localScale = theScale;
-                }
-                if (height != optionHeight) {
-                    Vector3 theScale = optionBox.localScale;
-                    theScale.y *= (optionHeight / height);
-                    //optionBox.localScale = theScale;
-                }
-                optionBox.transform.position = boxPositions[1].position;
+                Debug.Log("Failed attempt");
             }
-            */
         }
 
-        //Receives the index of the vertical position we are navigating to
-        public void NavigateOption(int index) {
-            optionBox.transform.position = boxPositions[index].position;
+        public void IncreaseDepth() {
+            optionsAnimator.SetInteger("Depth", ++depth);
         }
 
-        //Receives the index of the character that we are navigating to
-        public void NavigateCharacter(int index) {
-            //How many characters will there be in the screen
+        public void DecreaseDepth() {
+            optionsAnimator.SetInteger("Depth", --depth);
         }
     }
 }

@@ -26,6 +26,13 @@ namespace Golegos {
             float v = Input.GetAxis("Vertical");
 
             character.Move(h, v);
+
+            if (Input.GetButtonDown("Select")) {
+                character.Select();
+            }
+            if (Input.GetButtonDown("Back")) {
+                character.Back();
+            }
         }
     }
 }

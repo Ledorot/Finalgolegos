@@ -12,7 +12,7 @@ namespace Golegos {
         //Character components
 
         private Rigidbody2D rb;
-        private NewBattleManager battleManager;
+        public NewBattleManager battleManager;
 
         //Movement variables
 
@@ -34,9 +34,8 @@ namespace Golegos {
         }
 
         void Start() {
-            battleManager = NewBattleManager.bm;
             if (battleManager == null) {
-                Debug.LogError("Couldn't find BattleManager instance");
+                Debug.LogError("No BattleManager instance assigned");
             }
         }
 
@@ -74,6 +73,14 @@ namespace Golegos {
                     }
                 }
             }
+        }
+
+        public void Select() {
+            battleManager.Select();
+        }
+
+        public void Back() {
+            battleManager.Back();
         }
     }
 }
