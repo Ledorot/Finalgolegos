@@ -5,9 +5,10 @@ using UnityEngine;
 
 namespace Golegos
 {
-	[CreateAssetMenu (fileName = "New Special Attack", menuName = "Golegos/Special Attack", order = 3)]
-	public class SpecialAttack : ScriptableObject
-	{
+    //[CreateAssetMenu (fileName = "New Special Attack", menuName = "Golegos/Special Attack", order = 3)]
+    //public class SpecialAttack : ScriptableObject
+    public class SpecialAttack : MonoBehaviour
+    {
 		public String attackName;
 		public String description;
 		public Int32 diceToRoll = 1;

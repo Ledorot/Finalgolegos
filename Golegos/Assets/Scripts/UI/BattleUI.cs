@@ -18,9 +18,7 @@ namespace Golegos
 
         //Keeps track of the depth of the options navigating
         private int depth = 0;
-        //Stores last indexes of selected options
-        private int lastCharacterIndex = 0;
-        
+
 
         void Awake() {
 

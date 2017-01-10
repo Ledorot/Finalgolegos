@@ -11,6 +11,54 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1894132121432464}
   m_IsPrefabParent: 1
+--- !u!1 &1387277129917618
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4992602406189084}
+  - component: {fileID: 114246496866836404}
+  m_Layer: 0
+  m_Name: SpecialAttack_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1404954859981982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4796583997437550}
+  - component: {fileID: 114257433202021766}
+  m_Layer: 0
+  m_Name: CharacterStats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1674524478013472
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4363068809227308}
+  - component: {fileID: 114086890780677056}
+  m_Layer: 0
+  m_Name: Attack_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1894132121432464
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +79,51 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1967168743122140
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4843092959050992}
+  - component: {fileID: 114774099102664986}
+  m_Layer: 0
+  m_Name: Attack_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4363068809227308
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674524478013472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4796583997437550}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4796583997437550
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404954859981982}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 67.375145, y: 10.59885, z: 0}
+  m_LocalScale: {x: 0.093727365, y: 0.093727365, z: 0.093727365}
+  m_Children:
+  - {fileID: 4363068809227308}
+  - {fileID: 4843092959050992}
+  - {fileID: 4992602406189084}
+  m_Father: {fileID: 4801969067791028}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4801969067791028
 Transform:
   m_ObjectHideFlags: 1
@@ -38,11 +131,38 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1894132121432464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.66, z: 0}
+  m_LocalPosition: {x: 20, y: -19, z: 0}
   m_LocalScale: {x: 10.669243, y: 10.669243, z: 10.669243}
-  m_Children: []
+  m_Children:
+  - {fileID: 4796583997437550}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4843092959050992
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1967168743122140}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.000010174983, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4796583997437550}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4992602406189084
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387277129917618}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.000010174983, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4796583997437550}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50600821094623508
 Rigidbody2D:
@@ -78,6 +198,22 @@ BoxCollider2D:
   m_Offset: {x: -0.00041221082, y: 0.0009368658}
   serializedVersion: 2
   m_Size: {x: 0.14789268, y: 0.14309299}
+--- !u!114 &114086890780677056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1674524478013472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f85cd867dc94b4a8863a413a26f6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: First Attack
+  description: The character's basic attack
+  diceToRoll: 2
+  effects: []
+  constraints: []
 --- !u!114 &114185040231814490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,6 +225,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd59870d9f40fe447a32fa61b9c08237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114246496866836404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1387277129917618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c005445e799f6f640b43c0aeb5ba9e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: SpecialAttack
+  description: The character's special attack
+  diceToRoll: 2
+  maxUses: 1
+  effects: []
+  constraints: []
+--- !u!114 &114257433202021766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404954859981982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4feaba44a7853548a0428ab6bbee414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: MainChar
+  RollsPerTurn: 5
+  AttackDice: 2
+  DefenseDice: 1
+  HealthBars: 
+  Attacks:
+  - {fileID: 114086890780677056}
+  - {fileID: 114774099102664986}
+  SpecialAttacks:
+  - {fileID: 114246496866836404}
+  defaultEquipment:
+    hand:
+      enabled: 0
+      item: {fileID: 0}
+    torso:
+      enabled: 0
+      item: {fileID: 0}
+    neck:
+      enabled: 0
+      item: {fileID: 0}
+    head:
+      enabled: 0
+      item: {fileID: 0}
+    back:
+      enabled: 0
+      item: {fileID: 0}
+    legs:
+      enabled: 0
+      item: {fileID: 0}
+    offHand:
+      enabled: 0
+      item: {fileID: 0}
 --- !u!114 &114318996209371232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,7 +296,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a387010db06b842a191775c669cc97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleManager: {fileID: 0}
+  character:
+    stats: {fileID: 114257433202021766}
+    gear:
+      hand:
+        enabled: 0
+        item: {fileID: 0}
+      torso:
+        enabled: 0
+        item: {fileID: 0}
+      neck:
+        enabled: 0
+        item: {fileID: 0}
+      head:
+        enabled: 0
+        item: {fileID: 0}
+      back:
+        enabled: 0
+        item: {fileID: 0}
+      legs:
+        enabled: 0
+        item: {fileID: 0}
+      offHand:
+        enabled: 0
+        item: {fileID: 0}
   movSpeed: 6
+--- !u!114 &114774099102664986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1967168743122140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f85cd867dc94b4a8863a413a26f6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: Second Attack
+  description: The character's secondary attack
+  diceToRoll: 2
+  effects: []
+  constraints: []
 --- !u!212 &212533514036521966
 SpriteRenderer:
   m_ObjectHideFlags: 1

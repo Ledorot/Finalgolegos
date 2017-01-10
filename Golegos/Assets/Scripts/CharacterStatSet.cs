@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 namespace Golegos
 {
-	[CreateAssetMenu (fileName = "New Stat Set", menuName = "Golegos/CharacterStatSet", order = 1)]
-	public class CharacterStatSet : ScriptableObject
-	{
+    //[CreateAssetMenu (fileName = "New Stat Set", menuName = "Golegos/CharacterStatSet", order = 1)]
+    //public class CharacterStatSet : ScriptableObject
+    public class CharacterStatSet : MonoBehaviour
+    {
 		public string characterName;
 		public int RollsPerTurn;
 		public int AttackDice;

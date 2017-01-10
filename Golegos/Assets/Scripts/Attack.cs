@@ -5,8 +5,9 @@ using Golegos.Enums;
 
 namespace Golegos {
 
-    [CreateAssetMenu(fileName = "New Special Attack", menuName = "Golegos/Special Attack", order = 3)]
-    public class Attack : ScriptableObject {
+    //[CreateAssetMenu(fileName = "New Special Attack", menuName = "Golegos/Special Attack", order = 3)]
+    //public class Attack : ScriptableObject {
+    public class Attack : MonoBehaviour {
         public String attackName = "Attack";
         public String description = "The character's basic attack";
         public Int32 diceToRoll = 1;

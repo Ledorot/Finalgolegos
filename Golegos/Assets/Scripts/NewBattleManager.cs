@@ -11,6 +11,7 @@ namespace Golegos {
         //List of enemies in the battle
         public List<CharacterStatSet> defenders;
         public DiceManager DiceManager;
+
         //Index of the currently selected player
         private int playerAttackerIndex = 0;
 
@@ -39,8 +40,7 @@ namespace Golegos {
 
         void Start() {
             //Battle();
-            currentOption.Available(true);
-            currentOption.SetChildrenNewEnable(true);
+            currentOption.FirstOption();
         }
 
         public void Battle() {
@@ -103,31 +103,40 @@ namespace Golegos {
             if (temp != null) {
                 currentOption = temp;
             }
-            else {
-                //Can't go further back
-            }
         }
 
-        //Called when the player navigates the menu
+        //Called when the player navigates the battle UI
         public void RightSelection() {
-            playerAttackerIndex++;
-            //TODO
+            currentOption.RightNavigate();
         }
 
-        //Called when the player navigates the menu
+        //Called when the player navigates the battle UI
         public void LeftSelection() {
-            playerAttackerIndex--;
-            //TODO
+            currentOption.LeftNavigate();
         }
 
-        //Called when the player navigates the menu
+        //Called when the player navigates the battle UI
         public void UpSelection() {
             currentOption.UpNavigate();
         }
 
-        //Called when the player navigates the menu
+        //Called when the player navigates the battle UI
         public void DownSelection() {
             currentOption.DownNavigate();
+        }
+
+        public void IncrementCharacterIndex() {
+            playerAttackerIndex++;
+            if (playerAttackerIndex >= allies.Count) {
+                playerAttackerIndex = 0;
+            }
+        }
+
+        public void DecrementCharacterIndex() {
+            playerAttackerIndex--;
+            if (playerAttackerIndex < 0) {
+                playerAttackerIndex = allies.Count - 1;
+            }
         }
 
         public void PlayerAttack(int attackerIndex, int defenderIndex) {

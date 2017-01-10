@@ -3,30 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Golegos;
+using System;
 
 namespace Golegos {
 
     [RequireComponent(typeof(Text))]
-    public class BattleOption : MonoBehaviour {
+    public class MenuOption : BattleOption {
 
         //List of battle options that derive from this option
-        public BattleOption[] derivedOptions;
-        private BattleUI battleUI;
-        private BattleOption parentOption = null;
+        public MenuOption[] derivedOptions;
+        
+        //The option that enabled this option
+        protected BattleOption parentOption = null;
 
         //Indicates whether or not the menu should animate to the left when this option is selected
         public bool increasesDepth = true;
-        //Indicates whether this option can do something if selected
-        public bool selectable = true;
 
         //The amount of options available after selecting this option
-        private int optionsNum;
+        protected int optionsNum;
         //Keeps track of the current option index
-        private int currentIndex = 0;
+        protected int currentIndex = 0;
         //The amount of time until this option hides its derived options
-        public float hideTime = .2f;
+        //public float hideTime = .2f;
 
-        void Awake() {
+        public virtual void Awake() {
             //Check if the number of derived options is 0
             optionsNum = derivedOptions.Length;
             if (optionsNum == 0 && increasesDepth) {
@@ -34,25 +34,19 @@ namespace Golegos {
             }
         }
 
-        void Start() {
-            battleUI = BattleUI.BUI;
-            if (battleUI == null) {
-                Debug.LogError("No BattleUI reference found");
-            }
+        public override void Start() {
+            base.Start();
             //Set this option as the parent of all the derived options
-            foreach (BattleOption battleOp in derivedOptions) {
+            foreach (MenuOption battleOp in derivedOptions) {
                 if (battleOp != null) {
                     battleOp.SetParentOption(this);
                 }
             }
         }
 
-        //Called when this option is made available (first indicates whether or not
-        //this option was the first one to be called, so that it can reset the optionBox's position)
-        public void Available(bool first) {
-            if (first) {
-                Invoke("FirstUpdate", .005f);
-            }
+        public override void FirstOption() {
+            Invoke("FirstUpdate", .005f);
+            SetChildrenNewEnable(true);
         }
 
         public void FirstUpdate() {
@@ -64,19 +58,15 @@ namespace Golegos {
             SetChildrenNewEnable(false);
         }
 
-        public void SetChildrenNewEnable(bool newEnable) {
-            foreach (BattleOption battleOp in derivedOptions) {
+        public virtual void SetChildrenNewEnable(bool newEnable) {
+            foreach (MenuOption battleOp in derivedOptions) {
                 if (battleOp != null) {
                     battleOp.gameObject.SetActive(newEnable);
-                    //If the children are now activated, call the available function
-                    if (newEnable) {
-                        battleOp.Available(false);
-                    }
                 }
             }
         }
 
-        public void UpNavigate() {
+        public override void UpNavigate() {
             if (currentIndex <= 0) {
                 currentIndex = optionsNum - 1;
             }
@@ -86,7 +76,7 @@ namespace Golegos {
             battleUI.UpdateOptionBox(currentIndex);
         }
 
-        public void DownNavigate() {
+        public override void DownNavigate() {
             if (currentIndex < optionsNum - 1) {
                 currentIndex++;
             }
@@ -96,8 +86,16 @@ namespace Golegos {
             battleUI.UpdateOptionBox(currentIndex);
         }
 
+        public override void LeftNavigate() {
+            ;
+        }
+
+        public override void RightNavigate() {
+            ;
+        }
+
         //Called when this option is selected
-        public BattleOption Select() {
+        public override BattleOption Select() {
             if (increasesDepth) {
                 battleUI.IncreaseDepth();
             }
@@ -107,7 +105,7 @@ namespace Golegos {
         }
 
         //Called when this option is exited from
-        public BattleOption Back() {
+        public override BattleOption Back() {
             if (parentOption != null) {
                 battleUI.DecreaseDepth();
                 SetToHideChildren();
@@ -132,14 +130,18 @@ namespace Golegos {
 
         //Returns the index of this option, from the parent's perspective
         public int GetIndexInParent() {
-            return parentOption.checkChildIndex(this);
+            MenuOption menuOption = parentOption as MenuOption;
+            if (menuOption != null) {
+                return menuOption.checkChildIndex(this);
+            }
+            return -1;
         }
 
         //Returns the index of the requested child from the derivedOptions array
-        public int checkChildIndex(BattleOption child) {
+        public virtual int checkChildIndex(MenuOption child) {
             int i = 0;
-            foreach (BattleOption battleOption in derivedOptions) {
-                if (battleOption == child) {
+            foreach (MenuOption MenuOption in derivedOptions) {
+                if (MenuOption == child) {
                     return i;
                 }
                 i++;

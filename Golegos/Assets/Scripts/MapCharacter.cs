@@ -13,6 +13,8 @@ namespace Golegos {
 
         private Rigidbody2D rb;
         public NewBattleManager battleManager;
+        public Character character;
+        public static MapCharacter mapChar;
 
         //Movement variables
 
@@ -30,7 +32,13 @@ namespace Golegos {
         ****************/
 
         void Awake() {
+            if (mapChar == null) {
+                mapChar = this;
+            }
             rb = GetComponent<Rigidbody2D>();
+            if (character == null) {
+                Debug.LogError("No Character specified!");
+            }
         }
 
         void Start() {
@@ -81,6 +89,24 @@ namespace Golegos {
 
         public void Back() {
             battleManager.Back();
+        }
+
+        //Return the name of the attack at the selected index
+        public string GetAttackText(int index, bool isSpecial) {
+            if (!isSpecial) {
+                //Debug.Log("New attack!");
+                if (character.stats.Attacks.Count > index) {
+                    return character.stats.Attacks[index].attackName;
+                }
+                return null;
+            }
+            else {
+                //Debug.Log("New special attack!");
+                if (character.stats.SpecialAttacks.Count > index) {
+                    return character.stats.SpecialAttacks[index].attackName;
+                }
+                return null;
+            }
         }
     }
 }
