@@ -94,7 +94,10 @@ namespace Golegos {
 
         //Called when the player presses the selection button
         public void Select() {
-            currentOption = currentOption.Select();
+            BattleOption temp = currentOption.Select();
+            if (temp != null) {
+                currentOption = temp;
+            }
         }
 
         //Called when the player presses the back button

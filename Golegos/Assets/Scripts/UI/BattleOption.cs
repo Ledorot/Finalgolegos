@@ -4,7 +4,10 @@ using UnityEngine;
 using Golegos;
 
 namespace Golegos {
-
+    /*
+    * Represents a generic option available in battle
+    * to be interacted with by the BattleManager
+    */
     public abstract class BattleOption : MonoBehaviour {
 
         //Reference to the battleUI

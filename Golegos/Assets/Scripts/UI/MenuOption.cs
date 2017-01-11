@@ -7,6 +7,9 @@ using System;
 
 namespace Golegos {
 
+    /*
+    * Represents a generic option in the battle menu to be interacted with by the BattleManager
+    */
     [RequireComponent(typeof(Text))]
     public class MenuOption : BattleOption {
 
@@ -23,6 +26,7 @@ namespace Golegos {
         protected int optionsNum;
         //Keeps track of the current option index
         protected int currentIndex = 0;
+        public static int maxOptions = 4;
         //The amount of time until this option hides its derived options
         //public float hideTime = .2f;
 
@@ -100,8 +104,14 @@ namespace Golegos {
                 battleUI.IncreaseDepth();
             }
             battleUI.UpdateOptionBox(0);
-            derivedOptions[currentIndex].SetChildrenNewEnable(true);
-            return derivedOptions[currentIndex];
+            MenuOption battleOp = derivedOptions[currentIndex];
+            if (battleOp != null) {
+                battleOp.SetChildrenNewEnable(true);
+                return battleOp;
+            }
+            else {
+                return null;
+            }
         }
 
         //Called when this option is exited from
@@ -118,7 +128,6 @@ namespace Golegos {
                 return parentOption;
             }
             else {
-                Debug.Log("No parent");
                 return null;
             }
         }

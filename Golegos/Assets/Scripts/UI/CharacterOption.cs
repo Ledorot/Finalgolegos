@@ -5,6 +5,10 @@ using Golegos;
 
 namespace Golegos {
 
+    /*
+    * Represents the option of choosing which character to strike with
+    * while in a battle
+    */
     public class CharacterOption : BattleOption {
 
         public MenuOption menuOp;
