@@ -13,8 +13,6 @@ namespace Golegos {
     [RequireComponent(typeof(Text))]
     public class AttackMenuOption : MenuOption {
 
-        //A reference to the character
-        private MapCharacter character = null;
         //A reference to the attacksUI
         public Transform attacksUI;
         private Animator attacksAnimator;
@@ -39,14 +37,6 @@ namespace Golegos {
             attackTexts = new string[optionsNum];
         }
 
-        public override void Start() {
-            base.Start();
-            if ((character = MapCharacter.mapChar) == null) {
-                Debug.LogError("No reference to MapCharacter found!");
-            }
-        }
-
-
         public override void UpNavigate() {
             //Change this
             if (currentIndex > 0) {
@@ -64,15 +54,19 @@ namespace Golegos {
 
         public override void DownNavigate() {
             //Change this
-            if (currentIndex < optionsNum - 1) {
-                currentIndex++;
-                if (currentIndex >= maxOptions) {
-                    attacksAnimator.SetInteger("Height", ++height);
-                    derivedOptions[currentIndex - maxOptions].GetComponent<Text>().text = "";
-                    derivedOptions[currentIndex].GetComponent<Text>().text = attackTexts[currentIndex];
-                }
-                else {
-                    battleUI.UpdateOptionBox(currentIndex);
+            if (!isSpecial && currentIndex < battleManager.GetSelectedPlayer().Attacks.Count - 1 ||
+                isSpecial && currentIndex < battleManager.GetSelectedPlayer().SpecialAttacks.Count - 1) {
+
+                if (currentIndex < optionsNum - 1) {
+                    currentIndex++;
+                    if (currentIndex >= maxOptions) {
+                        attacksAnimator.SetInteger("Height", ++height);
+                        derivedOptions[currentIndex - maxOptions].GetComponent<Text>().text = "";
+                        derivedOptions[currentIndex].GetComponent<Text>().text = attackTexts[currentIndex];
+                    }
+                    else {
+                        battleUI.UpdateOptionBox(currentIndex);
+                    }
                 }
             }
         }
@@ -96,7 +90,9 @@ namespace Golegos {
             int i = 0;
             string newText;
             if (newEnable) {
-                while ((newText = character.GetAttackText(i++, isSpecial)) != null) {
+                while (battleManager.GetSelectedPlayer() != null &&
+                    (newText = battleManager.GetSelectedPlayer().GetAttackText(i++, isSpecial)) != null) {
+
                     derivedOptions[i - 1].gameObject.SetActive(newEnable);
                     attackTexts[i - 1] = newText;
                     if (i <= maxOptions) {
@@ -108,10 +104,21 @@ namespace Golegos {
                 }
             }
             else {
-                while (character.GetAttackText(i++, isSpecial) != null) {
-                    derivedOptions[i].gameObject.SetActive(newEnable);
+                while (battleManager.GetSelectedPlayer().GetAttackText(i++, isSpecial) != null) {
+                    derivedOptions[i - 1].gameObject.SetActive(newEnable);
                 }
+                currentIndex = 0;
             }
+        }
+
+        //Called when this option is exited from
+        public override BattleOption Back() {
+            height = 0;
+            attacksAnimator.SetInteger("Height", height);
+            for (int i = maxOptions - 1; i > optionsNum; i++) {
+                derivedOptions[i].GetComponent<Text>().text = "";
+            }
+            return base.Back();
         }
     }
 }

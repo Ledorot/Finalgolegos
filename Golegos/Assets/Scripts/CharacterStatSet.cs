@@ -15,5 +15,23 @@ namespace Golegos
         public List<Attack> Attacks;
         public List<SpecialAttack> SpecialAttacks;
 		public Equipment defaultEquipment;
-	}
+
+        //Return the name of the attack at the selected index
+        public string GetAttackText(int index, bool isSpecial) {
+            if (!isSpecial) {
+                //Debug.Log("New attack!");
+                if (Attacks.Count > index) {
+                    return Attacks[index].attackName;
+                }
+                return null;
+            }
+            else {
+                //Debug.Log("New special attack!");
+                if (SpecialAttacks.Count > index) {
+                    return SpecialAttacks[index].attackName;
+                }
+                return null;
+            }
+        }
+    }
 }

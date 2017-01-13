@@ -90,12 +90,12 @@ namespace Golegos {
             battleUI.UpdateOptionBox(currentIndex);
         }
 
-        public override void LeftNavigate() {
-            ;
+        public override BattleOption LeftNavigate() {
+            return Back();
         }
 
-        public override void RightNavigate() {
-            ;
+        public override BattleOption RightNavigate() {
+            return Select();
         }
 
         //Called when this option is selected

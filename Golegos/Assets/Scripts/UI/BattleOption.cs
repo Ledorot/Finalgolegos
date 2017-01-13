@@ -12,11 +12,17 @@ namespace Golegos {
 
         //Reference to the battleUI
         protected BattleUI battleUI;
+        //Reference to the BattleManager
+        protected NewBattleManager battleManager;
 
         public virtual void Start() {
             battleUI = BattleUI.BUI;
             if (battleUI == null) {
                 Debug.LogError("No BattleUI reference found");
+            }
+            battleManager = NewBattleManager.bm;
+            if (battleManager == null) {
+                Debug.LogError("No static instance of NewBattleManager found!");
             }
         }
 
@@ -27,7 +33,7 @@ namespace Golegos {
 
         public abstract void UpNavigate();
         public abstract void DownNavigate();
-        public abstract void LeftNavigate();
-        public abstract void RightNavigate();
+        public abstract BattleOption LeftNavigate();
+        public abstract BattleOption RightNavigate();
     }
 }

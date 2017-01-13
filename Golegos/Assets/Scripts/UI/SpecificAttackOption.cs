@@ -14,23 +14,16 @@ namespace Golegos {
     [RequireComponent(typeof(Text))]
     public class SpecificAttackOption : MenuOption {
 
-        //A reference to the character
-        private MapCharacter character;
-
-
-        public override void Start() {
-            base.Start();
-            if ((character = MapCharacter.mapChar) == null) {
-                Debug.LogError("No reference to MapCharacter found!");
-            }
-        }
-
         public new void SetChildrenNewEnable(bool newEnable) {
             ;
         }
 
         public override BattleOption Select() {
             //NewBattleManager
+            return null;
+        }
+
+        public override BattleOption RightNavigate() {
             return null;
         }
 

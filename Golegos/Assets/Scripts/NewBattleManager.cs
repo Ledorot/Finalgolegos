@@ -6,11 +6,12 @@ using Golegos.Enums;
 namespace Golegos {
     public class NewBattleManager : MonoBehaviour {
 
-        //List of allies in the battle
-        public List<CharacterStatSet> allies;
-        //List of enemies in the battle
-        public List<CharacterStatSet> defenders;
-        public DiceManager DiceManager;
+        //The battle to be executed by this manager
+        public Battle battle;
+        //A reference to the DiceManager
+        public DiceManager diceManager;
+        //A static reference to this BattleManager
+        public static NewBattleManager bm;
 
         //Index of the currently selected player
         private int playerAttackerIndex = 0;
@@ -36,6 +37,9 @@ namespace Golegos {
             if (currentOption == null) {
                 Debug.LogError("No BaseOption selected");
             }
+            if (bm == null) {
+                bm = this;
+            }
         }
 
         void Start() {
@@ -47,9 +51,9 @@ namespace Golegos {
             BattleOutcomeText.text = "";
 
             // These three lines are in to help with testing until the rest of the battle system is in.
-            DiceManager.SetAttackerInfo(attackerRoll.regularDice, attackerRoll.specialDice, attackerRoll.playerSide, attackerRoll.throwOffset);
-            DiceManager.SetDefenderInfo(defenderRoll.regularDice, defenderRoll.specialDice, defenderRoll.playerSide, defenderRoll.throwOffset);
-            DiceManager.SetSpecialInfo(specialRoll.regularDice, specialRoll.playerSide, specialRoll.throwOffset);
+            diceManager.SetAttackerInfo(attackerRoll.regularDice, attackerRoll.specialDice, attackerRoll.playerSide, attackerRoll.throwOffset);
+            diceManager.SetDefenderInfo(defenderRoll.regularDice, defenderRoll.specialDice, defenderRoll.playerSide, defenderRoll.throwOffset);
+            diceManager.SetSpecialInfo(specialRoll.regularDice, specialRoll.playerSide, specialRoll.throwOffset);
 
             if (OffensiveTotalText != null) {
                 OffensiveTotalText.color = Color.yellow;
@@ -60,7 +64,7 @@ namespace Golegos {
                 DefensiveTotalText.text = "0";
             }
 
-            DiceManager.Roll();
+            diceManager.Roll();
         }
 
         public void UpdateDiceTotals(int attackTotal, int defenseTotal) {
@@ -110,12 +114,18 @@ namespace Golegos {
 
         //Called when the player navigates the battle UI
         public void RightSelection() {
-            currentOption.RightNavigate();
+            BattleOption temp = currentOption.RightNavigate();
+            if (temp != null) {
+                currentOption = temp;
+            }
         }
 
         //Called when the player navigates the battle UI
         public void LeftSelection() {
-            currentOption.LeftNavigate();
+            BattleOption temp = currentOption.LeftNavigate();
+            if (temp != null) {
+                currentOption = temp;
+            }
         }
 
         //Called when the player navigates the battle UI
@@ -130,7 +140,7 @@ namespace Golegos {
 
         public void IncrementCharacterIndex() {
             playerAttackerIndex++;
-            if (playerAttackerIndex >= allies.Count) {
+            if (playerAttackerIndex >= battle.allies.Count) {
                 playerAttackerIndex = 0;
             }
         }
@@ -138,8 +148,15 @@ namespace Golegos {
         public void DecrementCharacterIndex() {
             playerAttackerIndex--;
             if (playerAttackerIndex < 0) {
-                playerAttackerIndex = allies.Count - 1;
+                playerAttackerIndex = battle.allies.Count - 1;
             }
+        }
+
+        public CharacterStatSet GetSelectedPlayer() {
+            if (battle.allies.Count > playerAttackerIndex) {
+                return battle.allies[playerAttackerIndex];
+            }
+            return null;
         }
 
         public void PlayerAttack(int attackerIndex, int defenderIndex) {

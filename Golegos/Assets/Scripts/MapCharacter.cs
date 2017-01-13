@@ -91,22 +91,6 @@ namespace Golegos {
             battleManager.Back();
         }
 
-        //Return the name of the attack at the selected index
-        public string GetAttackText(int index, bool isSpecial) {
-            if (!isSpecial) {
-                //Debug.Log("New attack!");
-                if (character.stats.Attacks.Count > index) {
-                    return character.stats.Attacks[index].attackName;
-                }
-                return null;
-            }
-            else {
-                //Debug.Log("New special attack!");
-                if (character.stats.SpecialAttacks.Count > index) {
-                    return character.stats.SpecialAttacks[index].attackName;
-                }
-                return null;
-            }
-        }
+        
     }
 }

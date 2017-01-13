@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Golegos;
 
 namespace Golegos {
@@ -9,58 +10,60 @@ namespace Golegos {
     * Represents the option of choosing which character to strike with
     * while in a battle
     */
-    public class CharacterOption : BattleOption {
+    public class CharacterOption : MenuOption {
 
-        public MenuOption menuOp;
-        public NewBattleManager bm;
-        //A reference to the character
-        private MapCharacter character = null;
+        //Store the texts of the different attacks
+        private string[] characterTexts;
 
-        void Awake() {
-            if (menuOp == null) {
-                Debug.LogError("No menuOp available!");
+
+        public override void Awake() {
+            base.Awake();
+            characterTexts = new string[optionsNum];
+        }
+
+        public override void SetChildrenNewEnable(bool newEnable) {
+            int i = 0;
+            string newText;
+            if (newEnable) {
+                while (i < battleManager.battle.allies.Count) {
+                    newText = battleManager.battle.allies[i++].characterName;
+                    derivedOptions[i - 1].gameObject.SetActive(newEnable);
+                    characterTexts[i - 1] = newText;
+                    if (i <= maxOptions) {
+                        derivedOptions[i - 1].GetComponent<Text>().text = characterTexts[i - 1];
+                    }
+                    else {
+                        derivedOptions[i - 1].GetComponent<Text>().text = "";
+                    }
+                }
             }
-            if (bm == null) {
-                Debug.LogError("No BattleManager selected!");
+            else {
+                while (battleManager.battle.allies[i] != null) {
+                    derivedOptions[i].gameObject.SetActive(newEnable);
+                }
             }
-        }
-
-        public override void Start() {
-            base.Start();
-            if ((character = MapCharacter.mapChar) == null) {
-                Debug.LogError("No reference to MapCharacter found!");
-            }
-        }
-
-        public override void FirstOption() {
-            //Update the character selection
-        }
-
-        public override BattleOption Select() {
-            //Change the selection from the character to the menu
-            menuOp.SetChildrenNewEnable(true);
-            return menuOp;
-        }
-
-        public override BattleOption Back() {
-            //Change the selection from the menu to the character
-            return null;
         }
 
         public override void UpNavigate() {
-            ;
+            if (currentIndex <= 0) {
+                currentIndex = battleManager.battle.allies.Count - 1;
+            }
+            else {
+                currentIndex--;
+            }
+            battleUI.UpdateOptionBox(currentIndex);
+            battleManager.DecrementCharacterIndex();
         }
 
         public override void DownNavigate() {
-            ;
-        }
-
-        public override void LeftNavigate() {
-            //Change the position of the character selection
-        }
-
-        public override void RightNavigate() {
-            //Change the position of the character selection
+            if (currentIndex < battleManager.battle.allies.Count - 1) {
+                currentIndex++;
+            }
+            else {
+                currentIndex = 0;
+            }
+            battleUI.UpdateOptionBox(currentIndex);
+            battleManager.IncrementCharacterIndex();
         }
     }
 }
