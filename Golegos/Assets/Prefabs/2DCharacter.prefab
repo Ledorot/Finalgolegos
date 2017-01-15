@@ -11,6 +11,86 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1894132121432464}
   m_IsPrefabParent: 1
+--- !u!1 &1112053654529662
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4761649425994812}
+  - component: {fileID: 114189859739642730}
+  m_Layer: 0
+  m_Name: SpecialAttack_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1204497320285888
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4180464341190106}
+  - component: {fileID: 114530839035801376}
+  m_Layer: 0
+  m_Name: Attack_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1212069391607836
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4475241527831634}
+  - component: {fileID: 114142403307895046}
+  m_Layer: 0
+  m_Name: Attack_6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1270226308023918
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4701089329058656}
+  - component: {fileID: 114105251872263818}
+  m_Layer: 0
+  m_Name: Attack_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1305201658812822
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4228882737788332}
+  - component: {fileID: 114345464445971558}
+  m_Layer: 0
+  m_Name: Attack_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1305957652641852
 GameObject:
   m_ObjectHideFlags: 1
@@ -38,6 +118,22 @@ GameObject:
   - component: {fileID: 114154447855634144}
   m_Layer: 0
   m_Name: Attack_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1386432455553348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4925381895266520}
+  - component: {fileID: 114995905396039370}
+  m_Layer: 0
+  m_Name: Ally_1_Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,6 +182,22 @@ GameObject:
   - component: {fileID: 114257433202021766}
   m_Layer: 0
   m_Name: CharacterStats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1439803360452092
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4706198256946634}
+  - component: {fileID: 114184404626616588}
+  m_Layer: 0
+  m_Name: Attack_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,6 +255,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1964440406725352
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4296775834749380}
+  - component: {fileID: 114442496109374072}
+  m_Layer: 0
+  m_Name: Attack_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1967168743122140
 GameObject:
   m_ObjectHideFlags: 1
@@ -159,6 +287,45 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4180464341190106
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1204497320285888}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.000010174983, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4925381895266520}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4228882737788332
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305201658812822}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4925381895266520}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4296775834749380
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1964440406725352}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.000010174983, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4925381895266520}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4363068809227308
 Transform:
   m_ObjectHideFlags: 1
@@ -171,6 +338,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4796583997437550}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4475241527831634
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1212069391607836}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.000010174983, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4925381895266520}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4657294704310576
 Transform:
@@ -185,6 +365,32 @@ Transform:
   m_Father: {fileID: 4796583997437550}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4701089329058656
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1270226308023918}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.000010174983, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4925381895266520}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4706198256946634
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1439803360452092}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.000010174983, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4925381895266520}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4726481399859860
 Transform:
   m_ObjectHideFlags: 1
@@ -197,6 +403,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4796583997437550}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4761649425994812
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1112053654529662}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.000010174983, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4925381895266520}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4796381026471636
 Transform:
@@ -242,6 +461,7 @@ Transform:
   m_LocalScale: {x: 10.669243, y: 10.669243, z: 10.669243}
   m_Children:
   - {fileID: 4796583997437550}
+  - {fileID: 4925381895266520}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -257,6 +477,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4796583997437550}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4925381895266520
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386432455553348}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 67.375145, y: 10.598851, z: 0}
+  m_LocalScale: {x: 0.093727365, y: 0.093727365, z: 0.093727365}
+  m_Children:
+  - {fileID: 4228882737788332}
+  - {fileID: 4296775834749380}
+  - {fileID: 4180464341190106}
+  - {fileID: 4701089329058656}
+  - {fileID: 4706198256946634}
+  - {fileID: 4475241527831634}
+  - {fileID: 4761649425994812}
+  m_Father: {fileID: 4801969067791028}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4930992473040712
 Transform:
@@ -334,6 +574,38 @@ MonoBehaviour:
   diceToRoll: 2
   effects: []
   constraints: []
+--- !u!114 &114105251872263818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1270226308023918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f85cd867dc94b4a8863a413a26f6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: Fourth Attack
+  description: The character's secondary attack
+  diceToRoll: 2
+  effects: []
+  constraints: []
+--- !u!114 &114142403307895046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1212069391607836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f85cd867dc94b4a8863a413a26f6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: Sixth Attack
+  description: The character's secondary attack
+  diceToRoll: 2
+  effects: []
+  constraints: []
 --- !u!114 &114154447855634144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -350,6 +622,22 @@ MonoBehaviour:
   diceToRoll: 2
   effects: []
   constraints: []
+--- !u!114 &114184404626616588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1439803360452092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f85cd867dc94b4a8863a413a26f6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: Fifth Attack
+  description: The character's secondary attack
+  diceToRoll: 2
+  effects: []
+  constraints: []
 --- !u!114 &114185040231814490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -361,6 +649,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd59870d9f40fe447a32fa61b9c08237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114189859739642730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1112053654529662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c005445e799f6f640b43c0aeb5ba9e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: SpecialAttack
+  description: The character's special attack
+  diceToRoll: 2
+  maxUses: 1
+  effects: []
+  constraints: []
 --- !u!114 &114246496866836404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -389,7 +694,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4feaba44a7853548a0428ab6bbee414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: MainChar
+  characterName: MAIN CHAR
+  battleSprite: {fileID: 224515525848832724, guid: 9f6c4fde3ad72c94baadbb2df459cf57,
+    type: 2}
   RollsPerTurn: 5
   AttackDice: 2
   DefenseDice: 1
@@ -478,6 +785,54 @@ MonoBehaviour:
   diceToRoll: 2
   effects: []
   constraints: []
+--- !u!114 &114345464445971558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1305201658812822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f85cd867dc94b4a8863a413a26f6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: First Attack
+  description: The character's basic attack
+  diceToRoll: 2
+  effects: []
+  constraints: []
+--- !u!114 &114442496109374072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1964440406725352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f85cd867dc94b4a8863a413a26f6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: Second Attack
+  description: The character's secondary attack
+  diceToRoll: 2
+  effects: []
+  constraints: []
+--- !u!114 &114530839035801376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1204497320285888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f85cd867dc94b4a8863a413a26f6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackName: Third Attack
+  description: The character's secondary attack
+  diceToRoll: 2
+  effects: []
+  constraints: []
 --- !u!114 &114754676119328568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -526,6 +881,54 @@ MonoBehaviour:
   diceToRoll: 2
   effects: []
   constraints: []
+--- !u!114 &114995905396039370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386432455553348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4feaba44a7853548a0428ab6bbee414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: ALLY 1
+  battleSprite: {fileID: 0}
+  RollsPerTurn: 5
+  AttackDice: 2
+  DefenseDice: 1
+  HealthBars: 
+  Attacks:
+  - {fileID: 114345464445971558}
+  - {fileID: 114442496109374072}
+  - {fileID: 114530839035801376}
+  - {fileID: 114105251872263818}
+  - {fileID: 114142403307895046}
+  - {fileID: 114442496109374072}
+  SpecialAttacks:
+  - {fileID: 114189859739642730}
+  defaultEquipment:
+    hand:
+      enabled: 0
+      item: {fileID: 0}
+    torso:
+      enabled: 0
+      item: {fileID: 0}
+    neck:
+      enabled: 0
+      item: {fileID: 0}
+    head:
+      enabled: 0
+      item: {fileID: 0}
+    back:
+      enabled: 0
+      item: {fileID: 0}
+    legs:
+      enabled: 0
+      item: {fileID: 0}
+    offHand:
+      enabled: 0
+      item: {fileID: 0}
 --- !u!212 &212533514036521966
 SpriteRenderer:
   m_ObjectHideFlags: 1

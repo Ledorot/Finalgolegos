@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
-using Golegos.Enums;
 
 namespace Golegos {
     public class NewBattleManager : MonoBehaviour {
@@ -27,6 +25,10 @@ namespace Golegos {
         public Text OffensiveTotalText;
         public Text DefensiveTotalText;
 
+        //Ally spawn points
+        public Transform[] allySpawnPoints;
+        //Enemy spawn points
+        public Transform[] enemySpawnPoints;
         //A reference to the baseOption
         public BattleOption baseOption;
         //The currently selected option
@@ -40,11 +42,19 @@ namespace Golegos {
             if (bm == null) {
                 bm = this;
             }
+            if (allySpawnPoints.Length == 0) {
+                Debug.LogError("No ally spawn points specified!");
+            }
+            if (enemySpawnPoints.Length == 0) {
+                Debug.LogError("No enemy spawn points specified!");
+            }
         }
 
         void Start() {
             //Battle();
             currentOption.FirstOption();
+            SpawnCharacters();
+
         }
 
         public void Battle() {
@@ -94,6 +104,23 @@ namespace Golegos {
                 DefensiveTotalText.color = Color.blue;
             }
 
+        }
+
+        private void SpawnCharacters() {
+            int i = 0;
+            if (battle.allies.Count > 0) {
+                while (battle.allies[i] != null && battle.allies[i].battleSprite != null) {
+                    /*RectTransform sprite = */
+                    Instantiate(battle.allies[i].battleSprite, allySpawnPoints[i++].position, allySpawnPoints[i].rotation, allySpawnPoints[i]);
+                    //sprite.parent
+                }
+            }
+            i = 0;
+            if (battle.enemies.Count > 0) {
+                while (battle.enemies[i] != null && battle.enemies[i].battleSprite != null) {
+                    Instantiate(battle.enemies[i].battleSprite, enemySpawnPoints[i++]);
+                }
+            }
         }
 
         //Called when the player presses the selection button

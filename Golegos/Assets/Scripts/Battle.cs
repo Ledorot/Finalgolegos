@@ -9,6 +9,6 @@ namespace Golegos {
         //List of allies in the battle
         public List<CharacterStatSet> allies;
         //List of enemies in the battle
-        public List<CharacterStatSet> defenders;
+        public List<CharacterStatSet> enemies;
     }
 }

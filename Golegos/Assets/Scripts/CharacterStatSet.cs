@@ -8,6 +8,7 @@ namespace Golegos
     public class CharacterStatSet : MonoBehaviour
     {
 		public string characterName;
+        public RectTransform battleSprite;
 		public int RollsPerTurn;
 		public int AttackDice;
 		public int DefenseDice;
