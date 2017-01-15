@@ -48,6 +48,9 @@ namespace Golegos {
             if (enemySpawnPoints.Length == 0) {
                 Debug.LogError("No enemy spawn points specified!");
             }
+            if (battle == null) {
+                Debug.LogError("No Battle specified!");
+            }
         }
 
         void Start() {
@@ -108,17 +111,21 @@ namespace Golegos {
 
         private void SpawnCharacters() {
             int i = 0;
-            if (battle.allies.Count > 0) {
-                while (battle.allies[i] != null && battle.allies[i].battleSprite != null) {
+            int max = battle.allies.Count;
+            for (i = 0; i < max; i++) {
+                if (battle.allies[i].battleSprite != null) {
                     /*RectTransform sprite = */
-                    Instantiate(battle.allies[i].battleSprite, allySpawnPoints[i++].position, allySpawnPoints[i].rotation, allySpawnPoints[i]);
+                    Instantiate(battle.allies[i].battleSprite, allySpawnPoints[i].position, allySpawnPoints[i].rotation, allySpawnPoints[i]);
                     //sprite.parent
                 }
             }
             i = 0;
-            if (battle.enemies.Count > 0) {
-                while (battle.enemies[i] != null && battle.enemies[i].battleSprite != null) {
-                    Instantiate(battle.enemies[i].battleSprite, enemySpawnPoints[i++]);
+            max = battle.enemies.Count;
+            for (i = 0; i < max; i++) {
+                if (battle.enemies[i].battleSprite != null) {
+                    /*RectTransform sprite = */
+                    Instantiate(battle.enemies[i].battleSprite, enemySpawnPoints[i].position, enemySpawnPoints[i].rotation, enemySpawnPoints[i]);
+                    //sprite.parent
                 }
             }
         }

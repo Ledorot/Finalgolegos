@@ -893,7 +893,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: ALLY 1
-  battleSprite: {fileID: 0}
+  battleSprite: {fileID: 224515525848832724, guid: b6723a360854e7346879b719db6b0e1f,
+    type: 2}
   RollsPerTurn: 5
   AttackDice: 2
   DefenseDice: 1

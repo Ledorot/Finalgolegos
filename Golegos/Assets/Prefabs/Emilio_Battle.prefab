@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222575992516894932}
   - component: {fileID: 114465293038719214}
   m_Layer: 0
-  m_Name: Davey_Battle
+  m_Name: Emilio_Battle
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8516d3d9ae5530945b2e6382c2aaee8f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2684e9e58b7fb7849b7961709c487745, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

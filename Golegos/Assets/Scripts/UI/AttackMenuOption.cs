@@ -93,7 +93,6 @@ namespace Golegos {
                 while (battleManager.GetSelectedPlayer() != null &&
                     (newText = battleManager.GetSelectedPlayer().GetAttackText(i++, isSpecial)) != null) {
 
-                    derivedOptions[i - 1].gameObject.SetActive(newEnable);
                     attackTexts[i - 1] = newText;
                     if (i <= maxOptions) {
                         derivedOptions[i - 1].GetComponent<Text>().text = attackTexts[i - 1];
@@ -105,7 +104,7 @@ namespace Golegos {
             }
             else {
                 while (battleManager.GetSelectedPlayer().GetAttackText(i++, isSpecial) != null) {
-                    derivedOptions[i - 1].gameObject.SetActive(newEnable);
+                    derivedOptions[i - 1].GetComponent<Text>().text = "";
                 }
                 currentIndex = 0;
             }
