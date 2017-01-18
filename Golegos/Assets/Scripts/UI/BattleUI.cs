@@ -113,7 +113,7 @@ namespace Golegos
         //}
         
         public void UpdateOptionBox(int index) {
-            if (optionBox != null && boxPositions.Length > index) {
+            if (optionBox != null && boxPositions.Length > index && index >= 0) {
                 optionBox.transform.position = boxPositions[index].position;
             }
             else {

@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+using Golegos;
 
 namespace Golegos {
     public class NewBattleManager : MonoBehaviour {
@@ -10,9 +13,19 @@ namespace Golegos {
         public DiceManager diceManager;
         //A static reference to this BattleManager
         public static NewBattleManager bm;
+        //Reference to the character
+        private MapCharacter mapCharacter;
 
         //Index of the currently selected player
-        private int playerAttackerIndex = 0;
+        private int playerIndex = 0;
+        //Index of the currently selected attack
+        private int attackIndex = 0;
+        //Index of the currently selected enemy
+        private int enemyIndex = 0;
+        //Current list of allies
+        private List<CharacterStatSet> alliesList;
+        //Current list of enemies
+        private List<CharacterStatSet> enemiesList;
 
         // These are currently only here for helping with testing.
         public DiceManager.RollInfo attackerRoll;
@@ -30,9 +43,9 @@ namespace Golegos {
         //Enemy spawn points
         public Transform[] enemySpawnPoints;
         //A reference to the baseOption
-        public BattleOption baseOption;
+        public MenuOption baseOption;
         //The currently selected option
-        private BattleOption currentOption;
+        private MenuOption currentOption;
 
         void Awake() {
             currentOption = baseOption;
@@ -55,9 +68,24 @@ namespace Golegos {
 
         void Start() {
             //Battle();
-            currentOption.FirstOption();
+            mapCharacter = MapCharacter.mapChar;
+            if (mapCharacter == null) {
+                Debug.Log("No MapCharacter instance found!");
+            }
+            NewBattle();
             SpawnCharacters();
+            Invoke("SetFirstOption", .1f);
 
+        }
+
+        //Used to give the other options a chance to use Start() properly (without null references)
+        public void SetFirstOption() {
+            currentOption.FirstOption();
+        }
+
+        public void NewBattle() {
+            alliesList = mapCharacter.allies;
+            enemiesList = battle.enemies;
         }
 
         public void Battle() {
@@ -111,20 +139,22 @@ namespace Golegos {
 
         private void SpawnCharacters() {
             int i = 0;
-            int max = battle.allies.Count;
+            int max = alliesList.Count;
+            //Spawn allies
             for (i = 0; i < max; i++) {
-                if (battle.allies[i].battleSprite != null) {
+                if (alliesList[i].battleSprite != null) {
                     /*RectTransform sprite = */
-                    Instantiate(battle.allies[i].battleSprite, allySpawnPoints[i].position, allySpawnPoints[i].rotation, allySpawnPoints[i]);
+                    Instantiate(alliesList[i].battleSprite, allySpawnPoints[i].position, allySpawnPoints[i].rotation, allySpawnPoints[i]);
                     //sprite.parent
                 }
             }
             i = 0;
-            max = battle.enemies.Count;
+            max = enemiesList.Count;
+            //Spawn enemies
             for (i = 0; i < max; i++) {
-                if (battle.enemies[i].battleSprite != null) {
+                if (enemiesList[i].battleSprite != null) {
                     /*RectTransform sprite = */
-                    Instantiate(battle.enemies[i].battleSprite, enemySpawnPoints[i].position, enemySpawnPoints[i].rotation, enemySpawnPoints[i]);
+                    Instantiate(enemiesList[i].battleSprite, enemySpawnPoints[i].position, enemySpawnPoints[i].rotation, enemySpawnPoints[i]);
                     //sprite.parent
                 }
             }
@@ -132,34 +162,36 @@ namespace Golegos {
 
         //Called when the player presses the selection button
         public void Select() {
-            BattleOption temp = currentOption.Select();
+            MenuOption temp = currentOption.Select() as MenuOption;
             if (temp != null) {
+                MenuOption menuOp = currentOption.GetParentOption() as MenuOption;
+                if (currentOption.GetParentOption() != null && menuOp != null) {
+                    menuOp.SetChildrenNewEnable(false);
+                }
                 currentOption = temp;
             }
         }
 
         //Called when the player presses the back button
         public void Back() {
-            BattleOption temp = currentOption.Back();
+            MenuOption temp = currentOption.Back() as MenuOption;
             if (temp != null) {
                 currentOption = temp;
+                MenuOption menuOp = currentOption.GetParentOption() as MenuOption;
+                if (currentOption.GetParentOption() != null && menuOp != null) {
+                    menuOp.SetChildrenNewEnable(true);
+                }
             }
         }
 
         //Called when the player navigates the battle UI
         public void RightSelection() {
-            BattleOption temp = currentOption.RightNavigate();
-            if (temp != null) {
-                currentOption = temp;
-            }
+            Select();
         }
 
         //Called when the player navigates the battle UI
         public void LeftSelection() {
-            BattleOption temp = currentOption.LeftNavigate();
-            if (temp != null) {
-                currentOption = temp;
-            }
+            Back();
         }
 
         //Called when the player navigates the battle UI
@@ -172,25 +204,42 @@ namespace Golegos {
             currentOption.DownNavigate();
         }
 
-        public void IncrementCharacterIndex() {
-            playerAttackerIndex++;
-            if (playerAttackerIndex >= battle.allies.Count) {
-                playerAttackerIndex = 0;
+        public void SetAllyIndex(int index) {
+            if (playerIndex < alliesList.Count) {
+                playerIndex = index;
+            }
+            else {
+                Debug.LogError("Specified character doesn't exist!");
             }
         }
 
-        public void DecrementCharacterIndex() {
-            playerAttackerIndex--;
-            if (playerAttackerIndex < 0) {
-                playerAttackerIndex = battle.allies.Count - 1;
+        public void SetEnemyIndex(int index) {
+            if (enemyIndex < enemiesList.Count) {
+                enemyIndex = index;
             }
+            else {
+                Debug.LogError("Specified character doesn't exist!");
+            }
+        }
+
+        public List<CharacterStatSet> GetAllies() {
+            return alliesList;
+        }
+
+        public List<CharacterStatSet> GetEnemies() {
+            return enemiesList;
         }
 
         public CharacterStatSet GetSelectedPlayer() {
-            if (battle.allies.Count > playerAttackerIndex) {
-                return battle.allies[playerAttackerIndex];
+            if (alliesList.Count > playerIndex) {
+                return alliesList[playerIndex];
             }
             return null;
+        }
+
+        //Sets the index of the attack to use by the player
+        public void SetPlayerAttack(int index) {
+            attackIndex = index;
         }
 
         public void PlayerAttack(int attackerIndex, int defenderIndex) {

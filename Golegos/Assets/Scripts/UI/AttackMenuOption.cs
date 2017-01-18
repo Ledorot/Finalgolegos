@@ -13,7 +13,7 @@ namespace Golegos {
     [RequireComponent(typeof(Text))]
     public class AttackMenuOption : MenuOption {
 
-        //A reference to the attacksUI
+        //A reference to the attacksUI (this class will animate it)
         public Transform attacksUI;
         private Animator attacksAnimator;
 
@@ -37,8 +37,37 @@ namespace Golegos {
             attackTexts = new string[optionsNum];
         }
 
+        //Changes the different attack's visibility
+        //public void RearrangeChildrenVisibility(int index) {
+        //    if (index >= derivedOptions.Length || index < 0) {
+        //        return;
+        //    }
+        //    derivedOptions[index - maxOptions].gameObject.SetActive(false);
+        //    if (index - 1 >= derivedOptions.Length) {
+        //        derivedOptions[index - 1].gameObject.SetActive(false);
+        //    }
+        //    derivedOptions[index].gameObject.SetActive(true);
+        //    if (index < derivedOptions.Length - 1) {
+        //        derivedOptions[index + 1].gameObject.SetActive(false);
+        //    }
+        //}
+
+        public override BattleOption Select() {
+            battleManager.SetPlayerAttack(currentIndex);
+            return base.Select();
+        }
+
+        //Called when this option is exited from
+        public override BattleOption Back() {
+            height = 0;
+            attacksAnimator.SetInteger("Height", height);
+            for (int i = maxOptions - 1; i > optionsNum; i++) {
+                derivedOptions[i].GetComponent<Text>().text = "";
+            }
+            return base.Back();
+        }
+
         public override void UpNavigate() {
-            //Change this
             if (currentIndex > 0) {
                 currentIndex--;
                 if (height > 0) {
@@ -53,7 +82,6 @@ namespace Golegos {
         }
 
         public override void DownNavigate() {
-            //Change this
             if (!isSpecial && currentIndex < battleManager.GetSelectedPlayer().Attacks.Count - 1 ||
                 isSpecial && currentIndex < battleManager.GetSelectedPlayer().SpecialAttacks.Count - 1) {
 
@@ -71,21 +99,6 @@ namespace Golegos {
             }
         }
 
-        //Changes the different attack's visibility
-        //public void RearrangeChildrenVisibility(int index) {
-        //    if (index >= derivedOptions.Length || index < 0) {
-        //        return;
-        //    }
-        //    derivedOptions[index - maxOptions].gameObject.SetActive(false);
-        //    if (index - 1 >= derivedOptions.Length) {
-        //        derivedOptions[index - 1].gameObject.SetActive(false);
-        //    }
-        //    derivedOptions[index].gameObject.SetActive(true);
-        //    if (index < derivedOptions.Length - 1) {
-        //        derivedOptions[index + 1].gameObject.SetActive(false);
-        //    }
-        //}
-
         public override void SetChildrenNewEnable(bool newEnable) {
             int i = 0;
             string newText;
@@ -95,29 +108,22 @@ namespace Golegos {
 
                     attackTexts[i - 1] = newText;
                     if (i <= maxOptions) {
+                        //Show the text of the different attacks
                         derivedOptions[i - 1].GetComponent<Text>().text = attackTexts[i - 1];
                     }
                     else {
+                        //If there are more options than there are attacks, hide this text
                         derivedOptions[i - 1].GetComponent<Text>().text = "";
                     }
                 }
             }
             else {
                 while (battleManager.GetSelectedPlayer().GetAttackText(i++, isSpecial) != null) {
+                    //Hide the text of all the attacks
                     derivedOptions[i - 1].GetComponent<Text>().text = "";
                 }
                 currentIndex = 0;
             }
-        }
-
-        //Called when this option is exited from
-        public override BattleOption Back() {
-            height = 0;
-            attacksAnimator.SetInteger("Height", height);
-            for (int i = maxOptions - 1; i > optionsNum; i++) {
-                derivedOptions[i].GetComponent<Text>().text = "";
-            }
-            return base.Back();
         }
     }
 }

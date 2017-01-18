@@ -12,6 +12,11 @@ namespace Golegos {
     */
     public class CharacterOption : MenuOption {
 
+        //Reference to the characters that this option will show
+        private List<CharacterStatSet> characters;
+        //Whether or not this class lists enemies
+        public bool hasEnemies;
+
         //Store the texts of the different attacks
         private string[] characterTexts;
 
@@ -21,49 +26,80 @@ namespace Golegos {
             characterTexts = new string[optionsNum];
         }
 
-        public override void SetChildrenNewEnable(bool newEnable) {
-            int i = 0;
-            string newText;
-            if (newEnable) {
-                while (i < battleManager.battle.allies.Count) {
-                    newText = battleManager.battle.allies[i++].characterName;
-                    derivedOptions[i - 1].gameObject.SetActive(newEnable);
-                    characterTexts[i - 1] = newText;
-                    if (i <= maxOptions) {
-                        derivedOptions[i - 1].GetComponent<Text>().text = characterTexts[i - 1];
-                    }
-                    else {
-                        derivedOptions[i - 1].GetComponent<Text>().text = "";
-                    }
-                }
+        public override void Start() {
+            base.Start();
+            SetCharacterList();
+            Invoke("SetCharacterList", .05f);
+        }
+
+        public void SetCharacterList() {
+            if (!hasEnemies) {
+                characters = battleManager.GetAllies();
             }
             else {
-                while (battleManager.battle.allies[i] != null) {
-                    derivedOptions[i].gameObject.SetActive(newEnable);
-                }
+                characters = battleManager.GetEnemies();
             }
+        }
+
+        public override BattleOption Select() {
+            if (!hasEnemies) {
+                battleManager.SetAllyIndex(currentIndex);
+            }
+            else {
+                battleManager.SetEnemyIndex(currentIndex);
+            }
+            return base.Select();
         }
 
         public override void UpNavigate() {
             if (currentIndex <= 0) {
-                currentIndex = battleManager.battle.allies.Count - 1;
+                if (!hasEnemies) {
+                    currentIndex = battleManager.GetAllies().Count - 1;
+                }
+                else {
+                    currentIndex = battleManager.GetEnemies().Count - 1;
+                }
             }
             else {
                 currentIndex--;
             }
             battleUI.UpdateOptionBox(currentIndex);
-            battleManager.DecrementCharacterIndex();
         }
 
         public override void DownNavigate() {
-            if (currentIndex < battleManager.battle.allies.Count - 1) {
+            if (!hasEnemies && currentIndex < battleManager.GetAllies().Count - 1 ||
+                    hasEnemies && currentIndex < battleManager.GetEnemies().Count - 1) {
                 currentIndex++;
             }
             else {
                 currentIndex = 0;
             }
             battleUI.UpdateOptionBox(currentIndex);
-            battleManager.IncrementCharacterIndex();
+        }
+
+        public override void SetChildrenNewEnable(bool newEnable) {
+            int i = 0;
+            string newText;
+            if (newEnable) {
+                while (i < characters.Count) {
+                    newText = characters[i++].characterName;
+                    characterTexts[i - 1] = newText;
+                    if (i <= maxOptions) {
+                        //Set the option's text to each of the character's names
+                        derivedOptions[i - 1].GetComponent<Text>().text = characterTexts[i - 1];
+                    }
+                    else {
+                        //If there are more options than characters, hide the rest of the options' text
+                        derivedOptions[i - 1].GetComponent<Text>().text = "";
+                    }
+                }
+            }
+            else {
+                while (i < characters.Count) {
+                    //Hide the text from all the options
+                    derivedOptions[i++].GetComponent<Text>().text = "";
+                }
+            }
         }
     }
 }

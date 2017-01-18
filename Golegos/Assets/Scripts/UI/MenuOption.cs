@@ -15,12 +15,11 @@ namespace Golegos {
 
         //List of battle options that derive from this option
         public MenuOption[] derivedOptions;
-        
-        //The option that enabled this option
-        protected BattleOption parentOption = null;
 
         //Indicates whether or not the menu should animate to the left when this option is selected
         public bool increasesDepth = true;
+        //The text that this option should display
+        public string optionText;
 
         //The amount of options available after selecting this option
         protected int optionsNum;
@@ -29,6 +28,7 @@ namespace Golegos {
         public static int maxOptions = 4;
         //The amount of time until this option hides its derived options
         //public float hideTime = .2f;
+
 
         public virtual void Awake() {
             //Check if the number of derived options is 0
@@ -48,54 +48,15 @@ namespace Golegos {
             }
         }
 
+        //Called if this option is the first option of the menu
         public override void FirstOption() {
+            //Delays the update... because if it doesn't it won't work
             Invoke("FirstUpdate", .005f);
             SetChildrenNewEnable(true);
         }
 
         public void FirstUpdate() {
             battleUI.UpdateOptionBox(0);
-        }
-
-        //Called when this option gets returned to (so that this option can hide its derived options)
-        public void SetToHideChildren() {
-            SetChildrenNewEnable(false);
-        }
-
-        public virtual void SetChildrenNewEnable(bool newEnable) {
-            foreach (MenuOption battleOp in derivedOptions) {
-                if (battleOp != null) {
-                    battleOp.gameObject.SetActive(newEnable);
-                }
-            }
-        }
-
-        public override void UpNavigate() {
-            if (currentIndex <= 0) {
-                currentIndex = optionsNum - 1;
-            }
-            else {
-                currentIndex--;
-            }
-            battleUI.UpdateOptionBox(currentIndex);
-        }
-
-        public override void DownNavigate() {
-            if (currentIndex < optionsNum - 1) {
-                currentIndex++;
-            }
-            else {
-                currentIndex = 0;
-            }
-            battleUI.UpdateOptionBox(currentIndex);
-        }
-
-        public override BattleOption LeftNavigate() {
-            return Back();
-        }
-
-        public override BattleOption RightNavigate() {
-            return Select();
         }
 
         //Called when this option is selected
@@ -131,12 +92,58 @@ namespace Golegos {
                 return null;
             }
         }
-        
-        //Set the parent option of this option
-        public void SetParentOption(BattleOption newParent) {
-            parentOption = newParent;
+
+        //Called when the player navigates up
+        public override void UpNavigate() {
+            if (currentIndex <= 0) {
+                currentIndex = optionsNum - 1;
+            }
+            else {
+                currentIndex--;
+            }
+            battleUI.UpdateOptionBox(currentIndex);
         }
 
+        //Called when the player navigates down
+        public override void DownNavigate() {
+            if (currentIndex < optionsNum - 1) {
+                currentIndex++;
+            }
+            else {
+                currentIndex = 0;
+            }
+            battleUI.UpdateOptionBox(currentIndex);
+        }
+
+        //Called when the player navigates left
+        public override BattleOption LeftNavigate() {
+            return Back();
+        }
+
+        //Called when the player navigates right
+        public override BattleOption RightNavigate() {
+            return Select();
+        }
+
+        //Shows or hides the derived options of this option
+        public virtual void SetChildrenNewEnable(bool newEnable) {
+            foreach (MenuOption battleOp in derivedOptions) {
+                if (battleOp != null) {
+                    if (newEnable && battleOp.optionText != null) {
+                        battleOp.GetComponent<Text>().text = battleOp.optionText;
+                    }
+                    else if (!newEnable){
+                        battleOp.GetComponent<Text>().text = "";
+                    }
+                }
+            }
+        }
+
+        //Called when this option gets returned to (so that this option can hide its derived options)
+        public void SetToHideChildren() {
+            SetChildrenNewEnable(false);
+        }
+        
         //Returns the index of this option, from the parent's perspective
         public int GetIndexInParent() {
             MenuOption menuOption = parentOption as MenuOption;

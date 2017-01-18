@@ -768,6 +768,9 @@ MonoBehaviour:
       offHand:
         enabled: 0
         item: {fileID: 0}
+  allies:
+  - {fileID: 114257433202021766}
+  - {fileID: 114995905396039370}
   movSpeed: 6
 --- !u!114 &114340164890860232
 MonoBehaviour:

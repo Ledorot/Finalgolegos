@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Golegos;
 
 namespace Golegos {
@@ -15,6 +16,9 @@ namespace Golegos {
         public NewBattleManager battleManager;
         public Character character;
         public static MapCharacter mapChar;
+
+        //List of allies available for battle
+        public List<CharacterStatSet> allies;
 
         //Movement variables
 
