@@ -178,8 +178,10 @@ namespace Golegos {
             if (temp != null) {
                 currentOption = temp;
                 MenuOption menuOp = currentOption.GetParentOption() as MenuOption;
-                if (currentOption.GetParentOption() != null && menuOp != null) {
-                    menuOp.SetChildrenNewEnable(true);
+                if (menuOp != null) {
+                    Debug.Log("Parent: " + menuOp.name + "\tChild: " + currentOption);
+                    Debug.Log(currentOption.GetIndexInParent());
+                    menuOp.SetChildrenEnableAtIndex(currentOption.GetIndexInParent());
                 }
             }
         }

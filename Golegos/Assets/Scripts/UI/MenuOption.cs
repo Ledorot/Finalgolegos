@@ -67,6 +67,7 @@ namespace Golegos {
             battleUI.UpdateOptionBox(0);
             MenuOption battleOp = derivedOptions[currentIndex];
             if (battleOp != null) {
+                SetChildrenEnableAtIndex(currentIndex);
                 battleOp.SetChildrenNewEnable(true);
                 return battleOp;
             }
@@ -86,11 +87,25 @@ namespace Golegos {
                 if (newIndex >= 0) {
                     battleUI.UpdateOptionBox(newIndex);
                 }
+                if (parentOption as MenuOption != null) {
+                    (parentOption as MenuOption).SetChildrenNewEnable(true);
+                }
+                //SetChildrenNewEnable(true);
                 return parentOption;
             }
             else {
                 return null;
             }
+        }
+
+        //Called when the player navigates left
+        public override BattleOption LeftNavigate() {
+            return Back();
+        }
+
+        //Called when the player navigates right
+        public override BattleOption RightNavigate() {
+            return Select();
         }
 
         //Called when the player navigates up
@@ -115,16 +130,6 @@ namespace Golegos {
             battleUI.UpdateOptionBox(currentIndex);
         }
 
-        //Called when the player navigates left
-        public override BattleOption LeftNavigate() {
-            return Back();
-        }
-
-        //Called when the player navigates right
-        public override BattleOption RightNavigate() {
-            return Select();
-        }
-
         //Shows or hides the derived options of this option
         public virtual void SetChildrenNewEnable(bool newEnable) {
             foreach (MenuOption battleOp in derivedOptions) {
@@ -134,6 +139,20 @@ namespace Golegos {
                     }
                     else if (!newEnable){
                         battleOp.GetComponent<Text>().text = "";
+                    }
+                }
+            }
+        }
+
+        //Hides all the children except for the one at the specified index
+        public virtual void SetChildrenEnableAtIndex(int index) {
+            for (int i = 0; i < derivedOptions.Length; i++) {
+                if (derivedOptions[i] != null) {
+                    if (i == index && derivedOptions[i].optionText != null) {
+                        derivedOptions[i].GetComponent<Text>().text = derivedOptions[i].optionText;
+                    }
+                    else if (i != index) {
+                        derivedOptions[i].GetComponent<Text>().text = "";
                     }
                 }
             }
@@ -156,8 +175,8 @@ namespace Golegos {
         //Returns the index of the requested child from the derivedOptions array
         public virtual int checkChildIndex(MenuOption child) {
             int i = 0;
-            foreach (MenuOption MenuOption in derivedOptions) {
-                if (MenuOption == child) {
+            foreach (MenuOption menuOption in derivedOptions) {
+                if (menuOption.optionText == child.optionText) {
                     return i;
                 }
                 i++;

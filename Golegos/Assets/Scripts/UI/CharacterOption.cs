@@ -78,28 +78,41 @@ namespace Golegos {
         }
 
         public override void SetChildrenNewEnable(bool newEnable) {
-            int i = 0;
+            int i;
             string newText;
             if (newEnable) {
-                while (i < characters.Count) {
-                    newText = characters[i++].characterName;
-                    characterTexts[i - 1] = newText;
+                for (i = 0; i < characters.Count; i++) { 
+                    newText = characters[i].characterName;
+                    characterTexts[i] = newText;
                     if (i <= maxOptions) {
                         //Set the option's text to each of the character's names
-                        derivedOptions[i - 1].GetComponent<Text>().text = characterTexts[i - 1];
+                        derivedOptions[i].GetComponent<Text>().text = characterTexts[i];
                     }
                     else {
                         //If there are more options than characters, hide the rest of the options' text
-                        derivedOptions[i - 1].GetComponent<Text>().text = "";
+                        derivedOptions[i].GetComponent<Text>().text = "";
                     }
                 }
             }
             else {
-                while (i < characters.Count) {
+                for (i = 0; i < characters.Count; i++) {
                     //Hide the text from all the options
-                    derivedOptions[i++].GetComponent<Text>().text = "";
+                    derivedOptions[i].GetComponent<Text>().text = "";
                 }
             }
+        }
+
+        public override void SetChildrenEnableAtIndex(int index) {
+            int i;
+            for (i = 0; i < characters.Count; i++) {
+                if (i == index) {
+                    derivedOptions[i].GetComponent<Text>().text = characters[i].characterName;
+                }
+                else {
+                    derivedOptions[i].GetComponent<Text>().text = "";
+                }
+            }
+            currentIndex = 0;
         }
     }
 }

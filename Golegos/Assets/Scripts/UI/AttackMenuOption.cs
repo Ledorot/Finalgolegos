@@ -103,8 +103,7 @@ namespace Golegos {
             int i = 0;
             string newText;
             if (newEnable) {
-                while (battleManager.GetSelectedPlayer() != null &&
-                    (newText = battleManager.GetSelectedPlayer().GetAttackText(i++, isSpecial)) != null) {
+                while ((newText = battleManager.GetSelectedPlayer().GetAttackText(i++, isSpecial)) != null) {
 
                     attackTexts[i - 1] = newText;
                     if (i <= maxOptions) {
@@ -118,12 +117,25 @@ namespace Golegos {
                 }
             }
             else {
-                while (battleManager.GetSelectedPlayer().GetAttackText(i++, isSpecial) != null) {
-                    //Hide the text of all the attacks
-                    derivedOptions[i - 1].GetComponent<Text>().text = "";
+                foreach(MenuOption menuOp in derivedOptions) {
+                    menuOp.GetComponent<Text>().text = "";
                 }
                 currentIndex = 0;
             }
+        }
+
+        public override void SetChildrenEnableAtIndex(int index) {
+            int i = 0;
+            string newText;
+            while ((newText = battleManager.GetSelectedPlayer().GetAttackText(i++, isSpecial)) != null) {
+                if (i - 1 == index) {
+                    derivedOptions[i - 1].GetComponent<Text>().text = newText;
+                }
+                else {
+                    derivedOptions[i - 1].GetComponent<Text>().text = "";
+                }
+            }
+            currentIndex = 0;
         }
     }
 }
