@@ -5,6 +5,7 @@ public class Camera2DFollow : MonoBehaviour
 {
 
     public Transform target;
+    public Transform[] limits; //put all limits in here instead of seperate limits
     public Transform leftLimit;
     public Transform rightLimit;
     public Transform upLimit;
@@ -23,6 +24,7 @@ public class Camera2DFollow : MonoBehaviour
 	private float nextTimeToSearch = 0f;
 
     private Camera mainCamera;
+    private bool limits[] = new bool[]; //one bool array to worry about instead seperated-just a sugestion.
     private bool leftLimited = false;
     private bool rightLimited = false;
     private bool upLimited = false;
